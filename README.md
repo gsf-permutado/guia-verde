@@ -19,8 +19,9 @@ Para entender a base científica e técnica deste desenvolvimento, acesse os doc
 ## 🛠️ Tecnologias Utilizadas
 Focando em performance e compatibilidade com dispositivos móveis (Mobile-First):
 * **HTML5** (Estruturação semântica)
-* **CSS3** (Layout responsivo e acessibilidade)
-* **JavaScript Vanilla** (Interatividade leve)
+* **Bootstrap** (Compontentes de interface)
+* **CSS3** (Layout responsivo, edição de estilo e acessibilidade)
+* **JavaScript Vanilla** (Pesquisa filtrada de páginas)
 * **GitHub Pages** (Hospedagem e distribuição Open Source)
 
 ## Como acessar o produto?
