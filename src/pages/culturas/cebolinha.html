@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guia Verde | Cebolinha</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="../../css/base.css">
+    <link rel="stylesheet" href="../../css/navbar.css">
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <i class="bi bi-leaf"></i>
+                Guia Verde
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item"><a class="nav-link active" href="../../../index.html">Início</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../../pages/navbar/sobre.html">Sobre</a></li>
+                </ul>
+                <form class="d-flex" role="search" onsubmit="buscar(event)">
+                    <input id="campoBusca" class="form-control me-2" type="search"
+                          placeholder="O que procura?" aria-label="Pesquisar">
+                    <button class="btn btn-warning" type="submit">Pesquisar</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container py-4">
+        <div class="d-flex mb-3">
+            <button type="button" onclick="history.back()" class="btn btn-secondary">
+                <i class="bi bi-arrow-left"></i> Voltar
+            </button>
+
+            <a href="../../../index.html" class="btn btn-success ms-auto">
+                Página Inicial
+            </a>
+        </div>
+
+        <div class="card mb-4 border-0 shadow-sm">
+            <div class="row g-0 align-items-center">
+
+                <!-- Texto -->
+                <div class="col-12 col-md-8">
+                    <div class="card-body">
+                        <h2 class="card-title">Cebolinha (<em>Allium fistulosum</em>)</h2>
+                        <p class="card-text">
+                            A cebolinha, cujo nome científico é <em>Allium fistulosum</em>, é uma hortaliça herbácea muito cultivada e consumida no Brasil, especialmente como tempero fresco. Ela pertence à família Amaryllidaceae, possui folhas cilíndricas e ocas (fistulosas), de coloração verde-intensa, e é amplamente utilizada na culinária por seu sabor suave e aromático, similar ao da cebola, porém mais delicado.
+                        </p>
+                        <h2>Descrição</h2>
+                        <p>
+                            A cebolinha é uma planta de porte médio, geralmente entre 30 e 50 centímetros, com folhas tubulares e eretas que crescem em touceiras. Diferente da cebola comum, não forma bulbo desenvolvido, sendo cultivada principalmente pelas folhas verdes. Seu sistema de rebrota contínua permite múltiplas colheitas ao longo do ciclo.
+                        </p>
+                        <h2>Principais Características:</h2>
+                        <ul>
+                            <li><strong>Nome científico:</strong> <em>Allium fistulosum</em> L.</li>
+                            <li><strong>Família botânica:</strong> Amaryllidaceae.</li>
+                            <li><strong>Hábito de crescimento:</strong> herbácea perene, geralmente cultivada como anual ou semianual.</li>
+                            <li><strong>Folhas:</strong> cilíndricas, ocas (fistulosas), verde-intensas, reunidas em touceiras.</li>
+                            <li><strong>Flor:</strong> pequena, branca ou lilás, reunida em umbelas globosas.</li>
+                            <li><strong>Propagação:</strong> por sementes ou por divisão de touceiras.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Imagem -->
+                <div class="col-12 col-md-4">
+                    <img src="../../img/culturas-intro/cebolinha.webp"
+                        class="img-fluid h-100 w-100 object-fit-cover"
+                        alt="Cultivo de Cebolinha">
+                </div>
+
+            </div>
+        </div>
+
+        <section class="card mb-4">
+            <div class="card-body">
+                <h3 class="h4 mb-3">Variedades e Cultivares</h3>
+                <div class="table-responsive">
+                    <table class="table table-hover align-middle border">
+                        <thead class="table-success">
+                            <tr>
+                                <th>Cultivar / Tipo</th>
+                                <th>Característica Principal</th>
+                                <th>Destaque Técnico</th>
+                                <th>Ciclo até 1ª Colheita (dias)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Todo Ano</strong></td>
+                                <td>Folhas cilíndricas, verde-intensas</td>
+                                <td>Cultivar mais difundida no Brasil; boa adaptação a diferentes regiões; indicada para cultivo convencional e orgânico.</td>
+                                <td>30 - 60</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Comum Gigante</strong></td>
+                                <td>Folhas mais largas e vigorosas</td>
+                                <td>Maior produtividade de massa verde; ciclo ligeiramente mais longo; boa resposta a adubação orgânica.</td>
+                                <td>40 - 70</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="mt-3 text-center">
+                    <p class="text-muted small">
+                        Fonte: Dados técnicos adaptados de publicações da Embrapa e literatura agronômica sobre cultivo de aliáceas.
+                        Para mais informações acesse:
+                        <a href="https://www.embrapa.br/hortalicas/cebola" target="_blank" rel="noopener">
+                            Portal Embrapa Hortaliças – Cebola e Aliáceas
+                        </a>
+                    </p>
+
+                    <div class="row g-3 justify-content-center">
+
+                        <div class="col-6 col-md-3">
+                            <figure class="figure">
+                                <img src="../../img/culturas-detalhe/cebolinha-touceira.webp" class="figure-img img-fluid rounded" alt="Cebolinha em Touceira">
+                                <figcaption class="figure-caption text-center">Touceira</figcaption>
+                            </figure>
+                        </div>
+
+                        <div class="col-6 col-md-3">
+                            <figure class="figure">
+                                <img src="../../img/culturas-detalhe/cebolinha-hidro.webp" class="figure-img img-fluid rounded" alt="Cebolinha em Hidroponia">
+                                <figcaption class="figure-caption text-center">Hidroponia</figcaption>
+                            </figure>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="card mb-4">
+            <div class="card-body">
+                <h3 class="h4">Manejo e Plantio</h3>
+
+                <div class="row mt-3">
+                    <div class="col-md-7">
+
+                        <ul class="list-group list-group-flush">
+
+                            <li class="list-group-item">
+                                <strong>Propagação:</strong> Pode ser feita por sementes (em sementeira ou semeadora direta) ou por divisão de touceiras. Em sistema comercial, o uso de sementes de boa qualidade é recomendado para uniformidade de produção.
+                            </li>
+
+                            <li class="list-group-item">
+                                <strong>Transplante / Semeadura direta:</strong> O transplante de mudas é realizado quando estas apresentam entre 10 e 15 cm de altura, geralmente 20 a 30 dias após a semeadura. O espaçamento comum é de 20–30 cm entre linhas e 10–15 cm entre plantas.
+                            </li>
+
+                            <li class="list-group-item">
+                                <strong>Horário de plantio:</strong> O transplante deve ser feito nas horas mais frescas do dia, preferencialmente no início da manhã ou no final da tarde, para reduzir o estresse hídrico das mudas.
+                            </li>
+
+                            <li class="list-group-item">
+                                <strong>Irrigação:</strong> Manter o solo úmido sem encharcar. Irrigação por sulco ou gotejamento são indicadas. Folhagem molhada por longos períodos favorece o desenvolvimento de doenças fúngicas; preferir irrigação pela manhã.
+                            </li>
+
+                            <li class="list-group-item">
+                                <strong>Solo:</strong> Prefere solos bem drenados, profundos e ricos em matéria orgânica, com pH entre 5,5 e 6,5. Solos pesados ou encharcados favorecem podridões radiculares.
+                            </li>
+
+                            <li class="list-group-item">
+                                <strong>Adubação:</strong> Responde bem à adubação orgânica com esterco compostado, incorporado antes do plantio. Evitar excesso de nitrogênio, que aumenta a suscetibilidade a doenças fúngicas foliares como a mancha-púrpura.
+                            </li>
+
+                            <li class="list-group-item">
+                                <strong>Colheita:</strong> A partir de 30 a 60 dias após o estabelecimento, realizam-se cortes parciais das folhas, mantendo cerca de 5 a 7 cm de base para garantir a rebrota contínua da touceira.
+                            </li>
+
+                            <li class="list-group-item">
+                                <strong>Rotação de culturas:</strong> Prática fundamental para reduzir a incidência de doenças do solo. Recomenda-se rotação por pelo menos 3 anos com gramíneas ou leguminosas em áreas com histórico de podridão-branca ou raiz-rosada.
+                            </li>
+
+                        </ul>
+
+                    </div>
+                </div>
+
+                <!-- Créditos e fonte técnica -->
+                <div class="mt-4 text-muted small">
+
+                    <p>
+                        <strong>Fontes técnicas:</strong>
+                    </p>
+
+                    <p>
+                        Apostila "Cultivo da Cebola" – Embrapa Informação Tecnológica.
+                        <a href="https://www.infoteca.cnptia.embrapa.br/infoteca/bitstream/doc/151767/1/ApostilaCEBOLA.pdf" target="_blank" rel="noopener">
+                            Acesse o documento completo.
+                        </a>
+                    </p>
+
+                    <p>
+                        Tratos culturais na cultura da cebolinha verde (espaçamento, adubação, produção) –
+                        <a href="http://faef.revista.inf.br/imagens_arquivos/arquivos_destaque/Oj97ElgnbbVZmow_2019-6-19-14-14-3.pdf" target="_blank" rel="noopener">
+                            Artigo técnico FAEF.
+                        </a>
+                    </p>
+
+                    <p>
+                        Portal Embrapa Hortaliças – Cebola: clima, plantio e manejo:
+                        <a href="https://www.embrapa.br/hortalicas/cebola" target="_blank" rel="noopener">
+                            www.embrapa.br/hortalicas/cebola
+                        </a>
+                    </p>
+
+                </div>
+
+            </div>
+        </section>
+
+        <section class="card mb-4">
+            <div class="card-body">
+
+                <h3 class="h4 text-danger">Manejo Integrado de Pragas e Doenças (MIP)</h3>
+
+                <h5 class="mt-3">Principais Pragas</h5>
+                <div class="table-responsive">
+                    <table class="table table-sm table-bordered mt-2">
+                        <thead class="table-dark text-center">
+                            <tr>
+                                <th>Praga</th>
+                                <th>Sintomas</th>
+                                <th>Manejo Recomendado</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Tripes (<em>Thrips tabaci</em>)</strong></td>
+                                <td>Manchas claras nas folhas, atrofiamento e enrolamento foliar. Abre feridas que facilitam a entrada de fungos como <em>Alternaria porri</em>.</td>
+                                <td>Inspeção semanal nas axilas das folhas. Uso de inseticidas registrados e seletivos (classes III–IV). Evitar inseticidas de amplo espectro no início do ciclo.</td>
+                            </tr>
+
+                            <tr>
+                                <td><strong>Lagarta-rosca (<em>Agrotis</em> spp.)</strong></td>
+                                <td>Corte de plantas no solo ou na base, causando perdas localizadas em reboleiras.</td>
+                                <td>Monitoramento da lavoura; controle biológico e químico específico quando a população atingir nível de dano econômico.</td>
+                            </tr>
+
+                            <tr>
+                                <td><strong>Mosca-minadora (<em>Liriomyza</em> spp.)</strong></td>
+                                <td>Galerias visíveis dentro das folhas, reduzindo área fotossintética e qualidade comercial.</td>
+                                <td>Uso de inseticidas registrados, rotação de princípios ativos e controle de plantas hospedeiras nas bordaduras da lavoura.</td>
+                            </tr>
+
+                            <tr>
+                                <td><strong>Nematoides radiculares</strong></td>
+                                <td>Comprometimento das raízes, redução do desenvolvimento vegetativo e morte de plantas.</td>
+                                <td>Rotação de culturas com espécies não hospedeiras, uso de mudas sadias e análise prévia do solo.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h5 class="mt-4">Principais Doenças</h5>
+                <div class="table-responsive">
+                    <table class="table table-sm table-bordered mt-2">
+                        <thead class="table-dark text-center">
+                            <tr>
+                                <th>Doença (agente)</th>
+                                <th>Sintomas</th>
+                                <th>Manejo Recomendado</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Mancha-púrpura (<em>Alternaria porri</em> / <em>Stemphylium vesicarium</em>)</strong></td>
+                                <td>Lesões alongadas com manchas púrpuras nas folhas, morte precoce da folhagem e redução de produtividade. Mais comum em clima quente e úmido.</td>
+                                <td>Rotação com gramíneas, menor densidade de plantio, evitar excesso de nitrogênio, controle de tripes e uso de fungicidas protetores e sistêmicos registrados.</td>
+                            </tr>
+
+                            <tr>
+                                <td><strong>Míldio (<em>Peronospora destructor</em>)</strong></td>
+                                <td>Manchas suaves nas folhas com esporulação acinzentada na superfície; evolui rapidamente em clima frio e úmido.</td>
+                                <td>Plantio em períodos menos úmidos, boa drenagem do solo, controle preventivo com fungicidas de múltiplos modos de ação e eliminação de plantas voluntárias.</td>
+                            </tr>
+
+                            <tr>
+                                <td><strong>Raiz-rosada (<em>Pyrenochaeta terrestris</em>)</strong></td>
+                                <td>Raízes com coloração rosada a púrpura, enrugamento, redução de crescimento e mortalidade de plantas.</td>
+                                <td>Rotação por 3 anos com culturas não hospedeiras, calagem para pH 5,5–6,0, evitar monocultura e uso de mudas sadias.</td>
+                            </tr>
+
+                            <tr>
+                                <td><strong>Podridão-branca (<em>Sclerotium cepivorum</em>)</strong></td>
+                                <td>Micélio branco envolvendo raízes e base da planta; microscleródios persistentes no solo; plantas severamente afetadas morrem.</td>
+                                <td>Prevenção essencial: mudas sadias, evitar áreas infestadas e desinfestar máquinas e equipamentos. Não há fungicidas registrados no Brasil para esta doença.</td>
+                            </tr>
+
+                            <tr>
+                                <td><strong>Antracnose foliar (<em>Colletotrichum gloeosporioides</em> f. sp. <em>cepae</em>)</strong></td>
+                                <td>Manchas brancas ou rosadas com pontos pretos, enrolamento foliar em forma de "charuto"; reduz área foliar e enfraquece a planta.</td>
+                                <td>Sementes e mudas sadias, manejo adequado da irrigação, rotação de culturas e eliminação de plantas voluntárias; fungicidas quando necessário.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="mt-3 text-muted small text-center">
+
+                    <p>
+                        Informações adaptadas de publicações técnicas sobre fitopatologia da cultura de aliáceas (cebola, alho e cebolinha).
+                    </p>
+
+                    <p>
+                        <strong>Referências principais:</strong>
+                    </p>
+
+                    <p>
+                        EMBRAPA. <em>Diagnose e manejo de doenças fúngicas na cultura da cebola</em> (CT‑133). 🔗
+                        <a href="https://www.infoteca.cnptia.embrapa.br/bitstream/doc/1007653/1/CT133.pdf" target="_blank" rel="noopener">
+                            Acesse o documento.
+                        </a>
+                    </p>
+
+                    <p>
+                        EMBRAPA. <em>Doenças, pragas e plantas daninhas em alho e cebola</em>. 🔗
+                        <a href="https://www.embrapa.br/busca-de-publicacoes/-/publicacao/1184634/doencas-pragas-e-plantas-daninhas-em-alho-e-cebola" target="_blank" rel="noopener">
+                            Acesse a publicação.
+                        </a>
+                    </p>
+
+                    <p>
+                        EMBRAPA. Portal Hortaliças – Doenças causadas por fungos e oomicetos. 🔗
+                        <a href="https://www.embrapa.br/hortalicas/cebola/dencas-causadas-por-fungos-e-oomicetos" target="_blank" rel="noopener">
+                            Acesse o portal.
+                        </a>
+                    </p>
+
+                    <p>
+                        Pragas e doenças da cebolinha verde – Artigo técnico (FAEF). 🔗
+                        <a href="http://faef.revista.inf.br/imagens_arquivos/arquivos_destaque/Cus9WiLEwf5Xm9w_2018-11-6-12-33-29.pdf" target="_blank" rel="noopener">
+                            Acesse o artigo.
+                        </a>
+                    </p>
+
+                </div>
+
+            </div>
+        </section>
+
+        <div class="alert alert-warning d-flex align-items-center">
+            <i class="bi bi-thermometer-half fs-3 me-3"></i>
+            <div class="alert alert-warning mt-3">
+                <strong>Alerta de Temperatura:</strong>
+                A cebolinha desenvolve-se melhor em climas temperados, com temperaturas médias entre <strong>15 °C e 25 °C</strong>.
+                Em regiões quentes, é mais indicado o cultivo no período de inverno ou sob sombreamento leve,
+                pois o calor intenso compromete o desenvolvimento das folhas e favorece doenças fúngicas.
+                Folhas jovens toleram pequenas geadas, mas geadas prolongadas podem causar danos severos à cultura.
+            </div>
+        </div>
+    </main>
+
+    <footer class="py-5 bg-light border-top">
+        <div class="container text-center">
+            <p class="text-muted fw-bold mb-1">Guia Verde – 2026</p>
+
+            <div class="small text-muted">
+                Fontes técnicas:
+                <a href="https://www.embrapa.br/hortalicas"
+                target="_blank"
+                rel="noopener"
+                class="text-decoration-none text-secondary">
+                Embrapa Hortaliças
+                </a> |
+
+                <a href="https://www.infoteca.cnptia.embrapa.br/bitstream/doc/1007653/1/CT133.pdf"
+                target="_blank"
+                rel="noopener"
+                class="text-decoration-none text-secondary">
+                Diagnose e Manejo de Doenças Fúngicas (CT-133)
+                </a> |
+
+                <a href="http://faef.revista.inf.br/imagens_arquivos/arquivos_destaque/Cus9WiLEwf5Xm9w_2018-11-6-12-33-29.pdf"
+                target="_blank"
+                rel="noopener"
+                class="text-decoration-none text-secondary">
+                Artigo – Pragas e Doenças da Cebolinha (FAEF)
+                </a>
+            </div>
+
+            <div class="small text-muted mt-2">
+                Conteúdo técnico adaptado de materiais de extensão rural da
+                Embrapa e literatura agronômica sobre o cultivo de cebolinha verde (<em>Allium fistulosum</em>).
+            </div>
+        </div>
+    </footer>
+
+    <button
+        type="button"
+        class="btn btn-success btn-floating btn-lg"
+        id="btn-back-to-top"
+        style="position: fixed; bottom: 20px; right: 20px; display: none;"
+        aria-label="Voltar ao topo"
+        title="Voltar ao topo">
+        <i class="bi bi-arrow-up"></i>
+    </button>
+    <script src="../../js/ui-extras.js"></script>
+    <script src="../../../src/js/search.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
