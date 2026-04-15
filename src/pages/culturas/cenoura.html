@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guia Verde | Cenoura</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="../../css/base.css">
+    <link rel="stylesheet" href="../../css/navbar.css">
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <i class="bi bi-leaf"></i>
+                Guia Verde
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item"><a class="nav-link active" href="../../../index.html">Início</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../../pages/navbar/sobre.html">Sobre</a></li>
+                </ul>
+                <form class="d-flex" role="search" onsubmit="buscar(event)">
+                    <input id="campoBusca" class="form-control me-2" type="search"
+                          placeholder="O que procura?" aria-label="Pesquisar">
+                    <button class="btn btn-warning" type="submit">Pesquisar</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container py-4">
+        <div class="d-flex mb-3">
+            <button type="button" onclick="history.back()" class="btn btn-secondary">
+                <i class="bi bi-arrow-left"></i> Voltar
+            </button>
+
+            <a href="../../../index.html" class="btn btn-success ms-auto">
+                Página Inicial
+            </a>
+        </div>
+
+        <div class="card mb-4 border-0 shadow-sm">
+            <div class="row g-0 align-items-center">
+
+                <!-- Texto -->
+                <div class="col-12 col-md-8">
+                    <div class="card-body">
+                        <h2 class="card-title">Cenoura (<em>Daucus carota</em> L.)</h2>
+                        <p class="card-text">
+                            A cenoura, cujo nome científico é <em>Daucus carota</em> L., é uma das principais hortaliças cultivadas no mundo e no Brasil. Pertence à família Apiaceae, sendo cultivada principalmente pela raiz tuberosa de coloração alaranjada, rica em carotenoides que, no organismo humano, são convertidos em vitamina A. É amplamente consumida in natura e está entre as cinco principais hortaliças produzidas no país.
+                        </p>
+                        <h2>Descrição</h2>
+                        <p>
+                            A cenoura é uma planta herbácea bianual, cultivada como anual para fins comerciais. Sua parte comestível é a raiz principal tuberosa, de formato cilíndrico ou cônico, coloração alaranjada intensa e textura firme. A parte aérea é composta por folhas compostas, de aspecto rendado, utilizadas como referência no manejo e na colheita da cultura.
+                        </p>
+                        <h2>Principais Características:</h2>
+                        <ul>
+                            <li><strong>Nome científico:</strong> <em>Daucus carota</em> L.</li>
+                            <li><strong>Família botânica:</strong> Apiaceae.</li>
+                            <li><strong>Hábito de crescimento:</strong> herbácea bianual, cultivada como anual.</li>
+                            <li><strong>Raiz:</strong> tuberosa, cilíndrica ou cônica, alaranjada, principal produto comercial.</li>
+                            <li><strong>Folhas:</strong> compostas, alternas, de aspecto rendado e coloração verde-intensa.</li>
+                            <li><strong>Propagação:</strong> exclusivamente por sementes.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Imagem -->
+                <div class="col-12 col-md-4">
+                    <img src="../../img/culturas-intro/cenoura.webp"
+                        class="img-fluid h-100 w-100 object-fit-cover"
+                        alt="Cultivo de Cenoura">
+                </div>
+
+            </div>
+        </div>
+
+        <section class="card mb-4">
+            <div class="card-body">
+                <h3 class="h4 mb-3">Variedades e Cultivares</h3>
+                <div class="table-responsive">
+                    <table class="table table-hover align-middle border">
+                        <thead class="table-success">
+                            <tr>
+                                <th>Grupo / Cultivar</th>
+                                <th>Característica Principal</th>
+                                <th>Destaque Técnico</th>
+                                <th>Ciclo (dias)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Brasília (verão)</strong></td>
+                                <td>Raízes cilíndricas, alaranjadas</td>
+                                <td>Tolerância à queima das folhas e ao nematoide das galhas; indicada para plantios de primavera/verão.</td>
+                                <td>85 - 100</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Nantes (inverno)</strong></td>
+                                <td>Raízes cilíndricas, alaranjado-intensas</td>
+                                <td>Alta produtividade e qualidade de raízes; indicada apenas para plantios de outono/inverno.</td>
+                                <td>110 - 130</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Kuroda</strong></td>
+                                <td>Raízes cônicas, alaranjado-intensas</td>
+                                <td>Tolerância à queima das folhas; ótimo enfolhamento, permitindo comercialização em maços.</td>
+                                <td>100 - 120</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="mt-3 text-center">
+                    <p class="text-muted small">
+                        Fonte: Dados técnicos adaptados de publicações da Embrapa Hortaliças sobre o sistema de produção de cenoura.
+                        Para mais informações acesse:
+                        <a href="https://www.embrapa.br/agencia-de-informacao-tecnologica/cultivos/cenoura" target="_blank" rel="noopener">
+                            Portal Embrapa Hortaliças – Cenoura
+                        </a>
+                    </p>
+
+                    <div class="row g-3 justify-content-center">
+
+                        <div class="col-6 col-md-3">
+                            <figure class="figure">
+                                <img src="../../img/culturas-detalhe/cenoura-brasilia.webp" class="figure-img img-fluid rounded" alt="Cenoura grupo Brasília">
+                                <figcaption class="figure-caption text-center">Foto de Sérgio Bender, disponível na EMBRAPA</figcaption>
+                                <a href="https://www.embrapa.br/agencia-de-informacao-tecnologica/cultivos/cenoura/pre-producao/caracteristicas/cultivares/brasilia"
+                                target="_blank" rel="noopener">Grupo Brasília</a>
+                            </figure>
+                        </div>
+
+                        <div class="col-6 col-md-3">
+                            <figure class="figure">
+                                <img src="../../img/culturas-detalhe/cenoura-nantes.webp" class="figure-img img-fluid rounded" alt="Cenoura grupo Nantes">
+                                <figcaption class="figure-caption text-center">Foto de Sérgio Bender, disponível na EMBRAPA</figcaption>
+                                <a href="https://www.embrapa.br/agencia-de-informacao-tecnologica/cultivos/cenoura/pre-producao/caracteristicas/cultivares/nantes"
+                                target="_blank" rel="noopener">Grupo Nantes</a>
+                            </figure>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="card mb-4">
+            <div class="card-body">
+                <h3 class="h4">Manejo e Plantio</h3>
+
+                <div class="row mt-3">
+                    <div class="col-md-7">
+
+                        <ul class="list-group list-group-flush">
+
+                            <li class="list-group-item">
+                                <strong>Preparo do solo:</strong> A cenoura adapta-se melhor em solos de textura média, profundos, bem drenados e ricos em matéria orgânica, com pH próximo a 6,0. Recomenda-se aração profunda seguida de gradagem e levantamento de canteiros com 1,0 m a 1,8 m de largura e cerca de 30 cm de altura.
+                            </li>
+
+                            <li class="list-group-item">
+                                <strong>Semeadura:</strong> Realizada diretamente nos canteiros, em profundidade entre 1 e 2 cm. Pode ser feita manualmente, com semeadores manuais ou com semeadoras pneumáticas de precisão. O espaçamento entre linhas varia de 15 a 20 cm em sistemas simples, até linhas triplas em sistemas de grande escala.
+                            </li>
+
+                            <li class="list-group-item">
+                                <strong>Desbaste (Raleio):</strong> Realizado entre 25 e 35 dias após a semeadura, consiste na retirada do excesso de plantas, deixando espaço de 4 a 5 cm entre plantas quando o espaçamento entre linhas é de 20 cm, garantindo o estande ideal para bom desenvolvimento das raízes.
+                            </li>
+
+                            <li class="list-group-item">
+                                <strong>Irrigação:</strong> Cultura exigente em água. Logo após o plantio, deve-se umedecer o solo a 20 cm de profundidade. Evitar o encrostamento superficial até a germinação com irrigações diárias ou a cada 12 horas. O pivô central é o sistema mais comum nas grandes regiões produtoras.
+                            </li>
+
+                            <li class="list-group-item">
+                                <strong>Adubação:</strong> Exige adubação equilibrada de plantio com N-P-K e micronutrientes, especialmente boro e zinco. A adubação de cobertura com nitrogênio e potássio é realizada em duas etapas, geralmente aos 20 e 40 dias após a emergência. Em sistemas orgânicos, utilizam-se estercos curtidos de gado ou galinha.
+                            </li>
+
+                            <li class="list-group-item">
+                                <strong>Colheita:</strong> Realizada entre 85 e 130 dias após a semeadura, dependendo do grupo de cultivares. O critério mais comum é o tamanho e comprimento das raízes. Pode ser feita de forma manual, semimecanizada ou mecanizada, devendo-se evitar danos físicos às raízes durante todo o processo.
+                            </li>
+
+                            <li class="list-group-item">
+                                <strong>Rotação de culturas:</strong> Prática fundamental para reduzir o potencial de inóculo de pragas e doenças no solo. Recomenda-se a rotação com gramíneas, como o milheto, especialmente antes dos plantios de verão, para melhorar a estrutura do solo e reduzir nematoides.
+                            </li>
+
+                        </ul>
+
+                    </div>
+                </div>
+
+                <!-- Créditos e fonte técnica -->
+                <div class="mt-4 text-muted small">
+
+                    <p>
+                        <strong>Fontes técnicas:</strong>
+                    </p>
+
+                    <p>
+                        CARVALHO, A. D. F. et al. <em>Cenoura: Daucus carota L.</em> – Sistemas de Produção nº 2. Embrapa Hortaliças, Brasília, DF, 2021.
+                        <a href="http://www.infoteca.cnptia.embrapa.br/infoteca/handle/doc/1135838" target="_blank" rel="noopener">
+                            Acesse o portal da Embrapa Hortaliças.
+                        </a>
+                    </p>
+
+                    <p>
+                        FILGUEIRA, F. A. R. <em>Novo manual de olericultura</em>: agrotecnologia moderna na produção e comercialização de hortaliças. 2. ed. Viçosa, MG: UFV, 2008.
+                    </p>
+
+                    <p>
+                        Portal Embrapa Hortaliças – Cenoura: clima, plantio e manejo:
+                        <a href="https://www.embrapa.br/agencia-de-informacao-tecnologica/cultivos/cenoura/producao/manejo-do-solo" target="_blank" rel="noopener">
+                            www.embrapa.br/hortalicas/cenoura
+                        </a>
+                    </p>
+
+                </div>
+
+            </div>
+        </section>
+
+        <section class="card mb-4">
+            <div class="card-body">
+
+                <h3 class="h4 text-danger">Manejo Integrado de Pragas e Doenças (MIP)</h3>
+
+                <h5 class="mt-3">Principais Pragas</h5>
+                <div class="table-responsive">
+                    <table class="table table-sm table-bordered mt-2">
+                        <thead class="table-dark text-center">
+                            <tr>
+                                <th>Praga</th>
+                                <th>Sintomas</th>
+                                <th>Manejo Recomendado</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Lagarta-rosca (<em>Agrotis ipsilon</em>)</strong></td>
+                                <td>Corte de plântulas junto ao solo, causando falhas no estande, principalmente na fase de emergência.</td>
+                                <td>Preparo correto do solo, incorporação de restos culturais, destruição de plantas daninhas gramíneas e irrigação bem conduzida.</td>
+                            </tr>
+
+                            <tr>
+                                <td><strong>Pulgões (<em>Cavariella aegopodii</em>, <em>Myzus persicae</em>)</strong></td>
+                                <td>Insetos sugadores que raramente causam danos econômicos diretos, mas são vetores de vírus como o Carrot red leaf virus.</td>
+                                <td>Monitoramento com armadilhas amarelas, eliminação de plantas daninhas hospedeiras, rotação com gramíneas e controle biológico por parasitoides.</td>
+                            </tr>
+
+                            <tr>
+                                <td><strong>Nematoides-das-galhas (<em>Meloidogyne</em> spp.)</strong></td>
+                                <td>Formação de galhas ("pipocas") nas raízes, bifurcações, redução do comprimento e diâmetro, amarelecimento foliar e reboleiras na lavoura.</td>
+                                <td>Rotação de culturas com gramíneas, amostragem prévia do solo, uso de cultivares tolerantes e evitar movimentação de solo infestado.</td>
+                            </tr>
+
+                            <tr>
+                                <td><strong>Mosca-branca (<em>Bemisia argentifolii</em>)</strong></td>
+                                <td>Migra de lavouras vizinhas (como soja) para a cenoura; prejuízos diretos ainda não completamente mensurados.</td>
+                                <td>Monitoramento da lavoura e implantação de barreiras vegetais nas bordaduras para reduzir a migração de insetos.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h5 class="mt-4">Principais Doenças</h5>
+                <div class="table-responsive">
+                    <table class="table table-sm table-bordered mt-2">
+                        <thead class="table-dark text-center">
+                            <tr>
+                                <th>Doença (agente)</th>
+                                <th>Sintomas</th>
+                                <th>Manejo Recomendado</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Queima das folhas (<em>Alternaria dauci</em>, <em>Cercospora carotae</em>, <em>Xanthomonas hortorum</em>)</strong></td>
+                                <td>Manchas castanho-escuras ou pretas nas folhas mais velhas, com halo amarelo, evoluindo para necrose e retorcimento dos folíolos.</td>
+                                <td>Uso de cultivares resistentes, sementes sadias tratadas com fungicidas, rotação com gramíneas e aplicação de fungicidas registrados.</td>
+                            </tr>
+
+                            <tr>
+                                <td><strong>Oídio (<em>Erysiphe heraclei</em>)</strong></td>
+                                <td>Estruturas brancas semelhantes a pó de giz nas folhas; em condições favoráveis causa amarelecimento e perdas severas de produção.</td>
+                                <td>Uso de cultivares resistentes; a ocorrência de chuvas e irrigação por aspersão limita o desenvolvimento da doença ao remover esporos.</td>
+                            </tr>
+
+                            <tr>
+                                <td><strong>Tombamento (<em>Rhizoctonia solani</em>, <em>Pythium</em> spp.)</strong></td>
+                                <td>Apodrecimento de sementes ou plântulas antes da emergência (pré-emergência) ou tombamento na base da plântula (pós-emergência), em reboleiras.</td>
+                                <td>Sementes sadias tratadas com fungicidas, boa drenagem do solo, evitar excesso de umidade e alta temperatura após a semeadura.</td>
+                            </tr>
+
+                            <tr>
+                                <td><strong>Podridão mole (<em>Pectobacterium</em> spp., <em>Dickeya</em> spp.)</strong></td>
+                                <td>Apodrecimento das raízes com murcha e seca das plantas; também ocorre na pós-colheita causando "mela" nas raízes, especialmente quando colhidas em solos úmidos.</td>
+                                <td>Evitar ferimentos nas raízes, colher em solo com umidade adequada, lavar com água clorada e armazenar abaixo de 10 °C com boa ventilação.</td>
+                            </tr>
+
+                            <tr>
+                                <td><strong>Podridão negra (<em>Berkeleyomyces basicola</em>)</strong></td>
+                                <td>Lesões cinzas que evoluem para pretas nas raízes; ocorre no campo e na pós-colheita, favorecida por alta umidade e temperatura acima de 25 °C.</td>
+                                <td>Evitar injúrias mecânicas durante colheita e beneficiamento, resfriamento rápido das raízes e uso de cloro na linha de classificação.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="mt-3 text-muted small text-center">
+
+                    <p>
+                        Informações adaptadas de publicações técnicas sobre fitopatologia da cultura da cenoura (<em>Daucus carota</em> L.).
+                    </p>
+
+                    <p>
+                        <strong>Referências principais:</strong>
+                    </p>
+
+                    <p>
+                        EMBRAPA. <em>Sistemas de Produção nº 2 – Cenoura</em>. Embrapa Hortaliças, Brasília, DF, 2021. 🔗
+                        <a href="http://www.infoteca.cnptia.embrapa.br/infoteca/handle/doc/1135838" target="_blank" rel="noopener">
+                            Acesse o portal.
+                        </a>
+                    </p>
+
+                    <p>
+                        LOPES, C. A.; REIS, A. <em>Doenças da cenoura</em>. Brasília, DF: Embrapa, 2016. 🔗
+                        <a href="http://www.infoteca.cnptia.embrapa.br/infoteca/handle/doc/1050943" target="_blank" rel="noopener">
+                            Acesse a publicação.
+                        </a>
+                    </p>
+
+                    <p>
+                        LOURENÇO JUNIOR, V.; LOPES, C.A.; REIS, A. <em>Podridão negra da cenoura</em>. Embrapa Hortaliças, CT-121, 2019. 🔗
+                        <a href="http://www.infoteca.cnptia.embrapa.br/infoteca/handle/doc/1110308" target="_blank" rel="noopener">
+                            Acesse o comunicado técnico.
+                        </a>
+                    </p>
+
+                    <p>
+                        Fungicidas e nematicidas registrados – Sistema Agrofit/MAPA. 🔗
+                        <a href="https://www.gov.br/agricultura/pt-br/assuntos/insumos-agropecuarios/insumos-agricolas/agrotoxicos/agrofit" target="_blank" rel="noopener">
+                            Acesse o Agrofit.
+                        </a>
+                    </p>
+
+                </div>
+
+            </div>
+        </section>
+
+        <div class="alert alert-warning d-flex align-items-center">
+            <i class="bi bi-thermometer-half fs-3 me-3"></i>
+            <div class="alert alert-warning mt-3">
+                <strong>Alerta de Temperatura:</strong>
+                A cenoura é muito sensível às variações de temperatura. A germinação ocorre entre <strong>8 °C e 35 °C</strong>, com faixa ótima entre 20 °C e 30 °C. Após a germinação, as temperaturas ideais para o desenvolvimento ficam entre <strong>18 °C e 25 °C</strong>.
+                Temperaturas acima de 25 °C prejudicam o crescimento em comprimento das raízes e comprometem a coloração. Temperaturas noturnas próximas ou abaixo de 10 °C podem induzir o florescimento precoce em cultivares de verão.
+            </div>
+        </div>
+    </main>
+
+    <footer class="py-5 bg-light border-top">
+        <div class="container text-center">
+            <p class="text-muted fw-bold mb-1">Guia Verde – 2026</p>
+
+            <div class="small text-muted">
+                Fontes técnicas:
+                <a href="https://www.embrapa.br/hortalicas"
+                target="_blank"
+                rel="noopener"
+                class="text-decoration-none text-secondary">
+                Embrapa Hortaliças
+                </a> |
+
+                <a href="https://www.infoteca.cnptia.embrapa.br/infoteca/bitstream/doc/1110308/1/COT121FINAL.pdf"
+                target="_blank"
+                rel="noopener"
+                class="text-decoration-none text-secondary">
+                Podridão Negra da Cenoura (CT-121)
+                </a> |
+
+                <a href="http://www.agricultura.gov.br/servicos-e-sistemas/sistemas/agrofit"
+                target="_blank"
+                rel="noopener"
+                class="text-decoration-none text-secondary">
+                Agrofit – Fungicidas e Nematicidas Registrados
+                </a>
+            </div>
+
+            <div class="small text-muted mt-2">
+                Conteúdo técnico adaptado de materiais de pesquisa da
+                Embrapa Hortaliças e literatura agronômica sobre o cultivo de cenoura (<em>Daucus carota</em> L.).
+            </div>
+        </div>
+    </footer>
+
+    <button
+        type="button"
+        class="btn btn-success btn-floating btn-lg"
+        id="btn-back-to-top"
+        style="position: fixed; bottom: 20px; right: 20px; display: none;"
+        aria-label="Voltar ao topo"
+        title="Voltar ao topo">
+        <i class="bi bi-arrow-up"></i>
+    </button>
+    <script src="../../js/ui-extras.js"></script>
+    <script src="../../../src/js/search.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

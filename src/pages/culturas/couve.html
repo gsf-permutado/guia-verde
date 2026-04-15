@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guia Verde | Couve</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="../../css/base.css">
+    <link rel="stylesheet" href="../../css/navbar.css">
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <i class="bi bi-leaf"></i>
+                Guia Verde
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item"><a class="nav-link active" href="../../../index.html">Início</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../../pages/navbar/sobre.html">Sobre</a></li>
+                </ul>
+                <form class="d-flex" role="search" onsubmit="buscar(event)">
+                    <input id="campoBusca" class="form-control me-2" type="search"
+                          placeholder="O que procura?" aria-label="Pesquisar">
+                    <button class="btn btn-warning" type="submit">Pesquisar</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container py-4">
+        <div class="d-flex mb-3">
+            <button type="button" onclick="history.back()" class="btn btn-secondary">
+                <i class="bi bi-arrow-left"></i> Voltar
+            </button>
+
+            <a href="../../../index.html" class="btn btn-success ms-auto">
+                Página Inicial
+            </a>
+        </div>
+
+        <div class="card mb-4 border-0 shadow-sm">
+            <div class="row g-0 align-items-center">
+
+                <!-- Texto -->
+                <div class="col-12 col-md-8">
+                    <div class="card-body">
+                        <h2 class="card-title">Couve (<em>Brassica oleracea</em> var. <em>acephala</em>)</h2>
+                        <p class="card-text">
+                            A couve, cujo nome científico é <em>Brassica oleracea</em> var. <em>acephala</em>, é uma das principais hortaliças folhosas cultivadas no Brasil, com destaque especial na agricultura familiar. Pertence à família Brassicaceae (sin. Cruciferae), sendo cultivada principalmente pelas folhas, ricas em fibras, vitaminas e compostos nutraceuticos. É amplamente consumida in natura e processada, estando entre as hortaliças mais tradicionais na mesa do brasileiro.
+                        </p>
+                        <h2>Descrição</h2>
+                        <p>
+                            A couve é uma planta herbácea anual ou bianual, cultivada como anual para fins comerciais. Sua parte comestível são as folhas, que podem ser de coloração verde-clara a verde-escura, com textura lisa (tipo manteiga) ou crespa, conforme a cultivar. É uma espécie de fácil propagação, tradicionalmente realizada de forma vegetativa por meio de brotos, embora cultivares híbridas propagadas por sementes estejam cada vez mais presentes no mercado nacional.
+                        </p>
+                        <h2>Principais Características:</h2>
+                        <ul>
+                            <li><strong>Nome científico:</strong> <em>Brassica oleracea</em> var. <em>acephala</em>.</li>
+                            <li><strong>Família botânica:</strong> Brassicaceae (sin. Cruciferae).</li>
+                            <li><strong>Hábito de crescimento:</strong> herbácea anual ou bianual, cultivada como anual.</li>
+                            <li><strong>Folhas:</strong> lisas ou crespas, verde-claras a verde-escuras, principal produto comercial.</li>
+                            <li><strong>Propagação:</strong> vegetativa (brotos/mudas) ou por sementes (cultivares híbridas).</li>
+                            <li><strong>Uso:</strong> consumo in natura, refogada, em sucos e chips, com propriedades nutricionais e medicinais reconhecidas.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Imagem -->
+                <div class="col-12 col-md-4">
+                    <img src="../../img/culturas-intro/couve.webp"
+                        class="img-fluid h-100 w-100 object-fit-cover"
+                        alt="Cultivo de Couve">
+                </div>
+
+            </div>
+        </div>
+
+        <section class="card mb-4">
+            <div class="card-body">
+                <h3 class="h4 mb-3">Variedades e Cultivares</h3>
+                <div class="table-responsive">
+                    <table class="table table-hover align-middle border">
+                        <thead class="table-success">
+                            <tr>
+                                <th>Grupo / Cultivar</th>
+                                <th>Característica Principal</th>
+                                <th>Destaque Técnico</th>
+                                <th>Propagação</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Couve-manteiga Portuguesa</strong></td>
+                                <td>Folhas lisas, verde-escuras, textura macia</td>
+                                <td>Cultivar de polinização aberta, propagada vegetativamente; amplamente cultivada no Brasil e predominante no Distrito Federal.</td>
+                                <td>Vegetativa</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Couve-manteiga da Geórgia</strong></td>
+                                <td>Folhas lisas, verde-claras a médias</td>
+                                <td>Cultivar de polinização aberta, propagada vegetativamente; boa rusticidade e adaptação a diferentes regiões.</td>
+                                <td>Vegetativa</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Hi-Crop (F1)</strong></td>
+                                <td>Folhas lisas, porte ereto, entrenós longos</td>
+                                <td>Híbrido com melhor desempenho em resistência à podridão negra e maior produção de folhas comerciais; destaque em sistemas orgânicos no DF.</td>
+                                <td>Sementes</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Redbor e Starbor (F1)</strong></td>
+                                <td>Folhas crespas, coloração ornamental</td>
+                                <td>Híbridos crespos de uso ornamental e culinário; suscetíveis à podridão mole em condições de campo, exigindo manejo sanitário rigoroso.</td>
+                                <td>Sementes</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="mt-3 text-center">
+                    <p class="text-muted small">
+                        Fonte: Dados técnicos adaptados de publicações da Embrapa Hortaliças sobre suscetibilidade de cultivares de couve à podridão negra e caracterização da produção de couve no Distrito Federal.
+                        Para mais informações acesse:
+                        <a href="https://www.embrapa.br/hortalica-nao-e-so-salada/couve#:~:text=A%20couve%20%C3%A9%20uma%20hortali%C3%A7a,fresco%2C%20por%20at%C3%A9%20um%20dia." target="_blank" rel="noopener">
+                            Portal Embrapa Hortaliças – Couve
+                        </a>
+                    </p>
+
+                    <div class="row g-3 justify-content-center">
+
+                        <div class="col-6 col-md-3">
+                            <figure class="figure">
+                                <img src="../../img/culturas-detalhe/couve-manteiga.webp" class="figure-img img-fluid rounded" alt="Couve-manteiga tipo manteiga">
+                                <figcaption class="figure-caption text-center">Foto de Raphael A. C. Melo, disponível na EMBRAPA</figcaption>
+                                <a href="http://www.infoteca.cnptia.embrapa.br/infoteca/handle/doc/1082620"
+                                target="_blank" rel="noopener">Tipo Manteiga</a>
+                            </figure>
+                        </div>
+
+                        <div class="col-6 col-md-3">
+                            <figure class="figure">
+                                <img src="../../img/culturas-detalhe/couve-hibrida.webp" class="figure-img img-fluid rounded" alt="Couve híbrida Hi-Crop">
+                                <figcaption class="figure-caption text-center">Imagem da Hi-Crop - Site TAKII, link abaixo</figcaption>
+                                <a href="https://takii.com.br/produto/hi-crop/"
+                                target="_blank" rel="noopener">Cultivares Híbridas</a>
+                            </figure>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="card mb-4">
+            <div class="card-body">
+                <h3 class="h4">Manejo e Plantio</h3>
+
+                <div class="row mt-3">
+                    <div class="col-md-7">
+
+                        <ul class="list-group list-group-flush">
+
+                            <li class="list-group-item">
+                                <strong>Preparo do solo:</strong> A couve adapta-se a diferentes tipos de solo, mas prefere solos bem drenados, ricos em matéria orgânica e com pH próximo a 6,0. Recomenda-se aração e gradagem para o preparo adequado da área. A totalidade dos produtores no Distrito Federal utiliza calcário previamente ao cultivo para correção do solo.
+                            </li>
+
+                            <li class="list-group-item">
+                                <strong>Mudas e Plantio:</strong> A propagação tradicional é vegetativa, por meio de brotos retirados de plantas adultas. Cultivares híbridas são propagadas por sementes, produzindo mudas em bandejas com substrato comercial. O plantio das mudas no campo é feito após cerca de 28 dias da semeadura. O espaçamento utilizado varia entre linhas simples e duplas, sendo 1,10 m entre linhas e 0,70 m entre plantas uma configuração comum no DF.
+                            </li>
+
+                            <li class="list-group-item">
+                                <strong>Irrigação:</strong> O sistema de irrigação por aspersão é o mais utilizado pelos produtores (cerca de 95% das áreas no DF), com rega diária utilizando lâminas em torno de 12 mm. O molhamento frequente das folhas favorece doenças da parte aérea; sistemas de microirrigação (microaspersão e gotejamento) são mais benéficos, porém ainda pouco adotados pelos produtores.
+                            </li>
+
+                            <li class="list-group-item">
+                                <strong>Adubação:</strong> Na adubação de plantio em sistemas convencionais, os formulados NPK 4-14-8 e 4-30-16 são os mais utilizados, combinados com cama de aviário. A adubação de cobertura utiliza predominantemente o formulado 20-0-20. Em sistemas orgânicos/agroecológicos, empregam-se compostos tipo Bokashi. Recomenda-se a realização de análise de solo para orientação das doses de corretivos e fertilizantes.
+                            </li>
+
+                            <li class="list-group-item">
+                                <strong>Colheita:</strong> A produção de couve ocorre o ano todo na maioria das propriedades do DF. As folhas comerciais são aquelas com comprimento igual ou superior a 30 cm. A colheita é escalonada ao longo do ciclo da cultura, com coletas periódicas das folhas mais desenvolvidas. Evitar injúrias mecânicas nas folhas durante a colheita é essencial para reduzir perdas pós-colheita.
+                            </li>
+
+                            <li class="list-group-item">
+                                <strong>Rotação de culturas:</strong> Prática fundamental para reduzir o inóculo de patógenos no solo, especialmente a bactéria <em>Xanthomonas campestris</em> pv. <em>campestris</em>. Recomenda-se evitar o cultivo sucessivo de plantas da mesma família (Brassicaceae) sem período adequado de rotação, incluindo repolho, brócolis e couve-flor.
+                            </li>
+
+                        </ul>
+
+                    </div>
+                </div>
+
+                <!-- Créditos e fonte técnica -->
+                <div class="mt-4 text-muted small">
+
+                    <p>
+                        <strong>Fontes técnicas:</strong>
+                    </p>
+
+                    <p>
+                        QUEZADO-DUVAL, A. M.; MELO, R. A. de C. e; SOARES, A. F. T. <em>Suscetibilidade de cultivares de couve à podridão negra no Distrito Federal</em>. Boletim de Pesquisa e Desenvolvimento nº 225. Embrapa Hortaliças, Brasília, DF, 2021.
+                        <a href="http://www.infoteca.cnptia.embrapa.br/infoteca/handle/doc/1132594" target="_blank" rel="noopener">
+                            Acesse o portal da Embrapa Hortaliças.
+                        </a>
+                    </p>
+
+                    <p>
+                        MELO, R. A. de C. e; LUENGO, R. de F. A.; COSTA JUNIOR, A. D.; BUTRUILLE, N. M. S. <em>Caracterização da produção de couve no Distrito Federal</em>. Documentos nº 155. Embrapa Hortaliças, Brasília, DF, 2017.
+                        <a href="http://www.infoteca.cnptia.embrapa.br/infoteca/handle/doc/1082620" target="_blank" rel="noopener">
+                            Acesse o portal da Embrapa Hortaliças.
+                        </a>
+                    </p>
+
+                    <p>
+                        TRANI, P. E. et al. <em>Couve de folha: do plantio à pós-colheita</em>. Boletim Técnico IAC, 214. Instituto Agronômico, Campinas, 2015.
+                    </p>
+
+                    <p>
+                        Portal Embrapa Hortaliças – Couve: clima, plantio e manejo:
+                        <a href="http://www.infoteca.cnptia.embrapa.br/infoteca/handle/doc/112928" target="_blank" rel="noopener">
+                            www.embrapa.br/hortalicas/couve
+                        </a>
+                    </p>
+
+                </div>
+
+            </div>
+        </section>
+
+        <section class="card mb-4">
+            <div class="card-body">
+
+                <h3 class="h4 text-danger">Manejo Integrado de Pragas e Doenças (MIP)</h3>
+
+                <h5 class="mt-3">Principais Pragas</h5>
+                <div class="table-responsive">
+                    <table class="table table-sm table-bordered mt-2">
+                        <thead class="table-dark text-center">
+                            <tr>
+                                <th>Praga</th>
+                                <th>Sintomas</th>
+                                <th>Manejo Recomendado</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Traça-das-crucíferas (<em>Plutella xylostella</em>)</strong></td>
+                                <td>Lagartas minadoras que consomem o mesófilo foliar, deixando janelas translúcidas nas folhas, comprometendo diretamente a comercialização.</td>
+                                <td>Monitoramento contínuo, uso de <em>Bacillus thuringiensis</em>, inseticidas piretróides e rotação de princípios ativos para evitar resistência.</td>
+                            </tr>
+
+                            <tr>
+                                <td><strong>Pulgões (<em>Brevicoryne brassicae</em>, <em>Myzus persicae</em>)</strong></td>
+                                <td>Insetos sugadores que causam deformação foliar, encarquilhamento e podem transmitir vírus; colônias formam agregados nas folhas novas e na face inferior.</td>
+                                <td>Monitoramento com armadilhas amarelas, eliminação de plantas daninhas hospedeiras, controle biológico por parasitoides e jato d'água nas colônias.</td>
+                            </tr>
+
+                            <tr>
+                                <td><strong>Mosca-branca (<em>Bemisia tabaci</em>)</strong></td>
+                                <td>Inseto sugador que provoca clorose foliar e secreção de honeydew, facilitando o desenvolvimento de fumagina; pode transmitir vírus.</td>
+                                <td>Monitoramento da lavoura, implantação de barreiras vegetais nas bordaduras, eliminação de plantas daninhas hospedeiras e controle biológico.</td>
+                            </tr>
+
+                            <tr>
+                                <td><strong>Lesmas e caracóis</strong></td>
+                                <td>Raspaduras e perfurações irregulares nas folhas, especialmente em períodos chuvosos e em áreas com excesso de matéria orgânica no solo.</td>
+                                <td>Evitar excesso de umidade na superfície do solo, eliminar restos culturais e plantas daninhas, uso de iscas granuladas registradas quando necessário.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h5 class="mt-4">Principais Doenças</h5>
+                <div class="table-responsive">
+                    <table class="table table-sm table-bordered mt-2">
+                        <thead class="table-dark text-center">
+                            <tr>
+                                <th>Doença (agente)</th>
+                                <th>Sintomas</th>
+                                <th>Manejo Recomendado</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Podridão negra (<em>Xanthomonas campestris</em> pv. <em>campestris</em>)</strong></td>
+                                <td>Amarelecimento marginal das folhas em formato de "V" seguido de necrose; nervuras escurecidas (enegrecidas); favorecida em verões quentes e chuvosos com irrigação por aspersão.</td>
+                                <td>Uso de cultivares com menor suscetibilidade (ex.: Hi-Crop), tratamento térmico das sementes (52 °C/30 min), rotação de culturas, evitar irrigação excessiva por aspersão e eliminação de plantas daninhas brassicáceas.</td>
+                            </tr>
+
+                            <tr>
+                                <td><strong>Podridão mole (<em>Pectobacterium carotovorum</em> subsp. <em>carotovorum</em>)</strong></td>
+                                <td>Apodrecimento aquoso e fétido dos tecidos foliares e da base do caule; favorecida por temperaturas elevadas, alta umidade e ferimentos nas plantas.</td>
+                                <td>Evitar ferimentos nas plantas, colher em condições adequadas de umidade, desinfecção de ferramentas, reduzir molhamento das folhas e melhorar drenagem do solo.</td>
+                            </tr>
+
+                            <tr>
+                                <td><strong>Míldio (<em>Peronospora brassicae</em>)</strong></td>
+                                <td>Manchas amareladas na face superior das folhas com esporulação acinzentada a violácea na face inferior; ocorre em condições de alta umidade e temperatura amena.</td>
+                                <td>Uso de sementes sadias tratadas, espaçamento adequado para ventilação, evitar excesso de irrigação e aplicação de fungicidas registrados quando necessário.</td>
+                            </tr>
+
+                            <tr>
+                                <td><strong>Alternariose (<em>Alternaria brassicae</em>, <em>A. brassicicola</em>)</strong></td>
+                                <td>Manchas circulares de coloração castanho-escura com anéis concêntricos nas folhas, podendo coalescer e causar necrose extensa; favorecida por alta umidade e temperaturas entre 25 e 30 °C.</td>
+                                <td>Sementes sadias tratadas com fungicidas, rotação de culturas com gramíneas, eliminação de restos culturais e aplicação de fungicidas registrados.</td>
+                            </tr>
+
+                            <tr>
+                                <td><strong>Hérnia-das-crucíferas (<em>Plasmodiophora brassicae</em>)</strong></td>
+                                <td>Formação de galhas nas raízes, murcha e amarelecimento das plantas; solo infestado mantém o patógeno por muitos anos; reboleiras na lavoura.</td>
+                                <td>Calagem do solo para elevar o pH acima de 7,2, rotação de culturas com não brassicáceas por pelo menos 4 anos, evitar movimentação de solo infestado e uso de mudas sadias.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="mt-3 text-muted small text-center">
+
+                    <p>
+                        Informações adaptadas de publicações técnicas sobre fitopatologia da cultura da couve (<em>Brassica oleracea</em> var. <em>acephala</em>).
+                    </p>
+
+                    <p>
+                        <strong>Referências principais:</strong>
+                    </p>
+
+                    <p>
+                        QUEZADO-DUVAL, A. M.; MELO, R. A. de C. e; SOARES, A. F. T. <em>Suscetibilidade de cultivares de couve à podridão negra no Distrito Federal</em>. Boletim de Pesquisa e Desenvolvimento nº 225. Embrapa Hortaliças, 2021. 🔗
+                        <a href="http://www.infoteca.cnptia.embrapa.br/infoteca/handle/doc/1132594" target="_blank" rel="noopener">
+                            Acesse o portal.
+                        </a>
+                    </p>
+
+                    <p>
+                        LOPES, C. A.; QUEZADO-SOARES, A. M. <em>Doenças bacterianas das hortaliças: diagnose e controle</em>. Embrapa-CNPH, Brasília, DF, 1997. 🔗
+                        <a href="http://livimagens.sct.embrapa.br/amostras/00063200.pdf" target="_blank" rel="noopener">
+                            Acesse a publicação.
+                        </a>
+                    </p>
+
+                    <p>
+                        MELO, R. A. de C. e et al. <em>Caracterização da produção de couve no Distrito Federal</em>. Documentos nº 155. Embrapa Hortaliças, 2017. 🔗
+                        <a href="http://www.infoteca.cnptia.embrapa.br/infoteca/handle/doc/1082620" target="_blank" rel="noopener">
+                            Acesse o documento técnico.
+                        </a>
+                    </p>
+
+                    <p>
+                        Fungicidas e bactericidas registrados – Sistema Agrofit/MAPA. 🔗
+                        <a href="https://www.gov.br/agricultura/pt-br/assuntos/insumos-agropecuarios/insumos-agricolas/agrotoxicos/agrofit" target="_blank" rel="noopener">
+                            Acesse o Agrofit.
+                        </a>
+                    </p>
+
+                </div>
+
+            </div>
+        </section>
+
+        <div class="alert alert-warning d-flex align-items-center">
+            <i class="bi bi-thermometer-half fs-3 me-3"></i>
+            <div class="alert alert-warning mt-3">
+                <strong>Alerta de Temperatura e Estação:</strong>
+                A couve é sensível às condições climáticas do verão. A podridão negra e a podridão mole são favorecidas por verões quentes e chuvosos (novembro a maio no DF), período em que há maior incidência e severidade das doenças. Temperaturas elevadas combinadas com irrigação por aspersão frequente aumentam significativamente o risco fitossanitário.
+                A colheita no verão é mais arriscada, porém apresenta possibilidade de maiores preços no mercado. Recomenda-se redobrar o monitoramento e adotar medidas preventivas nesse período.
+            </div>
+        </div>
+    </main>
+
+    <footer class="py-5 bg-light border-top">
+        <div class="container text-center">
+            <p class="text-muted fw-bold mb-1">Guia Verde – 2026</p>
+
+            <div class="small text-muted">
+                Fontes técnicas:
+                <a href="https://www.embrapa.br/hortalicas"
+                target="_blank"
+                rel="noopener"
+                class="text-decoration-none text-secondary">
+                Embrapa Hortaliças
+                </a> |
+
+                <a href="http://www.infoteca.cnptia.embrapa.br/infoteca/handle/doc/1135838"
+                target="_blank"
+                rel="noopener"
+                class="text-decoration-none text-secondary">
+                Podridão Negra da Couve (BPD-225)
+                </a> |
+
+                <a href="http://www.agricultura.gov.br/servicos-e-sistemas/sistemas/agrofit"
+                target="_blank"
+                rel="noopener"
+                class="text-decoration-none text-secondary">
+                Agrofit – Fungicidas e Bactericidas Registrados
+                </a>
+            </div>
+
+            <div class="small text-muted mt-2">
+                Conteúdo técnico adaptado de materiais de pesquisa da
+                Embrapa Hortaliças e literatura agronômica sobre o cultivo de couve (<em>Brassica oleracea</em> var. <em>acephala</em>).
+            </div>
+        </div>
+    </footer>
+
+    <button
+        type="button"
+        class="btn btn-success btn-floating btn-lg"
+        id="btn-back-to-top"
+        style="position: fixed; bottom: 20px; right: 20px; display: none;"
+        aria-label="Voltar ao topo"
+        title="Voltar ao topo">
+        <i class="bi bi-arrow-up"></i>
+    </button>
+    <script src="../../js/ui-extras.js"></script>
+    <script src="../../../src/js/search.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

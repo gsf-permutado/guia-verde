@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guia Verde | Mandioca</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="../../css/base.css">
+    <link rel="stylesheet" href="../../css/navbar.css">
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <i class="bi bi-leaf"></i>
+                Guia Verde
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item"><a class="nav-link active" href="../../../index.html">Início</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../../pages/navbar/sobre.html">Sobre</a></li>
+                </ul>
+                <form class="d-flex" role="search" onsubmit="buscar(event)">
+                    <input id="campoBusca" class="form-control me-2" type="search"
+                          placeholder="O que procura?" aria-label="Pesquisar">
+                    <button class="btn btn-warning" type="submit">Pesquisar</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container py-4">
+        <div class="d-flex mb-3">
+            <button type="button" onclick="history.back()" class="btn btn-secondary">
+                <i class="bi bi-arrow-left"></i> Voltar
+            </button>
+
+            <a href="../../../index.html" class="btn btn-success ms-auto">
+                Página Inicial
+            </a>
+        </div>
+
+        <div class="card mb-4 border-0 shadow-sm">
+            <div class="row g-0 align-items-center">
+
+                <!-- Texto -->
+                <div class="col-12 col-md-8">
+                    <div class="card-body">
+                        <h2 class="card-title">Mandioca (<em>Manihot esculenta</em> Crantz)</h2>
+                        <p class="card-text">
+                            A mandioca, cujo nome científico é <em>Manihot esculenta</em> Crantz, desempenha fundamental importância econômica e social, principalmente em países da América do Sul, África e Ásia. No Brasil, é utilizada tanto para alimentação humana (farinha, cozidas e derivados como bolos e tapiocas) quanto animal, a exemplo de raízes desidratadas e parte aérea. Em termos de valor de produção, a cultura ocupa a 6ª posição entre os produtos mais cultivados no país, depois de soja, cana-de-açúcar, milho, café e algodão herbáceo.
+                        </p>
+                        <h2>Descrição</h2>
+                        <p>
+                            A mandioca é uma planta arbustiva perene, cultivada como anual ou bianual para fins comerciais. Sua parte comestível é a raiz tuberosa, rica em amido, amplamente utilizada na produção de farinha, fécula, tapioca e outros derivados. A parte aérea (hastes e folhas) também tem grande valor nutritivo, sendo utilizada na alimentação animal. A fécula de mandioca é utilizada ainda nos setores de cosméticos, farmacêutica e alimentícios.
+                        </p>
+                        <h2>Principais Características:</h2>
+                        <ul>
+                            <li><strong>Nome científico:</strong> <em>Manihot esculenta</em> Crantz.</li>
+                            <li><strong>Família botânica:</strong> Euphorbiaceae.</li>
+                            <li><strong>Hábito de crescimento:</strong> arbustiva perene, cultivada como anual ou bianual.</li>
+                            <li><strong>Raiz:</strong> tuberosa, rica em amido, principal produto comercial.</li>
+                            <li><strong>Hastes:</strong> utilizadas como material de propagação vegetativa (manivas-semente).</li>
+                            <li><strong>Propagação:</strong> vegetativa, por meio de estacas de haste denominadas manivas.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Imagem -->
+                <div class="col-12 col-md-4">
+                    <img src="../../img/culturas-intro/mandioca.webp"
+                        class="img-fluid h-100 w-100 object-fit-cover"
+                        alt="Cultivo de Mandioca">
+                </div>
+
+            </div>
+        </div>
+
+        <section class="card mb-4">
+            <div class="card-body">
+                <h3 class="h4 mb-3">Variedades e Cultivares</h3>
+                <div class="table-responsive">
+                    <table class="table table-hover align-middle border">
+                        <thead class="table-success">
+                            <tr>
+                                <th>Tipo / Classificação</th>
+                                <th>Característica Principal</th>
+                                <th>Destaque Técnico</th>
+                                <th>Ciclo (meses)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Tipo Mesa (Macaxeira / Aipim)</strong></td>
+                                <td>Teor de HCN inferior a 50 mg/kg; raízes com polpa branca, creme ou amarela</td>
+                                <td>Consumo direto cozida ou frita; raízes com 20–30 cm de comprimento e 5–8 cm de diâmetro; facilidade de descascamento e curto tempo de cozimento.</td>
+                                <td>10 – 14</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Tipo Indústria (Farinha e Amido)</strong></td>
+                                <td>Teor de HCN superior a 50 mg/kg; alta produtividade de raízes e amido</td>
+                                <td>Indicada para produção de farinha, fécula e derivados industriais; cultivares com hastes retilíneas facilitam o plantio mecanizado.</td>
+                                <td>12 – 18</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Plantio Consorciado</strong></td>
+                                <td>Cultivares de porte compatível com culturas consortes</td>
+                                <td>Predominante no Nordeste; principal sistema de produção dos agricultores familiares. As culturas consortes mais comuns são milho e feijão-caupi.</td>
+                                <td>12 – 18</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="mt-3 text-center">
+                    <p class="text-muted small">
+                        Fonte: Dados técnicos adaptados de publicações da Embrapa Mandioca e Fruticultura e da Embrapa Tabuleiros Costeiros sobre o sistema de produção de mandioca.
+                        Para mais informações acesse:
+                        <a href="https://www.embrapa.br/mandioca-e-fruticultura" target="_blank" rel="noopener">
+                            Portal Embrapa Mandioca e Fruticultura
+                        </a>
+                    </p>
+                    <p>
+                        <a href="https://www.embrapa.br/mandioca-e-fruticultura/cultivos/mandioca" target="_blank" rel="noopener">
+                            Veja também as cultivares na seção Variedades de uso industrial - EMBRAPA
+                        </a>
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="card mb-4">
+            <div class="card-body">
+                <h3 class="h4">Manejo e Plantio</h3>
+
+                <div class="row mt-3">
+                    <div class="col-md-7">
+
+                        <ul class="list-group list-group-flush">
+
+                            <li class="list-group-item">
+                                <strong>Época de plantio e escolha da área:</strong> Na Região Nordeste, a época ideal de plantio é no início das chuvas, variando entre os estados. Deve-se evitar solos com declividades acentuadas e áreas sujeitas ao encharcamento, pois as raízes podem apodrecer. É essencial realizar análise de solo antes do plantio, coletando 20 amostras simples por área homogênea (profundidade de 0–20 cm) e enviando ao laboratório.
+                            </li>
+
+                            <li class="list-group-item">
+                                <strong>Preparo da área:</strong> São utilizados dois métodos: manual, característico de agricultores familiares que consorciam a mandioca com outras culturas; e mecanizado, com uso de grade e sulcador ou preparo de canteiros de 30–40 cm de altura. O espaçamento mais indicado é de 1,00 m entre linhas e 0,60 m entre plantas, podendo ser reduzido para 0,80 m entre linhas para favorecer o sombreamento das entrelinhas e o controle de plantas daninhas.
+                            </li>
+
+                            <li class="list-group-item">
+                                <strong>Material de plantio (Manivas):</strong> A maniva é a "semente" da mandioca. Devem ser selecionadas plantas sadias, sem ataque de pragas e doenças, com aproximadamente 12 meses de idade, evitando-se as extremidades das hastes e preferindo o terço médio. As manivas devem ser cortadas com cerca de 20 cm de comprimento (6 a 7 gemas viáveis). O armazenamento não deve ultrapassar 30 dias, em local fresco e ventilado, à sombra. O "teste do leite" (presença de látex ao corte) confirma a viabilidade do material.
+                            </li>
+
+                            <li class="list-group-item">
+                                <strong>Adubação:</strong> Baseada em análise de solo. Para produção de 25 t de raízes são extraídos 123 kg de N, 27 kg de P, 146 kg de K, 46 kg de Ca e 20 kg de Mg. A adubação fosfatada deve ser aplicada integralmente no plantio (superfosfato simples ou triplo). A adubação nitrogenada (sulfato de amônio ou ureia) deve ser fracionada em duas etapas: no plantio e aos 30–60 dias após a emergência. O cloreto de potássio (KCl) é aplicado em fundação, podendo ser parcelado em solos muito arenosos.
+                            </li>
+
+                            <li class="list-group-item">
+                                <strong>Sistemas de plantio consorciado:</strong> Sistema predominante no Nordeste, especialmente entre agricultores familiares. A mandioca pode ser consorciada com fumo, feijão, amendoim, feijão-vagem e milho. A mandioca não tolera sombreamento, portanto o porte e o ciclo das culturas consortes são fundamentais. O sistema de fileiras duplas (2,00 m × 0,60 m × 0,60 m) permite produção organizada e facilita a mecanização.
+                            </li>
+
+                            <li class="list-group-item">
+                                <strong>Controle de plantas infestantes:</strong> Nos primeiros quatro a cinco meses do ciclo, a mandioca é sensível à competição com plantas daninhas, exigindo cerca de 100 dias livres de interferência. Recomenda-se a capina sempre que possível. O controle químico deve utilizar somente produtos registrados para a cultura, nas dosagens recomendadas.
+                            </li>
+
+                            <li class="list-group-item">
+                                <strong>Colheita:</strong> Realizada a partir dos 12 meses de idade da planta, podendo se estender até 18 meses ou mais dependendo da cultivar e do mercado. No sistema consorciado, a colheita da cultura de ciclo mais curto deve preceder a colheita da mandioca. Recomenda-se colher em solo com umidade adequada para evitar danos às raízes e reduzir a incidência de podridões pós-colheita.
+                            </li>
+
+                        </ul>
+
+                    </div>
+                </div>
+
+                <!-- Créditos e fonte técnica -->
+                <div class="mt-4 text-muted small">
+
+                    <p>
+                        <strong>Fontes técnicas:</strong>
+                    </p>
+
+                    <p>
+                        SANTIAGO, A. D. et al. <em>Práticas para Produção de Mandioca por Agricultores Familiares na Região do Sealba</em>. Embrapa Tabuleiros Costeiros, Brasília, DF, 2023.
+                        <a href="https://www.embrapa.br/tabuleiros-costeiros" target="_blank" rel="noopener">
+                            Acesse o portal da Embrapa Tabuleiros Costeiros.
+                        </a>
+                    </p>
+
+                    <p>
+                        GOMES, J. C.; LEAL, E. C. <em>Cultivo da mandioca para a região dos tabuleiros costeiros</em>. Cruz das Almas: Embrapa Mandioca e Fruticultura, 2003. (Sistemas de produção, 11).
+                    </p>
+
+                    <p>
+                        Portal Embrapa Mandioca e Fruticultura:
+                        <a href="https://www.embrapa.br/mandioca-e-fruticultura" target="_blank" rel="noopener">
+                            www.embrapa.br/mandioca-e-fruticultura
+                        </a>
+                    </p>
+
+                </div>
+
+            </div>
+        </section>
+
+        <section class="card mb-4">
+            <div class="card-body">
+
+                <h3 class="h4 text-danger">Manejo Integrado de Pragas e Doenças (MIP)</h3>
+
+                <h5 class="mt-3">Principais Pragas</h5>
+                <div class="table-responsive">
+                    <table class="table table-sm table-bordered mt-2">
+                        <thead class="table-dark text-center">
+                            <tr>
+                                <th>Praga</th>
+                                <th>Sintomas</th>
+                                <th>Manejo Recomendado</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Mandarová (<em>Erinnyis ello</em>)</strong></td>
+                                <td>Lagartas (verde ou escura) de grande voracidade que consomem as folhas em poucos dias, podendo causar desfolha completa da lavoura e redução drástica da produção de raízes. A destruição da copa favorece também o desenvolvimento de plantas daninhas.</td>
+                                <td>Monitoramento periódico; catação manual em pequenas áreas; inseticidas à base de <em>Bacillus thuringiensis</em>; uso de <em>Baculovirus erinnyis</em> (pode ser preparado pelo próprio produtor com lagartas mortas, aplicando ao final da tarde). Inseticidas registrados (Agrofit) sob orientação técnica.</td>
+                            </tr>
+
+                            <tr>
+                                <td><strong>Percevejo-de-renda (<em>Vatiga illudens</em>)</strong></td>
+                                <td>Ocorre principalmente no período seco. Manchas amareladas e marrom-avermelhadas nas folhas basais e medianas, podendo evoluir para as folhas apicais em ataques severos, causando desfolhamento e redução da produtividade.</td>
+                                <td>Atualmente não há produtos registrados para controle desta praga. O uso de variedades tolerantes é a medida mais indicada.</td>
+                            </tr>
+
+                            <tr>
+                                <td><strong>Ácaro-verde e ácaro-rajado (<em>Mononychellus tanajoa</em> e <em>Tetranychus urticae</em>)</strong></td>
+                                <td>Ocorrem no período seco. Folhas cloróticas e com bronzeamento; o ácaro-verde ataca brotos e folhas jovens (deformadas e amareladas); o ácaro-rajado ataca folhas medianas e basais (cor marrom). Em casos graves, as folhas secam e caem, podendo matar a planta.</td>
+                                <td>Práticas integradas: destruição de plantas hospedeiras; inspeções periódicas; destruição de restos culturais; seleção de material de plantio livre de ácaros; distribuição adequada das plantas. O uso de acaricidas não é recomendável, pois não há produtos registrados para a cultura.</td>
+                            </tr>
+
+                            <tr>
+                                <td><strong>Mosca-do-broto (<em>Neosilba</em> spp.)</strong></td>
+                                <td>Larvas alimentam-se das novas brotações, causando quebra da dominância apical e prejudicando o desenvolvimento das plantas, com surgimento de múltiplas brotações laterais.</td>
+                                <td>Eliminação e enterrio ou queima dos brotos atacados. Inseticidas registrados (Agrofit) sob orientação técnica.</td>
+                            </tr>
+
+                            <tr>
+                                <td><strong>Mosca-das-galhas (<em>Jatrophobia brasiliensis</em>)</strong></td>
+                                <td>Comum nos primeiros 90 dias. Estruturas semelhantes a brincos ou verrugas na superfície superior das folhas (verde ou avermelhadas), como reação da planta ao ataque.</td>
+                                <td>Em ocorrências severas, recomenda-se eliminação e destruição das folhas atacadas. Não há produtos registrados para esta praga.</td>
+                            </tr>
+
+                            <tr>
+                                <td><strong>Moscas-brancas (<em>Aleurothrixus aepim</em>, <em>Bemisia</em> spp.)</strong></td>
+                                <td>Insetos pequenos de coloração branca que sugam as folhas, causando enfraquecimento da planta, queda de folhas (100% em casos severos) e redução da qualidade e quantidade de raízes. Favorecem o desenvolvimento da fumagina (<em>Capnodium</em> sp.).</td>
+                                <td>Existem produtos químicos registrados apenas para <em>Bemisia tabaci</em> (Agrofit). Uso sob recomendação de profissional habilitado.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h5 class="mt-4">Principais Doenças</h5>
+                <div class="table-responsive">
+                    <table class="table table-sm table-bordered mt-2">
+                        <thead class="table-dark text-center">
+                            <tr>
+                                <th>Doença (agente)</th>
+                                <th>Sintomas</th>
+                                <th>Manejo Recomendado</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Cercosporioses (<em>Cercosporidium henningsii</em>, <em>Cercospora vicosae</em>)</strong></td>
+                                <td>Redução da produção de folhas e da produtividade de raízes e amido. Os prejuízos não são relevantes na maioria das ocorrências.</td>
+                                <td>Na maioria dos casos não é necessário controle com fungicidas. Uso de cultivares tolerantes e manejo preventivo do plantio.</td>
+                            </tr>
+
+                            <tr>
+                                <td><strong>Antracnose (<em>Colletotrichum gloeosporioides</em> f.sp. <em>manihotis</em>)</strong></td>
+                                <td>Redução da produção de folhas e produtividade geral. Os danos geralmente não justificam medidas de controle químico na maioria das situações.</td>
+                                <td>Uso de material de plantio sadio; manejo preventivo. Controle com fungicidas raramente necessário.</td>
+                            </tr>
+
+                            <tr>
+                                <td><strong>Oídio (<em>Oidium manihotis</em>)</strong></td>
+                                <td>Estruturas pulverulentas esbranquiçadas sobre as folhas, causando redução da área fotossintética. Na maioria das ocorrências, não provoca prejuízos relevantes.</td>
+                                <td>Uso de cultivares tolerantes. Medidas de controle com fungicidas geralmente não são indicadas.</td>
+                            </tr>
+
+                            <tr>
+                                <td><strong>Podridão-mole (radicular) (<em>Fusarium</em> spp., <em>Phytophthora</em> spp., <em>Pythium</em> spp.)</strong></td>
+                                <td>Primeiro sintoma são folhas amareladas e murchas que caem; raízes em estado de putrefação com aspecto aquoso e odor desagradável. Pode causar perdas de até 100%. Ocorre mais em plantas adultas, mas também em plantas jovens.</td>
+                                <td>Conjunto de medidas: uso de manivas de plantios sadios; plantio em canteiros ou camalhões em áreas mal drenadas; rotação de cultura com gramíneas (ex.: milho) quando houver frustração de safra; evitar encharcamento do solo.</td>
+                            </tr>
+
+                            <tr>
+                                <td><strong>Podridão-seca (radicular) (<em>Armillaria mellea</em>, <em>Sclerotium rolfsii</em>, <em>Rosellinia necatrix</em>)</strong></td>
+                                <td>Raízes com podridão de consistência seca, sem desintegração e sem odor desagradável, diferenciando-se da podridão-mole. Pode causar perdas severas na lavoura.</td>
+                                <td>Uso de manivas sadias; rotação de cultura; plantio em áreas bem drenadas; monitoramento e eliminação de plantas sintomáticas.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="mt-3 text-muted small text-center">
+
+                    <p>
+                        Informações adaptadas de publicações técnicas sobre fitossanidade da cultura da mandioca (<em>Manihot esculenta</em> Crantz).
+                    </p>
+
+                    <p>
+                        <strong>Referências principais:</strong>
+                    </p>
+
+                    <p>
+                        SANTIAGO, A. D. et al. <em>Práticas para Produção de Mandioca por Agricultores Familiares na Região do Sealba</em>. Embrapa Tabuleiros Costeiros, Brasília, DF, 2023. 🔗
+                        <a href="http://www.infoteca.cnptia.embrapa.br/infoteca/handle/doc/1155717" target="_blank" rel="noopener">
+                            Acesse o portal.
+                        </a>
+                    </p>
+
+                    <p>
+                        ANJOS, J. R. N. et al. <em>Principais doenças da mandioca no cerrado</em>. In: Mandioca no Cerrado: orientações técnicas. Embrapa Cerrados, 2013. 🔗
+                        <a href="http://www.infoteca.cnptia.embrapa.br/infoteca/handle/doc/981357" target="_blank" rel="noopener">
+                            Acesse a publicação.
+                        </a>
+                    </p>
+
+                    <p>
+                        Fungicidas e inseticidas registrados – Sistema Agrofit/MAPA. 🔗
+                        <a href="https://www.gov.br/agricultura/pt-br/assuntos/insumos-agropecuarios/insumos-agricolas/agrotoxicos/agrofit" target="_blank" rel="noopener">
+                            Acesse o Agrofit.
+                        </a>
+                    </p>
+
+                </div>
+
+            </div>
+        </section>
+
+        <div class="alert alert-warning d-flex align-items-center">
+            <i class="bi bi-thermometer-half fs-3 me-3"></i>
+            <div class="alert alert-warning mt-3">
+                <strong>Atenção ao Plantio:</strong>
+                A época ideal de plantio para o Distrito Federal e Entorno compreende o período de outubro a dezembro. Este intervalo coincide com o estabelecimento das chuvas de verão, fator crítico pois a umidade do solo é o gatilho biológico para a ativação das gemas das manivas e a formação inicial do sistema radicular.
+                <ul>
+                    <li>Balanço Hídrico: Plantios realizados após dezembro enfrentam maior risco de veranicos (períodos secos em pleno verão) que podem comprometer o vigor das mudas.</li>
+                    <li>Vigor Germinativo: O uso de manivas armazenadas por mais de 30 dias reduz drasticamente a taxa de brotação. Recomenda-se que a rama tenha entre 10 e 12 meses de idade, sendo retirada do terço médio da planta mãe.</li>
+                </ul>
+            </div>
+        </div>
+    </main>
+
+    <footer class="py-5 bg-light border-top">
+        <div class="container text-center">
+            <p class="text-muted fw-bold mb-1">Guia Verde – 2026</p>
+
+            <div class="small text-muted">
+                Fontes técnicas:
+                <a href="https://www.embrapa.br/mandioca-e-fruticultura"
+                target="_blank"
+                rel="noopener"
+                class="text-decoration-none text-secondary">
+                Embrapa Mandioca e Fruticultura
+                </a> |
+
+                <a href="https://www.embrapa.br/tabuleiros-costeiros"
+                target="_blank"
+                rel="noopener"
+                class="text-decoration-none text-secondary">
+                Embrapa Tabuleiros Costeiros
+                </a> |
+
+                <a href="http://www.agricultura.gov.br/servicos-e-sistemas/sistemas/agrofit"
+                target="_blank"
+                rel="noopener"
+                class="text-decoration-none text-secondary">
+                Agrofit – Inseticidas e Fungicidas Registrados
+                </a>
+            </div>
+
+            <div class="small text-muted mt-2">
+                Conteúdo técnico adaptado de materiais de pesquisa da
+                Embrapa Tabuleiros Costeiros e literatura agronômica sobre o cultivo de mandioca (<em>Manihot esculenta</em> Crantz).
+            </div>
+        </div>
+    </footer>
+
+    <button
+        type="button"
+        class="btn btn-success btn-floating btn-lg"
+        id="btn-back-to-top"
+        style="position: fixed; bottom: 20px; right: 20px; display: none;"
+        aria-label="Voltar ao topo"
+        title="Voltar ao topo">
+        <i class="bi bi-arrow-up"></i>
+    </button>
+    <script src="../../js/ui-extras.js"></script>
+    <script src="../../../src/js/search.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
