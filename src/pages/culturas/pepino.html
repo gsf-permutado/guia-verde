@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guia Verde | Pepino</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="../../css/base.css">
+    <link rel="stylesheet" href="../../css/navbar.css">
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <i class="bi bi-leaf"></i>
+                Guia Verde
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item"><a class="nav-link active" href="../../../index.html">Início</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../../pages/navbar/sobre.html">Sobre</a></li>
+                </ul>
+                <form class="d-flex" role="search" onsubmit="buscar(event)">
+                    <input id="campoBusca" class="form-control me-2" type="search"
+                          placeholder="O que procura?" aria-label="Pesquisar">
+                    <button class="btn btn-warning" type="submit">Pesquisar</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container py-4">
+        <div class="d-flex mb-3">
+            <button type="button" onclick="history.back()" class="btn btn-secondary">
+                <i class="bi bi-arrow-left"></i> Voltar
+            </button>
+
+            <a href="../../../index.html" class="btn btn-success ms-auto">
+                Página Inicial
+            </a>
+        </div>
+
+        <div class="card mb-4 border-0 shadow-sm">
+            <div class="row g-0 align-items-center">
+
+                <!-- Texto -->
+                <div class="col-12 col-md-8">
+                    <div class="card-body">
+                        <h2 class="card-title">Pepino (<em>Cucumis sativus</em>)</h2>
+                        <p class="card-text">
+                            O pepino, cujo nome científico é <em>Cucumis sativus</em>, tem grande importância econômica e social dentro do agronegócio de hortaliças no Brasil. É muito apreciado e consumido em todas as regiões brasileiras. O fruto pode ser consumido na forma crua em saladas, sanduíches, sopas ou em conservas. Além disto, pode ser utilizado em cosméticos e medicamentos devido a suas propriedades nutracêuticas.
+                        </p>
+                        <h2>Descrição</h2>
+                        <p>
+                            O pepino é uma planta trepadeira anual da família Cucurbitaceae. Seus frutos são alongados, de coloração verde, com polpa branca e aquosa. A China é responsável por aproximadamente 60% da produção mundial de pepino. A produção anual brasileira ultrapassa 200.000 toneladas, com a região Sudeste respondendo por mais de 50% do total nacional, sendo São Paulo o principal estado produtor.
+                        </p>
+                        <h2>Principais Características:</h2>
+                        <ul>
+                            <li><strong>Nome científico:</strong> <em>Cucumis sativus</em> L.</li>
+                            <li><strong>Família botânica:</strong> Cucurbitaceae.</li>
+                            <li><strong>Hábito de crescimento:</strong> herbácea anual, trepadeira ou rasteira.</li>
+                            <li><strong>Frutos:</strong> alongados, cilíndricos, coloração verde, polpa branca e aquosa.</li>
+                            <li><strong>Flor:</strong> amarela, unissexual, presente na mesma planta (monoica).</li>
+                            <li><strong>Propagação:</strong> por sementes, semeadura direta ou transplante de mudas.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Imagem -->
+                <div class="col-12 col-md-4">
+                    <img src="../../img/culturas-intro/pepino.webp"
+                        class="img-fluid h-100 w-100 object-fit-cover"
+                        alt="Cultivo de Pepino">
+                </div>
+
+            </div>
+        </div>
+
+        <section class="card mb-4">
+            <div class="card-body">
+                <h3 class="h4 mb-3">Variedades e Cultivares</h3>
+                <div class="table-responsive">
+                    <table class="table table-hover align-middle border">
+                        <thead class="table-success">
+                            <tr>
+                                <th>Tipo / Cultivar</th>
+                                <th>Característica Principal</th>
+                                <th>Destaque Técnico</th>
+                                <th>Comprimento na Colheita (cm)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Caipira</strong></td>
+                                <td>Frutos verde-claros com listras longitudinais e "barriga branca"</td>
+                                <td>Único tipo adaptado ao cultivo rasteiro em campo aberto; sabor agradável, livre de amargor; cultivares com acúleos brancos apresentam melhor conservação pós-colheita.</td>
+                                <td>12 - 15</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Aodai / Comum</strong></td>
+                                <td>Frutos verde-escuros, cilíndricos</td>
+                                <td>Principal grupo em volume de comercialização no Brasil; cultivado exclusivamente em sistema tutorado; sabor muito apreciado em regiões metropolitanas.</td>
+                                <td>21 - 23</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Japonês / Aonaga</strong></td>
+                                <td>Frutos triloculados, verde-escuros, alongados, com espinhos brancos</td>
+                                <td>Predominantemente cultivado em casas de vegetação; maioria das cultivares partenocárpicas; mais exigente em manejo; bem aceito por mercados diferenciados.</td>
+                                <td>20 - 30</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Conserva / Indústria</strong></td>
+                                <td>Frutos verde-escuros, triloculados, colhidos precocemente</td>
+                                <td>Destinado à industrialização (picles); principais produtores nos estados do Sul, especialmente Santa Catarina; colheitas diárias favoráveis devido ao rápido crescimento.</td>
+                                <td>5 - 7</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="mt-3 text-center">
+                    <p class="text-muted small">
+                        Fonte: Dados técnicos adaptados de publicações da Embrapa e literatura agronômica sobre o cultivo de pepino.
+                        Para mais informações acesse:
+                        <a href="https://www.embrapa.br/hortalicas" target="_blank" rel="noopener">
+                            Portal Embrapa Hortaliças
+                        </a>
+                    </p>
+
+                    <div class="row g-3 justify-content-center">
+
+                        <div class="col-6 col-md-3">
+                            <figure class="figure">
+                                <img src="../../img/culturas-detalhe/pepino-caipira.webp" class="figure-img img-fluid rounded" alt="Pepino Caipira">
+                                <figcaption class="figure-caption text-center">Caipira</figcaption>
+                            </figure>
+                        </div>
+
+                        <div class="col-6 col-md-3">
+                            <figure class="figure">
+                                <img src="../../img/culturas-detalhe/pepino-japones.webp" class="figure-img img-fluid rounded" alt="Pepino Japonês em Cultivo Protegido">
+                                <figcaption class="figure-caption text-center">Japonês (cultivo protegido)</figcaption>
+                            </figure>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="card mb-4">
+            <div class="card-body">
+                <h3 class="h4">Manejo e Plantio</h3>
+
+                <div class="row mt-3">
+                    <div class="col-md-7">
+
+                        <ul class="list-group list-group-flush">
+
+                            <li class="list-group-item">
+                                <strong>Propagação:</strong> O plantio pode ser feito tanto por semeadura direta quanto por transplante de mudas. A semeadura em sulcos é preferível à semeadura em covas, pois favorece o desenvolvimento do sistema radicular e melhor aproveitamento de água e nutrientes. Para cultivares híbridas, recomenda-se a produção de mudas em bandejas de polipropileno de 128 células.
+                            </li>
+
+                            <li class="list-group-item">
+                                <strong>Transplante / Semeadura direta:</strong> Mudas produzidas em bandejas estão prontas para o plantio entre 8 e 10 dias após a semeadura. A profundidade de plantio é de 1,5 a 2 cm. No cultivo tutorado, o espaçamento recomendado é de 1 m entre linhas e 0,4 a 0,6 m entre plantas, com uma planta por cova. No cultivo rasteiro para consumo in natura, utiliza-se 1,5 x 1 m com 2 plantas por cova.
+                            </li>
+
+                            <li class="list-group-item">
+                                <strong>Tutoramento:</strong> A campo, o tutoramento é realizado com estacas de bambu rachadas ao meio em forma de "V" invertido a 1,7 m de altura. Os segmentos caipira e conserva adaptam-se ao cultivo rasteiro; o aodai é exclusivamente tutorado; o japonês deve ser conduzido em cultivo protegido e tutorado.
+                            </li>
+
+                            <li class="list-group-item">
+                                <strong>Irrigação:</strong> O pepino é exigente em água — o estresse hídrico afeta desde a fotossíntese até o metabolismo dos carboidratos. A umidade do solo deve ser mantida próxima à capacidade de campo. Em campo aberto predomina a irrigação por aspersão; em cultivo protegido o gotejamento é o mais indicado, pois reduz doenças foliares e permite a fertirrigação.
+                            </li>
+
+                            <li class="list-group-item">
+                                <strong>Solo:</strong> Prefere solos de textura média, leves, profundos, férteis, bem drenados e com alto teor de matéria orgânica. Solos pesados com histórico de mecanização intensa devem ser evitados. O pH ideal é entre 5,6 e 6,8. Calagem ou fosfatagem, quando recomendadas, devem ser feitas pelo menos dois meses antes do plantio.
+                            </li>
+
+                            <li class="list-group-item">
+                                <strong>Adubação:</strong> A adubação orgânica deve ser aplicada na dose de 30 t/ha de esterco bovino, 8 t/ha de esterco avícola ou 2,5 t/ha de torta de mamona fermentada, de 20 a 30 dias antes da semeadura. Na adubação mineral, recomenda-se geralmente 120 kg/ha de N, 120 a 250 kg/ha de K e 60 a 300 kg/ha de P, parcelados conforme análise de solo. A fertirrigação com fertilizantes solúveis permite melhor aproveitamento dos nutrientes.
+                            </li>
+
+                            <li class="list-group-item">
+                                <strong>Colheita:</strong> O início da colheita ocorre entre 40 e 50 dias após a semeadura, podendo-se estender por 60 a 80 dias. Colheitas em dias alternados estimulam a frutificação e elevam a produtividade. O tipo caipira é colhido com 12 a 14 cm; os tipos aodai e japonês com 21 a 23 cm. Para o conserva, o ponto de colheita varia de 5 a 7 cm e colheitas diárias são recomendadas.
+                            </li>
+
+                            <li class="list-group-item">
+                                <strong>Rotação de culturas:</strong> Fundamental para reduzir a incidência de doenças e nematoides no solo. Recomenda-se rotação com espécies que não pertençam à família das cucurbitáceas, evitando plantios sucessivos de pepino, melancia, melão e abóboras na mesma área.
+                            </li>
+
+                        </ul>
+
+                    </div>
+                </div>
+
+                <!-- Créditos e fonte técnica -->
+                <div class="mt-4 text-muted small">
+
+                    <p>
+                        <strong>Fontes técnicas:</strong>
+                    </p>
+
+                    <p>
+                        Circular Técnica 113 – "A cultura do pepino" – Embrapa Hortaliças, Brasília, DF, março de 2013.
+                        <a href="http://www.infoteca.cnptia.embrapa.br/infoteca/handle/doc/956387" target="_blank" rel="noopener">
+                            Portal Embrapa Hortaliças.
+                        </a>
+                    </p>
+
+                    <p>
+                        Portal Embrapa Hortaliças – pepino: clima, plantio e manejo:
+                        <a href="https://www.embrapa.br/busca-de-publicacoes/-/publicacao/busca/Pepino?p_auth=XCp16MHZ&_buscapublicacao_WAR_pcebusca6_1portlet_keywords=&_buscapublicacao_WAR_pcebusca6_1portlet_advancedSearch=false&_buscapublicacao_WAR_pcebusca6_1portlet_andOperator=true&_buscapublicacao_WAR_pcebusca6_1portlet_resetCur=false&_buscapublicacao_WAR_pcebusca6_1portlet_delta=75" target="_blank" rel="noopener">
+                            Publicações da Embrapa Hortaliças sobre o cultivo de pepino.
+                        </a>
+                    </p>
+
+                </div>
+
+            </div>
+        </section>
+
+        <section class="card mb-4">
+            <div class="card-body">
+
+                <h3 class="h4 text-danger">Manejo Integrado de Pragas e Doenças (MIP)</h3>
+
+                <h5 class="mt-3">Principais Pragas</h5>
+                <div class="table-responsive">
+                    <table class="table table-sm table-bordered mt-2">
+                        <thead class="table-dark text-center">
+                            <tr>
+                                <th>Praga</th>
+                                <th>Sintomas</th>
+                                <th>Manejo Recomendado</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Mosca-branca (<em>Bemisia tabaci</em> biótipo B)</strong></td>
+                                <td>Sucção de seiva e ação toxicogênica, provocando alterações no desenvolvimento vegetativo e reprodutivo. O líquido açucarado expelido favorece o desenvolvimento de fumagina (<em>Capnodium</em>) sobre folhas e frutos.</td>
+                                <td>Uso de sementes sadias; isolamento dos cultivos por data e área; barreiras vivas ao redor da lavoura; armadilhas amarelas adesivas; cultivo protegido com telado; destruição de restos culturais; controle químico com inseticidas registrados no MAPA.</td>
+                            </tr>
+
+                            <tr>
+                                <td><strong>Pulgões (<em>Aphis gossypii</em> e <em>Myzus persicae</em>)</strong></td>
+                                <td>Definhamento de mudas e plantas jovens; encarquilhamento de folhas, brotos e ramos; formação de fumagina; transmissão de viroses ao cultivo.</td>
+                                <td>Cultivo distante de plantios velhos de cucurbitáceas; barreiras vivas; cultivo protegido; plantio contra o vento; eliminação de plantas com viroses; uso de cultivares resistentes às principais viroses; inseticidas específicos registrados.</td>
+                            </tr>
+
+                            <tr>
+                                <td><strong>Tripes (<em>Thrips tabaci</em>, <em>T. palmi</em>, <em>Frankliniella schultzei</em>)</strong></td>
+                                <td>Folhas com aspecto queimado ou prateado e pontuações escuras; manchas e cicatrizes nos frutos em desenvolvimento; podem ser transmissores de vírus.</td>
+                                <td>Mesmas medidas adotadas para pulgões e mosca-branca; inseticidas registrados conforme Tabela de inseticidas do MAPA.</td>
+                            </tr>
+
+                            <tr>
+                                <td><strong>Brocas-das-cucurbitáceas (<em>Diaphania nitidalis</em> e <em>D. hyalinata</em>)</strong></td>
+                                <td>Lagartas atacam folhas, brotos e frutos; abrem galerias na polpa dos frutos tornando-os inaptos para comercialização; brotos atacados secam. Altas infestações nos meses mais quentes (setembro a março).</td>
+                                <td>Cultivares de ciclo curto adequadas à época; isolamento de talhões; policultivos com plantas não hospedeiras; cultivo protegido; rotação de culturas; vazio fitossanitário de pelo menos quatro semanas; inseticidas sintéticos ou biológicos com <em>Bacillus thuringiensis</em> registrados.</td>
+                            </tr>
+
+                            <tr>
+                                <td><strong>Vaquinhas (<em>Acalymma bivittula</em>, <em>Diabrotica</em> spp., <em>Epilachna cacica</em>, entre outras)</strong></td>
+                                <td>Adultos causam perfurações nas folhas, reduzindo área fotossintética; ataque às flores pode ocasionar aborto; larvas de algumas espécies atacam raízes no solo.</td>
+                                <td>Pulverizações foliares com inseticidas registrados; iscas com raízes de "tajujá" ou cabaça verde tratadas com inseticidas, distribuídas nas bordas do cultivo e substituídas quinzenalmente; não se recomenda controle químico de larvas no solo.</td>
+                            </tr>
+
+                            <tr>
+                                <td><strong>Nematoide-das-galhas (<em>Meloidogyne incognita</em> e <em>M. javanica</em>)</strong></td>
+                                <td>Perda de vigor, deficiência mineral, estresse hídrico nas horas mais quentes mesmo com solo úmido; baixa produtividade; engrossamento irregular e formação de galhas nas raízes.</td>
+                                <td>Controle preventivo: alqueive nos períodos secos; evitar áreas infectadas; rotação com plantas antagonistas (braquiária, mucuna preta, cravo-de-defunto, crotálaria). Não há produto químico registrado no MAPA para esta cultura.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h5 class="mt-4">Principais Doenças</h5>
+                <div class="table-responsive">
+                    <table class="table table-sm table-bordered mt-2">
+                        <thead class="table-dark text-center">
+                            <tr>
+                                <th>Doença (agente)</th>
+                                <th>Sintomas</th>
+                                <th>Manejo Recomendado</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Oídio (<em>Podosphaera xanthii</em>)</strong></td>
+                                <td>Crescimento branco pulverulento nas partes aéreas, principalmente folhas; coalescência das manchas pode afetar toda a área foliar. Mais comum em cultivos protegidos.</td>
+                                <td>Uso de cultivares resistentes; fungicidas à base de enxofre para casos comuns; fungicidas sistêmicos (triazóis) em condições mais favoráveis à doença; iniciar o tratamento nos primeiros sintomas, que ocorrem na parte inferior da folha.</td>
+                            </tr>
+
+                            <tr>
+                                <td><strong>Antracnose (<em>Colletotrichum gloeosporioides</em> f. sp. <em>cucurbitae</em>)</strong></td>
+                                <td>Nas folhas: encharcamento do tecido seguido de necrose, manchas circulares pardas com centro mais claro; nas hastes: lesões elípticas deprimidas; nos frutos: lesões circulares a elípticas com massa rosada de esporos em estádios avançados.</td>
+                                <td>Sementes sadias; destruição de restos culturais e cucurbitáceas silvestres; rotação de culturas; cultivares resistentes (ex.: Runner, Colônia, Guairá, Premio, Supremo); fungicidas protetores (mancozeb, chlorothalonil) ou sistêmicos (benomyl, thiabendazóis); manejo adequado da irrigação em cultivo protegido.</td>
+                            </tr>
+
+                            <tr>
+                                <td><strong>Cancro-das-hastes (<em>Dydimella bryoniae</em>)</strong></td>
+                                <td>Tombamento de mudas por necrose do colo; nas hastes, encharcamento com exsudação de goma parda evoluindo para cinza com corpos de frutificação negros; lesões podem causar morte da parte aérea acima da lesão.</td>
+                                <td>Rotação com espécies não cucurbitáceas; sementes tratadas com captan ou thiram; evitar locais com excesso de umidade e próximos a outras cucurbitáceas; rigoroso controle da água de irrigação em ambiente protegido.</td>
+                            </tr>
+
+                            <tr>
+                                <td><strong>Míldio (<em>Pseudoperonospora cubensis</em>)</strong></td>
+                                <td>Manchas cloróticas e angulosas na parte inferior da folha que evoluem; esporângios verde-oliva a púrpura na face inferior; manchas necrosadas em estádios avançados, reduzindo severamente a produtividade. Favorecido por temperatura de 16 a 22°C e alta umidade.</td>
+                                <td>Cultivares resistentes; evitar plantios em locais favoráveis à doença; fungicidas protetores (mancozeb, cúpricos, chlorothalonil) ou sistêmicos (metalaxil-M, azoxistrobina).</td>
+                            </tr>
+
+                            <tr>
+                                <td><strong>Mancha-zonada (<em>Leandria momordica</em>)</strong></td>
+                                <td>Manchas encharcadas que tornam-se esbranquiçadas após a necrose; evoluem para manchas angulosas que coalescem; corpos de frutificação negros na parte inferior da folha. Comum na região Sudeste em épocas quentes e úmidas.</td>
+                                <td>Locais menos sujeitos ao excesso de umidade e bem arejados; rotação com não cucurbitáceas; cultivares resistentes; fungicidas protetores (chlorothalonil) ou curativos (tebuconazol, azoxistrobina).</td>
+                            </tr>
+
+                            <tr>
+                                <td><strong>Mancha-angular (<em>Pseudomonas syringae</em> pv. <em>lachrymans</em>)</strong></td>
+                                <td>Doença bacteriana; manchas encharcadas e angulosas nas folhas limitadas pelas nervuras, tornando-se necrosadas; nos frutos, manchas encharcadas que evoluem para podridão por bactérias do gênero <em>Erwinia</em>. Favorecida por temperaturas de 24 a 28°C e alta umidade.</td>
+                                <td>Medidas preventivas; aeração adequada das casas de vegetação; rotação por mínimo de dois anos com não cucurbitáceas; tratamento de sementes com ácido lático a 2% por 20 minutos; evitar excesso de adubação nitrogenada; fungicidas cúpricos (com cautela para evitar fitotoxidez).</td>
+                            </tr>
+
+                            <tr>
+                                <td><strong>Viroses (PRSV-W – <em>Papaya ringspot virus</em> tipo W)</strong></td>
+                                <td>Amarelecimento entre nervuras, mosaico e deformações foliares; plantas definhadas; frutos deformados com alteração na cor. Transmitida por mais de 20 espécies de pulgões de forma não-persistente; mais comum em regiões tropicais.</td>
+                                <td>Cultivares resistentes; cobertura do solo com material repelente associada a óleo mineral; evitar plantio próximo a lavouras velhas de cucurbitáceas; eliminação de restos culturais e plantas hospedeiras; controle químico dos pulgões vetores.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="mt-3 text-muted small text-center">
+
+                    <p>
+                        Informações adaptadas de publicações técnicas sobre fitopatologia da cultura do pepino e cucurbitáceas em geral.
+                    </p>
+
+                    <p>
+                        <strong>Referências principais:</strong>
+                    </p>
+
+                    <p>
+                        EMBRAPA. <em>A cultura do pepino</em> – Circular Técnica 113. Brasília, DF, março de 2013. 🔗
+                        <a href="http://www.infoteca.cnptia.embrapa.br/infoteca/handle/doc/956387" target="_blank" rel="noopener">
+                            Portal Embrapa Hortaliças.
+                        </a>
+                    </p>
+
+                    <p>
+                        KUROZAWA, C.; PAVAN, M. A. <em>Doenças das cucurbitáceas</em>. In: Manual de Fitopatologia. 3. ed. São Paulo: Ceres, 1997. 🔗
+                        <a href="http://www.infoteca.cnptia.embrapa.br/infoteca/handle/doc/150015" target="_blank" rel="noopener">
+                            Embrapa Hortaliças.
+                        </a>
+                    </p>
+
+                    <p>
+                        AGROFIT – Sistema de Agrotóxicos Fitossanitários. MAPA. 🔗
+                        <a href="https://extranet.agricultura.gov.br/agrofit_cons/principal_agrofit_cons" target="_blank" rel="noopener">
+                            Acesse o portal.
+                        </a>
+                    </p>
+
+                </div>
+
+            </div>
+        </section>
+
+        <div class="alert alert-warning d-flex align-items-center">
+            <i class="bi bi-thermometer-half fs-3 me-3"></i>
+            <div class="alert alert-warning mt-3">
+                <strong>Alerta de Temperatura:</strong>
+                O pepino se adapta a regiões com clima variando de ameno a quente, com temperaturas ideais entre <strong>20 °C e 30 °C</strong>.
+                Baixas temperaturas prejudicam o desenvolvimento, principalmente em plantas jovens (menos de 35 dias após a germinação), e diminuem a produtividade.
+                A cultura não tolera geadas. Em regiões de altitude elevada ou latitude acima de 22° Sul,
+                recomenda-se o cultivo em casa de vegetação, onde o efeito estufa impede que as baixas temperaturas noturnas sejam limitantes para a cultura.
+            </div>
+        </div>
+    </main>
+
+    <footer class="py-5 bg-light border-top">
+        <div class="container text-center">
+            <p class="text-muted fw-bold mb-1">Guia Verde – 2026</p>
+
+            <div class="small text-muted">
+                Fontes técnicas:
+                <a href="https://www.embrapa.br/hortalicas"
+                target="_blank"
+                rel="noopener"
+                class="text-decoration-none text-secondary">
+                Embrapa Hortaliças
+                </a> |
+
+                <a href="https://extranet.agricultura.gov.br/agrofit_cons/principal_agrofit_cons"
+                target="_blank"
+                rel="noopener"
+                class="text-decoration-none text-secondary">
+                AGROFIT – Agrotóxicos Fitossanitários (MAPA)
+                </a> |
+
+                <a href="https://www.embrapa.br/hortalicas"
+                target="_blank"
+                rel="noopener"
+                class="text-decoration-none text-secondary">
+                Circular Técnica 113 – A Cultura do Pepino (Embrapa)
+                </a>
+            </div>
+
+            <div class="small text-muted mt-2">
+                Conteúdo técnico adaptado de materiais de extensão rural da
+                Embrapa e literatura agronômica sobre o cultivo de pepino (<em>Cucumis sativus</em>).
+            </div>
+        </div>
+    </footer>
+
+    <button
+        type="button"
+        class="btn btn-success btn-floating btn-lg"
+        id="btn-back-to-top"
+        style="position: fixed; bottom: 20px; right: 20px; display: none;"
+        aria-label="Voltar ao topo"
+        title="Voltar ao topo">
+        <i class="bi bi-arrow-up"></i>
+    </button>
+    <script src="../../js/ui-extras.js"></script>
+    <script src="../../../src/js/search.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

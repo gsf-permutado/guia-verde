@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guia Verde | Pimentão</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="../../css/base.css">
+    <link rel="stylesheet" href="../../css/navbar.css">
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <i class="bi bi-leaf"></i>
+                Guia Verde
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item"><a class="nav-link active" href="../../../index.html">Início</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../../pages/navbar/sobre.html">Sobre</a></li>
+                </ul>
+                <form class="d-flex" role="search" onsubmit="buscar(event)">
+                    <input id="campoBusca" class="form-control me-2" type="search"
+                          placeholder="O que procura?" aria-label="Pesquisar">
+                    <button class="btn btn-warning" type="submit">Pesquisar</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container py-4">
+        <div class="d-flex mb-3">
+            <button type="button" onclick="history.back()" class="btn btn-secondary">
+                <i class="bi bi-arrow-left"></i> Voltar
+            </button>
+
+            <a href="../../../index.html" class="btn btn-success ms-auto">
+                Página Inicial
+            </a>
+        </div>
+
+        <div class="card mb-4 border-0 shadow-sm">
+            <div class="row g-0 align-items-center">
+
+                <!-- Texto -->
+                <div class="col-12 col-md-8">
+                    <div class="card-body">
+                        <h2 class="card-title">Pimentão (<em>Capsicum annuum</em>)</h2>
+                        <p class="card-text">
+                            O pimentão, cujo nome científico é <em>Capsicum annuum</em>, é uma das hortaliças mais importantes do agronegócio brasileiro, cultivado em praticamente todos os estados do País. Nos últimos anos, tem sido considerado um desafio para a horticultura nacional devido à contaminação dos frutos com resíduos de agrotóxicos, o que impulsionou o desenvolvimento de sistemas de Produção Integrada (PI) para garantir qualidade e segurança alimentar ao consumidor.
+                        </p>
+                        <h2>Descrição</h2>
+                        <p>
+                            O pimentão é uma planta da família Solanaceae, de porte arbustivo, com frutos grandes, carnosos e de sabor adocicado (sem capsaicina em concentração relevante). É cultivado tanto em campo aberto como em ambiente protegido (estufas), com destaque para o Distrito Federal como polo produtor reconhecido nacionalmente. Os pimentões coloridos (vermelho e amarelo) são especialmente valorizados no mercado e produzidos predominantemente em cultivo protegido.
+                        </p>
+                        <h2>Principais Características:</h2>
+                        <ul>
+                            <li><strong>Nome científico:</strong> <em>Capsicum annuum</em> L.</li>
+                            <li><strong>Família botânica:</strong> Solanaceae.</li>
+                            <li><strong>Hábito de crescimento:</strong> herbácea perene cultivada como anual, arbustiva, ereta.</li>
+                            <li><strong>Frutos:</strong> grandes, carnosos, coloração variada (verde, vermelho, amarelo, laranja), sem pungência significativa.</li>
+                            <li><strong>Flor:</strong> branca, pequena, solitária, hermafrodita.</li>
+                            <li><strong>Propagação:</strong> por sementes; geralmente via produção de mudas em bandejas.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Imagem -->
+                <div class="col-12 col-md-4">
+                    <img src="../../img/culturas-intro/pimentao.webp"
+                        class="img-fluid h-100 w-100 object-fit-cover"
+                        alt="Cultivo de Pimentão">
+                </div>
+
+            </div>
+        </div>
+
+        <section class="card mb-4">
+            <div class="card-body">
+                <h3 class="h4 mb-3">Variedades e Cultivares</h3>
+                <div class="table-responsive">
+                    <table class="table table-hover align-middle border">
+                        <thead class="table-success">
+                            <tr>
+                                <th>Tipo / Grupo</th>
+                                <th>Característica Principal</th>
+                                <th>Destaque Técnico</th>
+                                <th>Coloração na Maturação</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Quadrado Verde</strong></td>
+                                <td>Frutos grandes, blocados, paredes espessas, colhidos ainda verdes</td>
+                                <td>Tipo mais comercializado no Brasil; cultivado predominantemente em campo aberto; boa adaptação às condições de clima tropical.</td>
+                                <td>Verde → Vermelho</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Vermelho (colorido)</strong></td>
+                                <td>Frutos blocados ou cônico-blocados, colhidos maduros com coloração vermelha intensa</td>
+                                <td>Alto valor de mercado; produzido principalmente em cultivo protegido (estufa); exige maior tempo de cultivo e manejo cuidadoso.</td>
+                                <td>Verde → Vermelho</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Amarelo (colorido)</strong></td>
+                                <td>Frutos blocados, parede espessa, coloração amarela na maturação</td>
+                                <td>Crescente demanda no mercado gourmet e supermercadista; produção concentrada em cultivo protegido no DF e São Paulo; cultivares partenocárpicas disponíveis.</td>
+                                <td>Verde → Amarelo</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Itálico / Cônico</strong></td>
+                                <td>Frutos alongados e cônicos, paredes médias</td>
+                                <td>Adaptado tanto ao cultivo a campo como ao protegido; apreciado em determinadas regiões do Brasil e para uso culinário específico (grelhar, rechear).</td>
+                                <td>Verde → Vermelho ou Amarelo</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="mt-3 text-center">
+                    <p class="text-muted small">
+                        Fonte: Dados técnicos adaptados de publicações da Embrapa Hortaliças e da Produção Integrada de Pimentão (PIP/MAPA).
+                        Para mais informações acesse:
+                        <a href="https://www.embrapa.br/hortalicas" target="_blank" rel="noopener">
+                            Portal Embrapa Hortaliças
+                        </a>
+                    </p>
+
+                    <div class="row g-3 justify-content-center">
+
+                        <div class="col-6 col-md-3">
+                            <figure class="figure">
+                                <img src="../../img/culturas-detalhe/pimentao-verde.webp" class="figure-img img-fluid rounded" alt="Pimentão Verde">
+                                <figcaption class="figure-caption text-center">Pimentão Verde (campo)</figcaption>
+                            </figure>
+                        </div>
+
+                        <div class="col-6 col-md-3">
+                            <figure class="figure">
+                                <img src="../../img/culturas-detalhe/pimentao-colorido.webp" class="figure-img img-fluid rounded" alt="Pimentões Coloridos em Cultivo Protegido">
+                                <figcaption class="figure-caption text-center">Pimentões Coloridos (cultivo protegido)</figcaption>
+                            </figure>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="card mb-4">
+            <div class="card-body">
+                <h3 class="h4">Manejo e Plantio</h3>
+
+                <div class="row mt-3">
+                    <div class="col-md-7">
+
+                        <ul class="list-group list-group-flush">
+
+                            <li class="list-group-item">
+                                <strong>Sistemas de cultivo:</strong> O pimentão pode ser cultivado a céu aberto (campo) ou em cultivo protegido (estufas). O cultivo protegido tem crescido bastante, especialmente para pimentões coloridos de maior valor comercial. No Brasil, o DF é o principal polo de produção em estufas, fornecendo para o Centro-Oeste, Norte e parte do Nordeste. São Paulo também possui polo expressivo de cultivo protegido, expandido após episódios de chuvas intensas. Em Manaus e no Acre utiliza-se o modelo "guarda-chuva" (apenas cobertura no teto, sem vedação lateral), devido à alta pluviosidade e à necessidade de ventilação.
+                            </li>
+
+                            <li class="list-group-item">
+                                <strong>Produção de mudas e transplantio:</strong> A produção de mudas é realizada em bandejas de polipropileno, com transplantio para o local definitivo quando as mudas apresentam 4 a 6 folhas definitivas. O espaçamento típico no cultivo protegido varia entre 0,4 a 0,5 m entre plantas e 1,0 a 1,2 m entre fileiras, dependendo do sistema de condução adotado (uma ou duas hastes por planta).
+                            </li>
+
+                            <li class="list-group-item">
+                                <strong>Tutoramento e condução:</strong> O pimentão é uma hortaliça de porte mais alto, não se adaptando a túneis baixos ou outros sistemas de cultivo protegido de menor porte. Em estufas, o tutoramento vertical com fitilhos ou cordas é amplamente utilizado. A poda de formação e o desbaste de brotos são práticas essenciais para aumentar produtividade e qualidade dos frutos.
+                            </li>
+
+                            <li class="list-group-item">
+                                <strong>Irrigação:</strong> Em cultivo protegido, o gotejamento é o sistema mais indicado, pois permite irrigação precisa conforme a necessidade da cultura, reduz o molhamento da folhagem (diminuindo doenças foliares) e viabiliza a fertirrigação. É fundamental utilizar água de boa qualidade e baixa salinidade, além de realizar limpeza periódica dos gotejadores para evitar entupimentos e distribuição desigual de água na estufa.
+                            </li>
+
+                            <li class="list-group-item">
+                                <strong>Solo e substrato:</strong> O pimentão prefere solos férteis, bem drenados, com boa capacidade de retenção de hídrica e alto teor de matéria orgânica. O pH ideal situa-se entre 6,0 e 6,8. Em cultivos protegidos com histórico de uso intensivo, pode-se migrar para o cultivo em substratos, evitando problemas de salinização do solo e doenças de solo acumuladas. A adubação deve ser baseada em análise de solo, evitando-se o excesso de fertilizantes, que pode salinizar o solo e inviabilizar a produção.
+                            </li>
+
+                            <li class="list-group-item">
+                                <strong>Adubação e nutrição:</strong> Os fertilizantes utilizados em cultivo protegido são, em geral, solúveis e aplicados via fertirrigação. Essa prática permite melhor aproveitamento dos nutrientes, pois a ausência de chuva no interior da estufa reduz a lavagem dos adubos. Plantas bem nutridas são mais resistentes ao ataque de pragas e doenças. É importante não confundir boa adubação com adubação excessiva, pois o excesso de fertilizantes causa desequilíbrios nutricionais e salinização do solo.
+                            </li>
+
+                            <li class="list-group-item">
+                                <strong>Colheita:</strong> O pimentão verde pode ser colhido quando atinge o tamanho característico da cultivar e a coloração verde intensa. Para pimentões coloridos (vermelho e amarelo), a colheita ocorre após a mudança completa de coloração, o que exige mais tempo de cultivo. A colheita é realizada manualmente, com cuidado para não danificar as plantas.
+                            </li>
+
+                            <li class="list-group-item">
+                                <strong>Rotação de culturas:</strong> Fundamental para reduzir a incidência de doenças de solo (fungos e bactérias) e pragas. Recomenda-se evitar o plantio sucessivo de solanáceas (tomate, berinjela, batata) na mesma área. A rotação com gramíneas e leguminosas é indicada. No cultivo protegido, onde a rotação espacial é difícil, a rotação temporal e o uso de matéria orgânica de qualidade são essenciais para manter a sanidade do solo.
+                            </li>
+
+                        </ul>
+
+                    </div>
+                </div>
+
+                <!-- Cultivo protegido box -->
+                <div class="mt-4 p-3 bg-light border rounded">
+                    <h5 class="text-success"><i class="bi bi-house-check"></i> Vantagens do Cultivo Protegido</h5>
+                    <p class="mb-0">
+                        O cultivo protegido oferece controle da entrada de chuva (reduzindo danos mecânicos e excesso de umidade), menor incidência de doenças e pragas, melhor eficiência no uso de nutrientes via fertirrigação e possibilidade de produtividade duas a três vezes superior ao cultivo a céu aberto. O uso de telas antiafídeos reduz o ataque de insetos vetores de viroses. No entanto, exige maior investimento inicial (estrutura da estufa e sistema de irrigação por gotejamento) e acompanhamento técnico rigoroso para evitar problemas como salinização do solo, excesso de umidade e surtos de doenças bacterianas como a murcha bacteriana.
+                    </p>
+                </div>
+
+                <!-- Créditos e fonte técnica -->
+                <div class="mt-4 text-muted small">
+
+                    <p>
+                        <strong>Fontes técnicas:</strong>
+                    </p>
+
+                    <p>
+                        GUEDES, Ítalo Moraes Rocha. <em>Produção de Pimentão em Cultivo Protegido</em>. Campo &amp; Negócios, junho de 2012. Embrapa Hortaliças, Brasília, DF.
+                    </p>
+
+                    <p>
+                        EMBRAPA HORTALIÇAS / MAPA. <em>Produção Integrada de Pimentão (PIP) – Folheto Informativo</em>. Brasília, DF, julho de 2015.
+                        <a href="http://www.infoteca.cnptia.embrapa.br/infoteca/handle/doc/1021208" target="_blank" rel="noopener">
+                            Portal Embrapa Hortaliças.
+                        </a>
+                    </p>
+
+                    <p>
+                        Portal Embrapa Hortaliças – pimentão: publicações técnicas:
+                        <a href="https://www.embrapa.br/busca-de-publicacoes/-/publicacao/busca/Piment%C3%A3o?p_auth=cUlmQnQM&_buscapublicacao_WAR_pcebusca6_1portlet_keywords=&_buscapublicacao_WAR_pcebusca6_1portlet_advancedSearch=false&_buscapublicacao_WAR_pcebusca6_1portlet_andOperator=true&_buscapublicacao_WAR_pcebusca6_1portlet_resetCur=false&_buscapublicacao_WAR_pcebusca6_1portlet_delta=50" target="_blank" rel="noopener">
+                            Publicações da Embrapa Hortaliças sobre o cultivo de pimentão.
+                        </a>
+                    </p>
+
+                </div>
+
+            </div>
+        </section>
+
+        <section class="card mb-4">
+            <div class="card-body">
+
+                <h3 class="h4 text-danger">Manejo Integrado de Pragas e Doenças (MIP)</h3>
+
+                <p class="text-muted small mt-2">
+                    O pimentão tem sido considerado o grande vilão da horticultura brasileira devido à contaminação dos frutos com resíduos de agrotóxicos. A Produção Integrada de Pimentão (PIP), iniciativa conjunta do MAPA e da Embrapa Hortaliças, visa organizar a cadeia produtiva e controlar todas as etapas da produção para garantir frutos seguros ao consumidor.
+                </p>
+
+                <h5 class="mt-3">Pragas Chave</h5>
+                <div class="table-responsive">
+                    <table class="table table-sm table-bordered mt-2">
+                        <thead class="table-dark text-center">
+                            <tr>
+                                <th>Praga</th>
+                                <th>Sintomas / Danos</th>
+                                <th>Manejo Recomendado</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Ácaro-branco (<em>Polyphagotarsonemus latus</em>)</strong></td>
+                                <td>Ataca folhas novas e brotos; causa bronzeamento e aspecto vítreo na face inferior das folhas; bordos enrolados para baixo, encarquilhados e quebradiços; pode causar morte de plantas jovens. Difícil detecção sem lupa (40x). Mais severo em clima quente e úmido, principalmente em estufas.</td>
+                                <td>Monitoramento frequente com lupa; controle químico com acaricidas registrados no MAPA; evitar excesso de temperatura e umidade dentro das estufas; destruição de plantas e restos culturais infestados.</td>
+                            </tr>
+
+                            <tr>
+                                <td><strong>Ácaros tetraniquídeos (<em>Tetranychus urticae</em> – ácaro-rajado; <em>T. ludeni</em> e <em>T. evansi</em> – ácaro-vermelho)</strong></td>
+                                <td>Pontos cloróticos na face superior das folhas evoluindo para clorose generalizada; presença de teia na face inferior; redução da fotossíntese, desfolha precoce, manchas e deformação nos frutos. Mais relevante em estufas em regiões de clima quente e seco.</td>
+                                <td>Monitoramento regular; acaricidas registrados no MAPA; controle biológico com ácaros predadores (<em>Phytoseiidae</em>); manutenção de umidade adequada no ambiente da estufa; evitar plantas estressadas.</td>
+                            </tr>
+
+                            <tr>
+                                <td><strong>Pulgões (<em>Myzus persicae</em>, <em>Macrosiphum euphorbiae</em>, <em>Aphis gossypii</em>)</strong></td>
+                                <td>Sucção de seiva; formação de fumagina nas folhas; transmissão de viroses como Mosaico-das-nervuras (PVY), Mosaico-amarelo-do-pimentão (PepYMV) e Mosaico-do-pepino (CMV). Principal dano é a transmissão de vírus. Praga chave tanto em campo aberto como em estufa.</td>
+                                <td>Telas antiafídeos em estufas; monitoramento frequente; controle biológico com parasitoides; inseticidas registrados; eliminação de plantas com viroses; cultivo distante de áreas com solanáceas velhas.</td>
+                            </tr>
+
+                            <tr>
+                                <td><strong>Moscas-brancas (<em>Bemisia tabaci</em> e <em>Trialeurodes vaporariorum</em>)</strong></td>
+                                <td>Sucção de seiva e injeção de toxinas; formação de fumagina; transmissão de Crinivirose (ToCV) e Geminivirose (Begomovirus). Alta relevância na fase de mudas e nos primeiros 40 dias após o transplantio. Praga importante tanto em campo como em estufa.</td>
+                                <td>Telas antiafídeos; monitoramento rigoroso na fase de viveiro; armadilhas amarelas adesivas; controle biológico com <em>Encarsia</em> e <em>Eretmocerus</em>; inseticidas e óleos minerais registrados; destruição de restos culturais.</td>
+                            </tr>
+
+                            <tr>
+                                <td><strong>Tripes (<em>Frankliniella schultzei</em>, <em>F. occidentalis</em>, <em>Thrips palmi</em>, <em>T. tabaci</em>)</strong></td>
+                                <td>Manchas irregulares prateadas ou esbranquiçadas com pontuações escuras nas folhas; danos em flores e frutos em desenvolvimento; transmissão da doença "Vira-cabeça" (TSWV, GRSV, TCSV). Alta relevância no viveiro e nos primeiros 45 dias após o transplantio.</td>
+                                <td>Monitoramento com armadilhas azuis adesivas; telas antiafídeos em estufas; controle biológico com predadores (<em>Orius</em>); inseticidas registrados; eliminação de plantas infectadas por vírus.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h5 class="mt-4">Pragas Secundárias / Ocasionais</h5>
+                <div class="table-responsive">
+                    <table class="table table-sm table-bordered mt-2">
+                        <thead class="table-dark text-center">
+                            <tr>
+                                <th>Praga</th>
+                                <th>Sintomas / Danos</th>
+                                <th>Manejo Recomendado</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Lagarta-rosca (<em>Agrotis ipsilon</em>)</strong></td>
+                                <td>Secciona o colo de plantas jovens rente ao solo; em infestações severas (períodos quentes e secos) pode exigir replantio.</td>
+                                <td>Monitoramento noturno; iscas tóxicas; inseticidas aplicados no solo no momento do transplantio quando necessário.</td>
+                            </tr>
+
+                            <tr>
+                                <td><strong>Lagarta-militar (complexo <em>Spodoptera</em>: <em>S. frugiperda</em>, <em>S. cosmioides</em>, <em>S. eridania</em>)</strong></td>
+                                <td>Seccionamento de plantas jovens; perfurações nos frutos próximo ao cálice com presença de excrementos; alimentação da polpa no interior; queda de frutos; surtos na transição entre estações chuvosa e seca no Centro-Oeste.</td>
+                                <td>Monitoramento com armadilhas de feromônio; controle biológico com <em>Bacillus thuringiensis</em> e vírus de poliedrose nuclear; inseticidas registrados; rotação de culturas.</td>
+                            </tr>
+
+                            <tr>
+                                <td><strong>Broca-grande (<em>Helicoverpa armigera</em>, <em>H. zea</em>, <em>Chloridea virescens</em>)</strong></td>
+                                <td>Grandes orifícios de entrada no fruto; polpa destruída; frutos suscetíveis à entrada de besouros e moscas; pode causar desfolha severa em mudas recém-transplantadas.</td>
+                                <td>Monitoramento com armadilhas de feromônio; controle biológico com <em>Bacillus thuringiensis</em> e parasitoides; inseticidas registrados; destruição de frutos broqueados.</td>
+                            </tr>
+
+                            <tr>
+                                <td><strong>Broca-pequena-do-fruto (<em>Neoleucinodes elegantalis</em>)</strong></td>
+                                <td>Larva broqueia o fruto internamente; orifício de saída permite entrada de umidade e patógenos; fruto impróprio para comercialização. Ocorre em temperaturas acima de 25°C e umidade relativa superior a 50%.</td>
+                                <td>Monitoramento; inseticidas registrados; destruição de frutos broqueados; evitar plantios em épocas e locais favoráveis à praga.</td>
+                            </tr>
+
+                            <tr>
+                                <td><strong>Broca-do-fruto-da-pimenta (<em>Symmetrischema dulce</em> e <em>S. borsaniella</em>)</strong></td>
+                                <td>Broqueamento interno dos frutos; orifícios de saída das lagartas servem como via de entrada para moscas que favorecem apodrecimento.</td>
+                                <td>Monitoramento; inseticidas registrados; remoção e destruição de frutos atacados.</td>
+                            </tr>
+
+                            <tr>
+                                <td><strong>Traça-do-tomateiro (<em>Tuta absoluta</em>) e Traça-da-batatinha (<em>Phthorimaea operculella</em>)</strong></td>
+                                <td>Lagartas fazem galerias em folhas, hastes, pedúnculos e frutos; orifícios de saída permitem entrada de moscas e apodrecimento do fruto.</td>
+                                <td>Armadilhas de feromônio sexual para monitoramento; controle biológico com parasitoides; inseticidas registrados; destruição de restos culturais.</td>
+                            </tr>
+
+                            <tr>
+                                <td><strong>Mosca-do-pimentão (<em>Dasineura</em> sp.) e Mosca (<em>Neosilba</em> sp.)</strong></td>
+                                <td><em>Dasineura</em>: frutos retorcidos com orifícios de saída próximos ao pedúnculo. <em>Neosilba</em>: larvas alimentam-se no interior dos frutos, contribuindo para o apodrecimento; entrada ocorre pelos orifícios deixados por lagartas de brocas.</td>
+                                <td>Monitoramento; controle das pragas brocadoras primárias (lagartas); inseticidas registrados quando necessário; destruição de frutos atacados.</td>
+                            </tr>
+
+                            <tr>
+                                <td><strong>Mosca-minadora (<em>Liriomyza</em> spp.)</strong></td>
+                                <td>Larvas abrem galerias em forma de serpentina nos folíolos; alta infestação causa necrose, secamento das folhas e desfolha precoce.</td>
+                                <td>Monitoramento; controle biológico com parasitoides (<em>Opius</em> spp.); inseticidas sistêmicos registrados; evitar aplicações desnecessárias que eliminem inimigos naturais.</td>
+                            </tr>
+
+                            <tr>
+                                <td><strong>Vaquinha verde-e-amarela (<em>Diabrotica speciosa</em>)</strong></td>
+                                <td>Adultos perfuram folhas reduzindo área fotossintética; larvas atacam raízes; altas infestações após transplantio podem destruir totalmente a parte aérea das mudas.</td>
+                                <td>Monitoramento; inseticidas foliares registrados; controle de plantas daninhas hospedeiras nas bordas do cultivo.</td>
+                            </tr>
+
+                            <tr>
+                                <td><strong>Percevejo-rendado (<em>Corythaica cyathicollis</em>) e Percevejo-do-tomate (<em>Phthia picta</em>)</strong></td>
+                                <td>Sucção de seiva; manchas cloróticas e esbranquiçadas nas folhas com dejetos pretos (rendado); manchas no fruto com aspecto de mosaico; aborto precoce de frutos e maturação desigual.</td>
+                                <td>Monitoramento; inseticidas registrados; destruição de restos culturais; controle de plantas hospedeiras nas bordas.</td>
+                            </tr>
+
+                            <tr>
+                                <td><strong>Cochonilhas-brancas (<em>Phenococcus</em> sp., <em>Planococcus</em> sp., <em>Pseudococcus</em> sp.)</strong></td>
+                                <td>Aglomeração com substância cerosa (aspecto de lã); sugam seiva; formam fumagina; associadas a formigas; em altas infestações causam queda de folhas. Detectadas no viveiro de mudas e após o transplantio.</td>
+                                <td>Controle de formigas; inseticidas sistêmicos ou de contato registrados; monitoramento no viveiro.</td>
+                            </tr>
+
+                            <tr>
+                                <td><strong>Burrinho-das-solanáceas (<em>Epicauta</em> spp.)</strong></td>
+                                <td>Adultos alimentam-se de folhas, ramos, brotações e frutos pequenos; altas infestações após transplantio podem destruir totalmente a parte aérea das mudas.</td>
+                                <td>Monitoramento; inseticidas foliares registrados; coleta manual em pequenas áreas.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h5 class="mt-4">Principais Viroses</h5>
+                <div class="table-responsive">
+                    <table class="table table-sm table-bordered mt-2">
+                        <thead class="table-dark text-center">
+                            <tr>
+                                <th>Virose (agente / vetor)</th>
+                                <th>Sintomas</th>
+                                <th>Manejo Recomendado</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Vira-cabeça (TSWV, GRSV, TCSV) – vetor: Tripes</strong></td>
+                                <td>Anéis cloróticos e manchas necróticas nas folhas; necrose de brotações terminais; anéis e manchas nos frutos; deformação dos frutos.</td>
+                                <td>Controle rigoroso dos tripes vetores; telas antiafídeos; eliminação de plantas doentes; monitoramento com armadilhas azuis.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Mosaico-das-nervuras (PVY) e Mosaico-amarelo-do-pimentão (PepYMV) – vetores: Pulgões</strong></td>
+                                <td>Mosaico com faixas cloróticas entre nervuras; deformação foliar; mosaico com faixas amarelas nos frutos.</td>
+                                <td>Controle de pulgões; eliminação de plantas hospedeiras; uso de cultivares resistentes; telas antiafídeos; óleos minerais repelentes.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Crinivirose (ToCV) – vetores: Moscas-brancas</strong></td>
+                                <td>Clorose entre nervuras nas folhas mais velhas (baixeiras).</td>
+                                <td>Controle de moscas-brancas; telas antiafídeos; monitoramento na fase de viveiro e primeiros 40 dias após transplantio.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Geminivirose (Begomovirus) – vetor: <em>Bemisia tabaci</em></strong></td>
+                                <td>Mosaico nas folhas do ápice; deformação e enrolamento foliar.</td>
+                                <td>Controle rigoroso de <em>Bemisia tabaci</em>; monitoramento precoce; eliminação de plantas doentes; cultivares resistentes quando disponíveis.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="mt-4 p-3 bg-light border rounded">
+                    <h6 class="text-success"><i class="bi bi-award"></i> Produção Integrada de Pimentão (PIP)</h6>
+                    <p class="mb-0 small">
+                        A PIP é uma iniciativa do MAPA e da Embrapa Hortaliças com apoio da Emater-DF, certificada pelo INMETRO. O produtor que adere ao sistema compromete-se a seguir as Normas Técnicas Específicas (NTEPIP), preencher Cadernos de Campo e de Pós-Colheita, aceitar auditorias das certificadoras e fornecer amostras para análise de resíduos de agrotóxicos. O produto certificado recebe o Selo "Brasil Certificado – Agricultura de Qualidade", que garante rastreabilidade do campo ao consumidor final. O projeto piloto tem foco no Distrito Federal, com posterior validação para demais regiões produtoras do Brasil.
+                    </p>
+                </div>
+
+                <div class="mt-3 text-muted small text-center">
+
+                    <p>
+                        Informações adaptadas de publicações técnicas sobre entomologia e fitossanidade da cultura do pimentão.
+                    </p>
+
+                    <p>
+                        <strong>Referências principais:</strong>
+                    </p>
+
+                    <p>
+                        GUIMARÃES, J. A. et al. <em>Guia para Identificação de Pragas do Pimentão</em> – Documentos 176. Embrapa Hortaliças, Brasília, DF, 2020. 🔗
+                        <a href="http://www.infoteca.cnptia.embrapa.br/infoteca/handle/doc/1124198" target="_blank" rel="noopener">
+                            Portal Embrapa Hortaliças.
+                        </a>
+                    </p>
+
+                    <p>
+                        MOURA, A. P.; MICHEREFF FILHO, M.; GUIMARÃES, J. A. <em>Manejo Integrado de Pragas de Pimentas do Gênero Capsicum</em> – Circular Técnica 115. Embrapa Hortaliças, Brasília, DF, 2013. 🔗
+                        <a href="http://www.infoteca.cnptia.embrapa.br/infoteca/handle/doc/956416" target="_blank" rel="noopener">
+                            Embrapa Hortaliças.
+                        </a>
+                    </p>
+
+                    <p>
+                        AGROFIT – Sistema de Agrotóxicos Fitossanitários. MAPA. 🔗
+                        <a href="https://extranet.agricultura.gov.br/agrofit_cons/principal_agrofit_cons" target="_blank" rel="noopener">
+                            Acesse o portal.
+                        </a>
+                    </p>
+
+                </div>
+
+            </div>
+        </section>
+
+        <div class="alert alert-warning d-flex align-items-center">
+            <i class="bi bi-thermometer-half fs-3 me-3"></i>
+            <div class="alert alert-warning mt-3">
+                <strong>Alerta de Temperatura:</strong>
+                O pimentão é exigente em temperatura, com faixa ideal entre <strong>20 °C e 30 °C</strong>.
+                Temperaturas acima de 35 °C prejudicam a frutificação (causam abortamento de flores e frutos),
+                enquanto temperaturas abaixo de 15 °C reduzem o crescimento e a produtividade.
+                O cultivo protegido (estufas) é especialmente recomendado em regiões com chuvas intensas,
+                variações bruscas de temperatura ou altitude elevada, pois estabiliza o ambiente e reduz
+                a incidência de doenças e pragas, podendo proporcionar produtividade duas a três vezes superior
+                ao cultivo a céu aberto quando bem conduzido com acompanhamento técnico.
+            </div>
+        </div>
+    </main>
+
+    <footer class="py-5 bg-light border-top">
+        <div class="container text-center">
+            <p class="text-muted fw-bold mb-1">Guia Verde – 2026</p>
+
+            <div class="small text-muted">
+                Fontes técnicas:
+                <a href="https://www.embrapa.br/hortalicas"
+                target="_blank"
+                rel="noopener"
+                class="text-decoration-none text-secondary">
+                Embrapa Hortaliças
+                </a> |
+
+                <a href="https://extranet.agricultura.gov.br/agrofit_cons/principal_agrofit_cons"
+                target="_blank"
+                rel="noopener"
+                class="text-decoration-none text-secondary">
+                AGROFIT – Agrotóxicos Fitossanitários (MAPA)
+                </a> |
+
+                <a href="https://www.embrapa.br/hortalicas"
+                target="_blank"
+                rel="noopener"
+                class="text-decoration-none text-secondary">
+                Documentos 176 – Guia para Identificação de Pragas do Pimentão (Embrapa)
+                </a>
+            </div>
+
+            <div class="small text-muted mt-2">
+                Conteúdo técnico adaptado de materiais de extensão rural da
+                Embrapa Hortaliças e do MAPA sobre o cultivo de pimentão (<em>Capsicum annuum</em>).
+            </div>
+        </div>
+    </footer>
+
+    <button
+        type="button"
+        class="btn btn-success btn-floating btn-lg"
+        id="btn-back-to-top"
+        style="position: fixed; bottom: 20px; right: 20px; display: none;"
+        aria-label="Voltar ao topo"
+        title="Voltar ao topo">
+        <i class="bi bi-arrow-up"></i>
+    </button>
+    <script src="../../js/ui-extras.js"></script>
+    <script src="../../../src/js/search.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

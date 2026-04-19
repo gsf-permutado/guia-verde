@@ -32,11 +32,6 @@ body::before {
     border-top: 5px solid #198754 !important; 
 }
 
-.hover-shadow:hover { 
-    transform: translateY(-5px); 
-    transition: 0.3s; 
-}
-
 .bg-gradient-success { 
     background: linear-gradient(45deg, #198754, #28a745); 
 }
