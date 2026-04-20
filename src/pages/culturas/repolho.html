@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guia Verde | Repolho</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="../../css/base.css">
+    <link rel="stylesheet" href="../../css/navbar.css">
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <i class="bi bi-leaf"></i>
+                Guia Verde
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item"><a class="nav-link active" href="../../../index.html">Início</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../../pages/navbar/sobre.html">Sobre</a></li>
+                </ul>
+                <form class="d-flex" role="search" onsubmit="buscar(event)">
+                    <input id="campoBusca" class="form-control me-2" type="search"
+                          placeholder="O que procura?" aria-label="Pesquisar">
+                    <button class="btn btn-warning" type="submit">Pesquisar</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container py-4">
+        <div class="d-flex mb-3">
+            <button type="button" onclick="history.back()" class="btn btn-secondary">
+                <i class="bi bi-arrow-left"></i> Voltar
+            </button>
+
+            <a href="../../../index.html" class="btn btn-success ms-auto">
+                Página Inicial
+            </a>
+        </div>
+
+        <div class="card mb-4 border-0 shadow-sm">
+            <div class="row g-0 align-items-center">
+
+                <!-- Texto -->
+                <div class="col-12 col-md-8">
+                    <div class="card-body">
+                        <h2 class="card-title">Repolho (<em>Brassica oleracea</em> var. <em>capitata</em>)</h2>
+                        <p class="card-text">
+                            O repolho, cujo nome científico é <em>Brassica oleracea</em> L. var. <em>capitata</em> L., é uma das hortaliças folhosas de maior importância econômica no agronegócio brasileiro. Em 1992, a área plantada no Brasil era de 13.387,7 ha, com produção de 408.276 toneladas. O consumo per capita no Brasil é estimado em 2 kg/ano, enquanto na região Norte este índice decresce para 1,3 kg. Do ponto de vista nutricional, o repolho é fonte de vitaminas C, B1 e B2, além de sais minerais como cálcio e fósforo de fácil assimilação pelo organismo.
+                        </p>
+                        <h2>Descrição</h2>
+                        <p>
+                            O repolho é uma planta da família Brassicaceae, de ciclo anual, com folhas dispostas em roseta compacta formando a "cabeça" ou "repolho" propriamente dito. É cultivado tanto em campo aberto como em ambiente protegido, adaptando-se melhor a climas amenos (ótimo de 16°C a 18°C), embora existam híbridos desenvolvidos para cultivo em regiões tropicais quentes.
+                        </p>
+                        <h2>Principais Características:</h2>
+                        <ul>
+                            <li><strong>Nome científico:</strong> <em>Brassica oleracea</em> L. var. <em>capitata</em> L.</li>
+                            <li><strong>Família botânica:</strong> Brassicaceae.</li>
+                            <li><strong>Hábito de crescimento:</strong> herbácea anual, ereta, com formação de cabeça compacta.</li>
+                            <li><strong>Fruto/Produto:</strong> cabeça formada por folhas sobrepostas, coloração verde ou roxa, peso variável conforme cultivar.</li>
+                            <li><strong>Flor:</strong> amarela, em inflorescência tipo racemo, hermafrodita.</li>
+                            <li><strong>Propagação:</strong> por sementes; produção de mudas em sementeiras ou bandejas antes do transplantio.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Imagem -->
+                <div class="col-12 col-md-4">
+                    <img src="../../img/culturas-intro/repolho.webp"
+                        class="img-fluid h-100 w-100 object-fit-cover"
+                        alt="Cultivo de Repolho">
+                </div>
+
+            </div>
+        </div>
+
+        <section class="card mb-4">
+            <div class="card-body">
+                <h3 class="h4 mb-3">Variedades e Cultivares</h3>
+                <div class="table-responsive">
+                    <table class="table table-hover align-middle border">
+                        <thead class="table-success">
+                            <tr>
+                                <th>Cultivar / Híbrido</th>
+                                <th>Característica Principal</th>
+                                <th>Destaque Técnico</th>
+                                <th>Ciclo / Época de Plantio</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Sooshu (KK cross)</strong></td>
+                                <td>Híbrido japonês precoce; cabeça redondo-achatada, peso médio 1,5 kg; folhas verde-azuladas</td>
+                                <td>Tolerante a temperaturas até 38°C; indicado para cultivo em regiões tropicais; boa adaptação ao cerrado</td>
+                                <td>80 dias; verão e ano todo em clima tropical</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Kenzan</strong></td>
+                                <td>Híbrido japonês precoce; cabeça achatada, peso médio 2,0 kg; folhas verde-azuladas</td>
+                                <td>Tolerante à podridão mole (<em>Erwinia carotovora</em>), podridão negra (<em>Xanthomonas campestris</em>) e rachadura da cabeça; recomendado para regiões serranas</td>
+                                <td>80 dias; inverno e regiões de altitude</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Fuyutoyo</strong></td>
+                                <td>Híbrido japonês precoce; cabeça achatada, compacta e branca internamente, peso médio 2,0 kg</td>
+                                <td>Tolerante à rachadura da cabeça; folhas verde-azuladas escuras; boa conservação pós-colheita</td>
+                                <td>90 dias; inverno e transição</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Louco de Piracicaba</strong></td>
+                                <td>Cultivar brasileira de verão; grande porte; cabeças achatadas até 2,5 kg; folhas verde-escuras</td>
+                                <td>Resistente à hérnia das brássicas (<em>Plasmodiophora brassicae</em>) e à podridão negra; amplamente adaptado ao Brasil</td>
+                                <td>100 dias; verão e épocas quentes</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="mt-3 text-center">
+                    <p class="text-muted small">
+                        Fonte: Dados técnicos adaptados de publicações da Embrapa Roraima, Embrapa Acre e Embrapa Amapá sobre cultivo de repolho.
+                        Para mais informações acesse:
+                        <a href="https://www.embrapa.br/hortalicas" target="_blank" rel="noopener">
+                            Portal Embrapa Hortaliças
+                        </a>
+                    </p>
+
+                    <div class="row g-3 justify-content-center">
+
+                        <div class="col-6 col-md-3">
+                            <figure class="figure">
+                                <img src="../../img/culturas-detalhe/repolho-verde.webp" class="figure-img img-fluid rounded" alt="Repolho Verde">
+                                <figcaption class="figure-caption text-center">Repolho Verde (campo)</figcaption>
+                            </figure>
+                        </div>
+
+                        <div class="col-6 col-md-3">
+                            <figure class="figure">
+                                <img src="../../img/culturas-detalhe/repolho-cabeca.webp" class="figure-img img-fluid rounded" alt="Cabeça de Repolho">
+                                <figcaption class="figure-caption text-center">Cabeça de Repolho (colheita)</figcaption>
+                            </figure>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="card mb-4">
+            <div class="card-body">
+                <h3 class="h4">Manejo e Plantio</h3>
+
+                <div class="row mt-3">
+                    <div class="col-md-7">
+
+                        <ul class="list-group list-group-flush">
+
+                            <li class="list-group-item">
+                                <strong>Sistemas de cultivo:</strong> O repolho pode ser cultivado a céu aberto ou em cultivo protegido. Em Roraima, o cultivo é realizado principalmente na região de microclima da Serra de Pacaraima e em área de mata na Vila Iracema, com comprovação de viabilidade também em área de cerrado (temperatura média anual de 27,4°C). Em Minas Gerais, a região de Juiz de Fora é a maior fornecedora para o mercado de Belo Horizonte, com destaque para o município de Carandaí.
+                            </li>
+
+                            <li class="list-group-item">
+                                <strong>Produção de mudas e transplantio:</strong> A semeadura é feita em sementeiras preparadas com 1 m de largura e leito de 15 a 20 cm de espessura, utilizando substrato com metade de solo e metade de esterco curtido. O transplantio deve ocorrer quando as mudas apresentarem 4 a 6 folhas definitivas ou 10 a 15 cm de altura, entre 21 e 28 dias após a semeadura, em covas de 30 × 30 × 30 cm com espaçamento de 60 cm na fileira e 80 cm entre fileiras.
+                            </li>
+
+                            <li class="list-group-item">
+                                <strong>Preparo do solo e correção:</strong> O solo mais apropriado é de textura média, solto, profundo e rico em matéria orgânica, com pH entre 5,5 e 6,8. Em solos ácidos de Roraima, recomenda-se elevar o pH até 6,0 com calcário dolomítico ou cal hidratada, incorporado pelo menos dois meses antes do transplantio. Para solos com elevado teor de alumínio, como na região de Pacaraima, utiliza-se dosagem de 5 t/ha de calcário com PRNT de 100%.
+                            </li>
+
+                            <li class="list-group-item">
+                                <strong>Irrigação:</strong> O repolho é exigente em água, necessitando de aplicação diária de 3 a 4 mm (3 a 4 litros/m²) nos primeiros 20 dias após o transplantio; após esse período, as irrigações podem ser feitas em turnos de 2 a 3 dias. O sistema de aspersão é o mais utilizado, mas sulcos, gotejamento e microaspersão também são alternativas viáveis.
+                            </li>
+
+                            <li class="list-group-item">
+                                <strong>Adubação orgânica e química:</strong> Recomenda-se 50 t/ha de esterco bovino curtido aplicado diretamente na cova de plantio. A adubação química deve ser baseada em análise de solo; na ausência desta, utiliza-se a fórmula 4-14-8 na base de 50 g/cova em solos já cultivados e 80 a 100 g/cova em solos novos, mais 0,5 g de bórax/cova. Adubação de cobertura com 20 a 30 g de sulfato de amônio ou nitrocálcio por cova, aplicada 20 a 30 dias após o transplantio.
+                            </li>
+
+                            <li class="list-group-item">
+                                <strong>Adubação foliar e micronutrientes:</strong> Aos 7 e 11 dias após a germinação, recomenda-se pulverização foliar com molibdato de sódio (5 g/10 L de água) e, aos 10 e 20 dias, aplicação de bórax (20 g/10 L de água) para garantir boa formação e fechamento da cabeça. Pulverizações quinzenais com mistura de 20 L de água + 10 g de molibdato de sódio + 40 g de bórax + 10 g de ureia são indicadas para garantir formação adequada das cabeças.
+                            </li>
+
+                            <li class="list-group-item">
+                                <strong>Colheita:</strong> A colheita inicia-se quando as cabeças estiverem bem fechadas e compactas, entre 80 a 130 dias após o transplantio, conforme a variedade e época de plantio. O corte é feito rente à última folha, deixando-se 4 a 5 folhas para proteção do repolho. Para fins comerciais, classificam-se as cabeças em Extra (1,5 a 2,0 kg), Especial (>2,5 kg) e Primeira (miúdas com defeitos não comprometentes).
+                            </li>
+
+                            <li class="list-group-item">
+                                <strong>Rotação de culturas:</strong> Fundamental para reduzir inóculo de patógenos de solo. Recomenda-se rotação com solanáceas (tomate, pimentão), leguminosas (mucuna-preta, guandú), liliáceas (cebola, alho) e cenoura, com intervalo mínimo de 2 a 3 anos para doenças como podridão negra e hérnia.
+                            </li>
+
+                        </ul>
+
+                    </div>
+                </div>
+
+                <!-- Cultivo em clima tropical box -->
+                <div class="mt-4 p-3 bg-light border rounded">
+                    <h5 class="text-success"><i class="bi bi-sun"></i> Adaptação ao Clima Tropical</h5>
+                    <p class="mb-0">
+                        Embora o repolho seja originário de regiões de clima temperado, o advento de híbridos japoneses (como Sooshu, Kenzan e Fuyutoyo) permitiu seu cultivo em regiões tropicais, mesmo em épocas de clima quente. Em Roraima, ensaios da Embrapa comprovaram a viabilidade do cultivo em área de cerrado com temperatura média anual de 27,4°C e umidade relativa de 76%. Na região serrana de Pacaraima (altitude 900 m, temperatura média 21,4°C), o híbrido Kenzan alcançou produtividade de até 87 t/ha em ensaios de pesquisa.
+                    </p>
+                </div>
+
+                <!-- Créditos e fonte técnica -->
+                <div class="mt-4 text-muted small">
+
+                    <p>
+                        <strong>Fontes técnicas:</strong>
+                    </p>
+
+                    <p>
+                        LUZ, F. J. de F.; OLIVEIRA, J. M. F. de. <em>Orientações técnicas para o cultivo do repolho em Roraima</em>. Boa Vista: Embrapa-CPAF/Roraima, 1997. 12 p. (Circular Técnica, 3).
+                        <a href="https://www.infoteca.cnptia.embrapa.br/infoteca/handle/doc/695199" target="_blank" rel="noopener">
+                            Infoteca Embrapa.
+                        </a>
+                    </p>
+
+                    <p>
+                        EMBRAPA AMAPÁ. <em>Cultivo do repolho (Brassica oleracea var. capitata)</em>. Macapá: Embrapa Amapá, 2011. Folder técnico.
+                        <a href="https://www.infoteca.cnptia.embrapa.br/infoteca/handle/doc/990385" target="_blank" rel="noopener">
+                            Infoteca Embrapa.
+                        </a>
+                    </p>
+
+                    <p>
+                        NUNES, M. U. C.; OLIVEIRA, J. B. de; FAZOLIN, M. <em>Cultivo de repolho (Brassica oleracea var. capitata) no Acre</em>. Rio Branco: Embrapa-CPAF/Acre, 1994. 18 p. (Circular Técnica, 11).
+                    </p>
+
+                    <p>
+                        EMATER-MG; EPAMIG; UFV. <em>Sistemas de Produção para a Cultura do Repolho</em>. Florestal-MG, 1979. 40 p. (Sistemas de Produção – Boletim nº 166).
+                    </p>
+
+                </div>
+
+            </div>
+        </section>
+
+        <section class="card mb-4">
+            <div class="card-body">
+
+                <h3 class="h4 text-danger">Manejo Integrado de Pragas e Doenças (MIP)</h3>
+
+                <p class="text-muted small mt-2">
+                    O repolho, como demais brássicas, está sujeito ao ataque de diversas pragas e doenças que podem comprometer significativamente a produção. O manejo integrado combina práticas culturais, monitoramento, controle biológico e, quando necessário, controle químico registrado no MAPA.
+                </p>
+
+                <h5 class="mt-3">Pragas Chave</h5>
+                <div class="table-responsive">
+                    <table class="table table-sm table-bordered mt-2">
+                        <thead class="table-dark text-center">
+                            <tr>
+                                <th>Praga</th>
+                                <th>Sintomas / Danos</th>
+                                <th>Manejo Recomendado</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Traça-das-crucíferas (<em>Plutella xylostella</em>)</strong></td>
+                                <td>Lagartas verde-claras (7-10 mm) alimentam-se das folhas, deixando-as rendadas ou furadas; quando atacam folhas da cabeça, causam grande prejuízo comercial</td>
+                                <td>Monitoramento frequente; controle biológico com <em>Bacillus thuringiensis</em>; inseticidas registrados (Cartap, Abamectina, Metomil); evitar aplicações preventivas desnecessárias</td>
+                            </tr>
+
+                            <tr>
+                                <td><strong>Curuquerê-da-couve (<em>Ascia monuste orseis</em>)</strong></td>
+                                <td>Lagartas de 30-35 mm, cabeça escura, alimentam-se das folhas causando desfolha intensa; podem comprometer totalmente a planta em infestações severas</td>
+                                <td>Monitoramento visual; controle biológico com parasitoides; inseticidas registrados (Malation, Triclorfon, Diazinon) aplicados no início do ataque</td>
+                            </tr>
+
+                            <tr>
+                                <td><strong>Lagarta-rosca (<em>Agrotis ipsilon</em>)</strong></td>
+                                <td>Lagartas de até 4 cm cortam plantas recém-transplantadas rente ao solo durante a noite; habita o solo durante o dia; causa perdas de estande e necessidade de replantio</td>
+                                <td>Aplicação de inseticidas no colo da planta; iscas tóxicas (farelo + açúcar + Triclorfon); monitoramento noturno; controle cultural com eliminação de restos vegetais</td>
+                            </tr>
+
+                            <tr>
+                                <td><strong>Pulgão-da-couve (<em>Brevicoryne brassicae</em>)</strong></td>
+                                <td>Insetos de 1-2 mm, verdes com camada cerosa branca, sugam seiva causando enrolamento foliar, definhamento e transmissão de viroses; localizam-se na face inferior das folhas</td>
+                                <td>Monitoramento regular; controle biológico com parasitoides; inseticidas registrados (Dimetoato, Acefato, Pirimicarb); cobertura morta com casca de arroz ou cal tem efeito repelente</td>
+                            </tr>
+
+                            <tr>
+                                <td><strong>Broca-da-couve (<em>Hellula undalis</em>)</strong></td>
+                                <td>Lagartas amareladas com três listas marrons no dorso; alimentam-se da superfície foliar e cavam galerias em nervuras e pontos de crescimento, causando brotações excessivas</td>
+                                <td>Monitoramento visual; inseticidas registrados (Acefato, Metomil, Paration-metílico) aplicados logo ao observar primeiros sintomas</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h5 class="mt-4">Principais Doenças</h5>
+                <div class="table-responsive">
+                    <table class="table table-sm table-bordered mt-2">
+                        <thead class="table-dark text-center">
+                            <tr>
+                                <th>Doença (Agente)</th>
+                                <th>Sintomas</th>
+                                <th>Manejo Recomendado</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Podridão-negra (<em>Xanthomonas campestris</em> pv. <em>campestris</em>)</strong></td>
+                                <td>Lesões amareladas em forma de V nas folhas, com vértice voltado para o centro; vasos lenhosos enegrecidos; amarelecimento e necrose foliar</td>
+                                <td>Uso de sementes sadias; tratamento com antibióticos (aureomicina/terramicina); rotação de 2-3 anos; cultivares resistentes (Louco, Sabaúna); evitar irrigação por aspersão</td>
+                            </tr>
+
+                            <tr>
+                                <td><strong>Podridão-mole (<em>Erwinia carotovora</em> pv. <em>carotovora</em>)</strong></td>
+                                <td>Encharcamento e decomposição aquosa/gelatinosa dos tecidos, com odor desagradável; frequentemente associada à podridão-negra</td>
+                                <td>Plantio na época seca; controle de insetos mastigadores; evitar ferimentos nas plantas; solos bem drenados; fungicidas cúpricos registrados</td>
+                            </tr>
+
+                            <tr>
+                                <td><strong>Hérnia-das-crucíferas (<em>Plasmodiophora brassicae</em>)</strong></td>
+                                <td>Galhas nas raízes (hiperplasia celular); murcha nas horas quentes; enfezamento; raízes deformadas podem apodrecer liberando esporos</td>
+                                <td>Rotação mínima de 4 anos; pH do solo >7,0; adubação com cálcio; evitar solos argilosos/encharcados; cultivares resistentes (YR Atlas F1, Natsumi AF-75 F1)</td>
+                            </tr>
+
+                            <tr>
+                                <td><strong>Míldio (<em>Peronospora parasitica</em>)</strong></td>
+                                <td>Lesões cloróticas irregulares evoluindo para necrose; frutificação branca na face inferior das folhas; ataque severo em mudas de sementeira</td>
+                                <td>Sementeira em locais sem acúmulo de neblina; baixa densidade de semeadura; fungicidas (Maneb, Mancozeb, cúpricos) com espalhante adesivo</td>
+                            </tr>
+
+                            <tr>
+                                <td><strong>Mofo-branco (<em>Sclerotinia sclerotiorum</em>)</strong></td>
+                                <td>Manchas encharcadas em folhas próximas ao solo ou na cabeça; mofo branco com escleródios negros; podridão mole da haste</td>
+                                <td>Rotação com gramíneas; destruição de restos culturais; aração profunda para enterrar escleródios; fungicidas sistêmicos (Benomil, Carbendazin)</td>
+                            </tr>
+
+                            <tr>
+                                <td><strong>Mancha-de-Alternária (<em>Alternaria brassicae</em>)</strong></td>
+                                <td>Lesões necróticas circulares com anéis concêntricos e halo amarelo; coalescência causando queima foliar; ataque em ramos na produção de sementes</td>
+                                <td>Sementes tratadas com fungicidas (Thiram); eliminação de restos culturais; fungicidas (Mancozeb, cúpricos); evitar áreas de baixada com acúmulo de umidade</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="mt-4 p-3 bg-light border rounded">
+                    <h6 class="text-success"><i class="bi bi-shield-check"></i> Controle Preventivo e Boas Práticas</h6>
+                    <p class="mb-0 small">
+                        Para o manejo eficaz de pragas e doenças do repolho, recomenda-se: uso de sementes e mudas certificadas e tratadas; rotação de culturas com espécies não hospedeiras; eliminação de restos culturais e plantas invasoras; correção e adubação equilibrada do solo; irrigação adequada sem excesso de umidade foliar; monitoramento constante da lavoura; e aplicação de defensivos apenas quando necessário, seguindo recomendações técnicas e respeitando períodos de carência.
+                    </p>
+                </div>
+
+                <div class="mt-3 text-muted small text-center">
+
+                    <p>
+                        Informações adaptadas de publicações técnicas sobre entomologia e fitossanidade da cultura do repolho.
+                    </p>
+
+                    <p>
+                        <strong>Referências principais:</strong>
+                    </p>
+
+                    <p>
+                        REIS, A. et al. <em>Principais doenças das brássicas causadas por fungos, oomicetos e protozoário: Identificação e manejo</em> – Circular Técnica 176. Embrapa Hortaliças, Brasília, DF, 2021.
+                        <a href="https://www.infoteca.cnptia.embrapa.br/infoteca/handle/doc/1121044" target="_blank" rel="noopener">
+                            Infoteca Embrapa.
+                        </a>
+                    </p>
+
+                    <p>
+                        LUZ, F. J. de F.; OLIVEIRA, J. M. F. de. <em>Orientações técnicas para o cultivo do repolho em Roraima</em> – Circular Técnica 3. Embrapa Roraima, Boa Vista, 1997.
+                        <a href="https://www.infoteca.cnptia.embrapa.br/infoteca/handle/doc/695199" target="_blank" rel="noopener">
+                            Infoteca Embrapa.
+                        </a>
+                    </p>
+
+                    <p>
+                        AGROFIT – Sistema de Agrotóxicos Fitossanitários. MAPA.
+                        <a href="https://extranet.agricultura.gov.br/agrofit_cons/principal_agrofit_cons" target="_blank" rel="noopener">
+                            Acesse o portal.
+                        </a>
+                    </p>
+
+                </div>
+
+            </div>
+        </section>
+
+        <div class="alert alert-warning d-flex align-items-center">
+            <i class="bi bi-thermometer-half fs-3 me-3"></i>
+            <div class="alert alert-warning mt-3">
+                <strong>Alerta de Temperatura:</strong>
+                O repolho adapta-se melhor a climas amenos, com faixa ideal entre <strong>16 °C e 18 °C</strong>.
+                Temperaturas acima de 35 °C podem prejudicar a formação da cabeça e induzir rachaduras,
+                enquanto temperaturas abaixo de 10 °C retardam o crescimento. Híbridos japoneses como
+                Sooshu e Kenzan foram desenvolvidos para tolerar temperaturas elevadas (até 38°C),
+                viabilizando o cultivo em regiões tropicais como Roraima e Amapá.
+                Em regiões serranas (altitude >800 m), como Pacaraima-RR, o cultivo apresenta
+                produtividade superior e menor incidência de doenças, com híbridos como Kenzan
+                alcançando até 87 t/ha em ensaios de pesquisa.
+            </div>
+        </div>
+    </main>
+
+    <footer class="py-5 bg-light border-top">
+        <div class="container text-center">
+            <p class="text-muted fw-bold mb-1">Guia Verde – 2026</p>
+
+            <div class="small text-muted">
+                Fontes técnicas:
+                <a href="https://www.embrapa.br/hortalicas"
+                target="_blank"
+                rel="noopener"
+                class="text-decoration-none text-secondary">
+                Embrapa Hortaliças
+                </a> |
+
+                <a href="https://www.infoteca.cnptia.embrapa.br/infoteca/handle/doc/695199"
+                target="_blank"
+                rel="noopener"
+                class="text-decoration-none text-secondary">
+                Circular Técnica 3 – Repolho em Roraima (Embrapa)
+                </a> |
+
+                <a href="https://www.infoteca.cnptia.embrapa.br/infoteca/handle/doc/1121044"
+                target="_blank"
+                rel="noopener"
+                class="text-decoration-none text-secondary">
+                Circular Técnica 176 – Doenças das Brássicas (Embrapa)
+                </a>
+            </div>
+
+            <div class="small text-muted mt-2">
+                Conteúdo técnico adaptado de materiais de extensão rural da
+                Embrapa Roraima, Embrapa Acre, Embrapa Amapá e EPAMIG sobre o cultivo de repolho (<em>Brassica oleracea</em> var. <em>capitata</em>).
+            </div>
+        </div>
+    </footer>
+
+    <button
+        type="button"
+        class="btn btn-success btn-floating btn-lg"
+        id="btn-back-to-top"
+        style="position: fixed; bottom: 20px; right: 20px; display: none;"
+        aria-label="Voltar ao topo"
+        title="Voltar ao topo">
+        <i class="bi bi-arrow-up"></i>
+    </button>
+    <script src="../../js/ui-extras.js"></script>
+    <script src="../../../src/js/search.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
