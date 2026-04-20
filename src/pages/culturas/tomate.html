@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guia Verde | Tomate</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="../../css/base.css">
+    <link rel="stylesheet" href="../../css/navbar.css">
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <i class="bi bi-leaf"></i>
+                Guia Verde
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item"><a class="nav-link active" href="../../../index.html">Início</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../../pages/navbar/sobre.html">Sobre</a></li>
+                </ul>
+                <form class="d-flex" role="search" onsubmit="buscar(event)">
+                    <input id="campoBusca" class="form-control me-2" type="search"
+                          placeholder="O que procura?" aria-label="Pesquisar">
+                    <button class="btn btn-warning" type="submit">Pesquisar</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container py-4">
+        <div class="d-flex mb-3">
+            <button type="button" onclick="history.back()" class="btn btn-secondary">
+                <i class="bi bi-arrow-left"></i> Voltar
+            </button>
+
+            <a href="../../../index.html" class="btn btn-success ms-auto">
+                Página Inicial
+            </a>
+        </div>
+
+        <div class="card mb-4 border-0 shadow-sm">
+            <div class="row g-0 align-items-center">
+
+                <!-- Texto -->
+                <div class="col-12 col-md-8">
+                    <div class="card-body">
+                        <h2 class="card-title">Tomate (<em>Solanum lycopersicum</em>)</h2>
+                        <p class="card-text">
+                            O tomateiro (<em>Solanum lycopersicum</em>) é uma solanácea amplamente difundida pelo mundo e ocupa a terceira maior área plantada dentre as hortaliças cultivadas no Brasil. É uma cultura de grande importância socioeconômica, com produção superior a 3,5 milhões de toneladas em aproximadamente 56 mil hectares, e produtividade média de cerca de 62 t/ha (MADEIRA et al., 2019).
+                        </p>
+                        <h2>Descrição</h2>
+                        <p>
+                            O tomateiro é uma planta da família Solanaceae, originalmente de clima ameno e relativamente seco, mas adaptada a ampla gama de condições climáticas. No Brasil, destaca-se em regiões serranas, de planalto ou de clima subtropical/temperado. A cultura apresenta dois segmentos principais: tomate para processamento industrial (rasteiro, com hábito determinado) e tomate para mesa (tutorado, com hábito indeterminado ou semideterminado), incluindo grupos como Santa Cruz, Salada, Cereja e Italiano.
+                        </p>
+                        <h2>Principais Características:</h2>
+                        <ul>
+                            <li><strong>Nome científico:</strong> <em>Solanum lycopersicum</em> L.</li>
+                            <li><strong>Família botânica:</strong> Solanaceae.</li>
+                            <li><strong>Hábito de crescimento:</strong> herbácea perene cultivada como anual; porte indeterminado, semideterminado ou determinado, conforme cultivar.</li>
+                            <li><strong>Frutos:</strong> bagas carnudas, coloração variada (vermelha, rosa, amarela, verde), formatos diversos (redondo, alongado, cereja, italiano).</li>
+                            <li><strong>Flor:</strong> amarela, pequena, hermafrodita, geralmente em inflorescências racemosas.</li>
+                            <li><strong>Propagação:</strong> por sementes; produção de mudas em bandejas com substrato, transplantio aos 25-35 dias após semeadura.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Imagem -->
+                <div class="col-12 col-md-4">
+                    <img src="../../img/culturas-intro/tomate.webp"
+                        class="img-fluid h-100 w-100 object-fit-cover"
+                        alt="Cultivo de Tomate">
+                </div>
+
+            </div>
+        </div>
+
+        <section class="card mb-4">
+            <div class="card-body">
+                <h3 class="h4 mb-3">Variedades e Cultivares</h3>
+                <div class="table-responsive">
+                    <table class="table table-hover align-middle border">
+                        <thead class="table-success">
+                            <tr>
+                                <th>Tipo / Grupo</th>
+                                <th>Característica Principal</th>
+                                <th>Destaque Técnico</th>
+                                <th>Coloração na Maturação</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Rasteiro (industrial)</strong></td>
+                                <td>Hábito de crescimento determinado; colheita mecânica; frutos com alto teor de sólidos</td>
+                                <td>Cultivado sem tutoramento; predominante em grandes áreas mecanizáveis do Brasil Central; plantio entre março e julho para escapar do período chuvoso.</td>
+                                <td>Verde → Vermelho intenso</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Santa Cruz (mesa)</strong></td>
+                                <td>Frutos oblongos, costados, firmeza média; hábito indeterminado</td>
+                                <td>Tipo mais tradicional no mercado brasileiro de mesa; exige tutoramento e condução; boa adaptação a diferentes regiões produtoras.</td>
+                                <td>Verde → Vermelho</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Salada / Longa Vida</strong></td>
+                                <td>Frutos redondos, firmes, alta durabilidade pós-colheita</td>
+                                <td>Ampla aceitação comercial; cultivado com tutoramento vertical; demanda adubação equilibrada para manter firmeza e sabor.</td>
+                                <td>Verde → Vermelho ou Rosa</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Cereja / Italiano</strong></td>
+                                <td>Frutos pequenos (cereja) ou alongados (italiano); sabor intenso</td>
+                                <td>Segmento de alto valor agregado; produção em cultivo protegido ou aberto; exige manejo fitossanitário rigoroso e colheita no ponto ideal de maturação.</td>
+                                <td>Verde → Vermelho, Amarelo ou Laranja</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="mt-3 text-center">
+                    <p class="text-muted small">
+                        Fonte: Dados técnicos adaptados da Circular Técnica 168 da Embrapa Hortaliças (MADEIRA et al., 2019).
+                        Para mais informações acesse:
+                        <a href="https://www.embrapa.br/hortalicas" target="_blank" rel="noopener">
+                            Portal Embrapa Hortaliças
+                        </a>
+                    </p>
+
+                    <div class="row g-3 justify-content-center">
+
+                        <div class="col-6 col-md-3">
+                            <figure class="figure">
+                                <img src="../../img/culturas-detalhe/tomate-rasteiro.webp" class="figure-img img-fluid rounded" alt="Tomate Rasteiro">
+                                <figcaption class="figure-caption text-center">Tomate Rasteiro</figcaption>
+                            </figure>
+                        </div>
+
+                        <div class="col-6 col-md-3">
+                            <figure class="figure">
+                                <img src="../../img/culturas-detalhe/tomate-mesa.webp" class="figure-img img-fluid rounded" alt="Tomate para Mesa em Tutoramento">
+                                <figcaption class="figure-caption text-center">Tomate para Mesa</figcaption>
+                            </figure>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="card mb-4">
+            <div class="card-body">
+                <h3 class="h4">Manejo e Plantio</h3>
+
+                <div class="row mt-3">
+                    <div class="col-md-7">
+
+                        <ul class="list-group list-group-flush">
+
+                            <li class="list-group-item">
+                                <strong>Sistemas de cultivo:</strong> O tomateiro pode ser cultivado a céu aberto (campo) ou em cultivo protegido (estufas). O segmento industrial (rasteiro) é predominantemente mecanizado e cultivado em áreas de topografia suave no Brasil Central. O tomate para mesa, por sua vez, é frequentemente tutorado e produzido em regiões serranas ou de clima ameno, com colheita escalonada ao longo do ano. O Sistema de Plantio Direto de Hortaliças (SPDH) tem sido recomendado como alternativa conservacionista, com redução de até 90% nas perdas de solo por erosão (MADEIRA et al., 2019).
+                            </li>
+
+                            <li class="list-group-item">
+                                <strong>Produção de mudas e transplantio:</strong> A produção de mudas é realizada em bandejas de polipropileno com substrato, em ambiente protegido. O transplantio para o local definitivo ocorre quando as mudas apresentam 4 a 6 folhas definitivas (25-35 dias após semeadura). No SPDH, o transplantio é feito em sulcos ou covas abertas sobre a palhada, com revolvimento localizado do solo.
+                            </li>
+
+                            <li class="list-group-item">
+                                <strong>Tutoramento e condução:</strong> Para tomate de mesa, o tutoramento vertical com fitilhos ou estacas é amplamente utilizado, alternativamente ao sistema tradicional em "V" invertido. A poda de formação, desbaste de brotos laterais e condução de hastes são práticas essenciais para aumentar produtividade e sanidade. No tomate rasteiro, não há tutoramento, e a condução visa manter a planta rasteira para colheita mecânica.
+                            </li>
+
+                            <li class="list-group-item">
+                                <strong>Irrigação:</strong> O tomateiro exige manejo hídrico preciso. No SPDH, a presença de palhada reduz a evaporação, proporcionando economia de água de irrigação da ordem de 25% na fase inicial e 11% ao longo do ciclo para tomate rasteiro; para tomate tutorado, estimativas empíricas indicam redução de 30% a 50% (MADEIRA et al., 2019). O gotejamento é o sistema mais indicado, permitindo fertirrigação e reduzindo o molhamento da parte aérea.
+                            </li>
+
+                            <li class="list-group-item">
+                                <strong>Solo e correção:</strong> O tomateiro prefere solos férteis, bem drenados, com pH entre 5,8 e 6,8. A calagem deve ser realizada com antecedência (preferencialmente 90 dias antes do plantio), incorporando calcário dolomítico para atingir saturação de bases de 70% e relação Ca:Mg de 1:1 na CTC. Em SPDH, a amostragem do solo deve ser feita nas camadas 0-10 cm e 10-20 cm, devido ao acúmulo de nutrientes na subsuperfície.
+                            </li>
+
+                            <li class="list-group-item">
+                                <strong>Adubação e nutrição:</strong> O tomateiro é exigente em nutrientes: demanda estimada de 190-300 kg/ha de N, 30-70 kg/ha de P e 200-350 kg/ha de K, além de Ca, Mg e S (MADEIRA et al., 2019). A ordem de acúmulo é K > N > P ≥ Ca > S > Mg. No SPDH, recomenda-se aplicar 40% do N e 60% do K no plantio, parcelando o restante em cobertura. O uso de gesso agrícola é indicado para fornecer Ca e S em camadas mais profundas.
+                            </li>
+
+                            <li class="list-group-item">
+                                <strong>Colheita:</strong> Para tomate de mesa, a colheita é manual, realizada quando os frutos atingem o ponto de maturação comercial (verde-maduro a vezado, conforme destino). Para tomate industrial, a colheita é mecânica, quando os frutos apresentam coloração vermelha uniforme e teor de sólidos adequado. No SPDH, a palhada reduz o contato direto dos frutos com o solo, diminuindo perdas por podridões em até 55%.
+                            </li>
+
+                            <li class="list-group-item">
+                                <strong>Rotação de culturas e plantas de cobertura:</strong> Fundamental para sustentabilidade do SPDH. Recomenda-se rotação com gramíneas (milho, milheto, aveia, sorgo) e leguminosas (crotalária, mucuna, feijão-de-porco, ervilhaca), isoladas ou em consórcio. As plantas de cobertura devem formar palhada densa e duradoura, com sistema radicular vigoroso para descompactação e reciclagem de nutrientes (MADEIRA et al., 2019).
+                            </li>
+
+                        </ul>
+
+                    </div>
+                </div>
+
+                <!-- SPDH box -->
+                <div class="mt-4 p-3 bg-light border rounded">
+                    <h5 class="text-success"><i class="bi bi-shield-check"></i> Benefícios do SPDH para o Tomateiro</h5>
+                    <p class="mb-0">
+                        O Sistema de Plantio Direto de Hortaliças (SPDH) proporciona: redução de até 80% nas perdas de água por escoamento superficial e 90% na erosão do solo; incremento significativo de matéria orgânica e fertilidade após seis anos de adoção; redução de até 4°C na temperatura média do solo e até 11°C nos picos diurnos; economia de água de irrigação (11-25%); e maior eficiência no uso da água (~23% superior ao sistema convencional). Além disso, a palhada melhora o microclima, reduz estresse térmico e favorece a sanidade das plantas (MADEIRA et al., 2019).
+                    </p>
+                </div>
+
+                <!-- Créditos e fonte técnica -->
+                <div class="mt-4 text-muted small">
+
+                    <p>
+                        <strong>Fontes técnicas:</strong>
+                    </p>
+
+                    <p>
+                        MADEIRA, N. R. et al. <em>Cultivo do tomateiro em Sistema de Plantio Direto de Hortaliças (SPDH)</em>. Circular Técnica 168. Embrapa Hortaliças, Brasília, DF, agosto de 2019. ISSN 1415-3033.
+                        <a href="http://www.infoteca.cnptia.embrapa.br/infoteca/handle/doc/1111562" target="_blank" rel="noopener">
+                            Infoteca Embrapa.
+                        </a>
+                    </p>
+
+                    <p>
+                        Portal Embrapa Hortaliças – tomate: publicações técnicas:
+                        <a href="https://www.embrapa.br/busca-de-publicacoes/-/publicacao/busca/Tomate" target="_blank" rel="noopener">
+                            Publicações da Embrapa Hortaliças sobre o cultivo de tomate.
+                        </a>
+                    </p>
+
+                </div>
+
+            </div>
+        </section>
+
+        <section class="card mb-4">
+            <div class="card-body">
+
+                <h3 class="h4 text-danger">Manejo Integrado de Pragas e Doenças (MIP)</h3>
+
+                <p class="text-muted small mt-2">
+                    O tomateiro é reconhecidamente uma das hortaliças mais exigentes em insumos agrícolas. No SPDH, a priorização da sanidade do sistema como um todo, com não revolvimento do solo, rotação de culturas efetiva e cobertura permanente, altera a dinâmica de problemas fitossanitários, favorecendo inimigos naturais e reduzindo a incidência de doenças (MADEIRA et al., 2019).
+                </p>
+
+                <h5 class="mt-3">Pragas Chave</h5>
+                <div class="table-responsive">
+                    <table class="table table-sm table-bordered mt-2">
+                        <thead class="table-dark text-center">
+                            <tr>
+                                <th>Praga</th>
+                                <th>Sintomas / Danos</th>
+                                <th>Manejo Recomendado</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Traça-do-tomateiro (<em>Tuta absoluta</em>)</strong></td>
+                                <td>Lagartas fazem galerias em folhas, hastes, pedúnculos e frutos; orifícios de saída permitem entrada de patógenos e apodrecimento. Praga de maior importância econômica no tomate.</td>
+                                <td>Monitoramento com armadilhas de feromônio; controle biológico com parasitoides (<em>Trichogramma</em>, <em>Dolichogenidea</em>); inseticidas registrados no MAPA; destruição de restos culturais; rotação de culturas.</td>
+                            </tr>
+
+                            <tr>
+                                <td><strong>Broca-pequena (<em>Neoleucinodes elegantalis</em>) e Broca-grande (<em>Helicoverpa</em> spp.)</strong></td>
+                                <td>Lagartas broqueiam frutos internamente; orifícios de saída facilitam entrada de umidade e patógenos; frutos impróprios para comercialização. Ocorrem em temperaturas >25°C e UR >50%.</td>
+                                <td>Monitoramento; inseticidas registrados; destruição de frutos broqueados; evitar plantios em épocas favoráveis à praga; controle biológico com <em>Bacillus thuringiensis</em> e parasitoides.</td>
+                            </tr>
+
+                            <tr>
+                                <td><strong>Pulgões (<em>Myzus persicae</em>, <em>Macrosiphum euphorbiae</em>)</strong></td>
+                                <td>Sucção de seiva; deformação foliar; transmissão de viroses (PVY, PepYMV, ToCV). Principal dano é a transmissão de vírus. Relevante em campo aberto e protegido.</td>
+                                <td>Telas antiafídeos em cultivo protegido; monitoramento frequente; controle biológico com parasitoides (<em>Aphidius</em>); inseticidas registrados; eliminação de plantas com viroses.</td>
+                            </tr>
+
+                            <tr>
+                                <td><strong>Moscas-brancas (<em>Bemisia tabaci</em>, <em>Trialeurodes vaporariorum</em>)</strong></td>
+                                <td>Sucção de seiva; formação de fumagina; transmissão de Crinivirose (ToCV) e Geminivirose (Begomovirus). Alta relevância na fase de mudas e primeiros 40 dias após transplantio.</td>
+                                <td>Telas antiafídeos; monitoramento rigoroso no viveiro; armadilhas amarelas adesivas; controle biológico com <em>Encarsia</em> e <em>Eretmocerus</em>; inseticidas e óleos minerais registrados.</td>
+                            </tr>
+
+                            <tr>
+                                <td><strong>Ácaros (<em>Tetranychus urticae</em>, <em>Polyphagotarsonemus latus</em>)</strong></td>
+                                <td><em>T. urticae</em>: pontos cloróticos, teia, desfolha. <em>P. latus</em>: bronzeamento, folhas encarquilhadas. Mais severos em clima quente e seco/úmido, respectivamente.</td>
+                                <td>Monitoramento com lupa; acaricidas registrados; controle biológico com ácaros predadores (<em>Phytoseiulus</em>); manutenção de umidade adequada; evitar plantas estressadas.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h5 class="mt-4">Pragas Secundárias / Ocasionais no SPDH</h5>
+                <div class="table-responsive">
+                    <table class="table table-sm table-bordered mt-2">
+                        <thead class="table-dark text-center">
+                            <tr>
+                                <th>Praga</th>
+                                <th>Sintomas / Danos</th>
+                                <th>Manejo Recomendado</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Corós e Cupins</strong></td>
+                                <td>Em áreas com SPDH consolidado, oscilação de palhada pode elevar populações; corós atacam raízes e colo; cupins cavam galerias. Podem atingir nível de dano econômico.</td>
+                                <td>Rotação com espécies não preferenciais; monitoramento; inseticidas registrados apenas quando necessário. Em hortaliças, a menor durabilidade do SPDH reduz ocorrência em relação a grãos.</td>
+                            </tr>
+
+                            <tr>
+                                <td><strong>Lagarta-rosca (<em>Agrotis ipsilon</em>)</strong></td>
+                                <td>Secciona colo de plantas jovens rente ao solo; em infestações severas pode exigir replantio.</td>
+                                <td>Monitoramento noturno; iscas tóxicas; inseticidas aplicados no sulco de plantio quando necessário.</td>
+                            </tr>
+
+                            <tr>
+                                <td><strong>Tripes (<em>Frankliniella schultzei</em>, <em>F. occidentalis</em>)</strong></td>
+                                <td>Manchas prateadas nas folhas; danos em flores; transmissão de "Vira-cabeça" (TSWV, GRSV). Alta relevância no viveiro e primeiros 45 dias após transplantio.</td>
+                                <td>Armadilhas azuis adesivas; telas antiafídeos; controle biológico com <em>Orius</em>; inseticidas registrados; eliminação de plantas infectadas.</td>
+                            </tr>
+
+                            <tr>
+                                <td><strong>Mosca-minadora (<em>Liriomyza</em> spp.)</strong></td>
+                                <td>Larvas abrem galerias serpenteantes em folíolos; alta infestação causa necrose e desfolha precoce.</td>
+                                <td>Monitoramento; controle biológico com parasitoides (<em>Opius</em> spp.); inseticidas sistêmicos registrados; evitar aplicações que eliminem inimigos naturais.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h5 class="mt-4">Principais Doenças e Benefícios do SPDH</h5>
+                <div class="table-responsive">
+                    <table class="table table-sm table-bordered mt-2">
+                        <thead class="table-dark text-center">
+                            <tr>
+                                <th>Doença / Agente</th>
+                                <th>Sintomas</th>
+                                <th>Manejo e Efeito do SPDH</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Nematoides (<em>Meloidogyne</em>, <em>Pratylenchus</em>)</strong></td>
+                                <td>Galhas radiculares (<em>Meloidogyne</em>); lesões e necrose (<em>Pratylenchus</em>); redução de crescimento e produtividade.</td>
+                                <td>No SPDH com consórcio milho+mucuna, observou-se menor número de juvenis e adultos. Rotação com espécies não hospedeiras e aporte de matéria orgânica favorecem controle.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Doenças fúngicas foliares (Alternariose, Septoriose)</strong></td>
+                                <td>Manchas foliares, desfolha precoce, redução de área fotossintética.</td>
+                                <td>No SPDH, redução do respingo da chuva diminui dispersão de esporos; plantas mantêm "saia" mais íntegra. Observações indicam menor incidência, mas carecem de validação experimental (MADEIRA et al., 2019).</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Murchas bacterianas e fúngicas</strong></td>
+                                <td>Murcha progressiva, escurecimento vascular, morte de plantas.</td>
+                                <td>SPDH favorece diversidade microbiana do solo e saúde das plantas. Rotação de culturas e evitar solanáceas na mesma área por pelo menos dois anos são essenciais.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="mt-4 p-3 bg-light border rounded">
+                    <h6 class="text-success"><i class="bi bi-award"></i> Exemplos de Desempenho Produtivo em SPDH</h6>
+                    <p class="mb-0 small">
+                        Em ensaios da Embrapa Hortaliças, tomate rasteiro em SPDH atingiu produtividade de 105-118 t/ha (vs. 103 t/ha no convencional), com redução de ~55% em frutos podres. Em tomate para mesa no DF, sobre palhada de milheto, obteve-se até 92 t/ha com tutoramento vertical. Nos EUA, tomate em "mulching" de ervilhaca peluda produziu 96,4 t/ha contra 75,5 t/ha no convencional, com maior lucratividade. A eficiência de uso da água foi ~23% superior no SPDH (MADEIRA et al., 2019).
+                    </p>
+                </div>
+
+                <div class="mt-3 text-muted small text-center">
+
+                    <p>
+                        Informações adaptadas da Circular Técnica 168 da Embrapa Hortaliças sobre cultivo de tomate em SPDH.
+                    </p>
+
+                    <p>
+                        <strong>Referência principal:</strong>
+                    </p>
+
+                    <p>
+                        MADEIRA, N. R.; LIMA, C. E. P.; MELO, R. A. C. et al. <em>Cultivo do tomateiro em Sistema de Plantio Direto de Hortaliças (SPDH)</em>. Circular Técnica 168. Embrapa Hortaliças, Brasília, DF, 2019. 29 p. ISSN 1415-3033. 🔗
+                        <a href="http://www.infoteca.cnptia.embrapa.br/infoteca/handle/doc/1111562" target="_blank" rel="noopener">
+                            Infoteca Embrapa.
+                        </a>
+                    </p>
+
+                    <p>
+                        AGROFIT – Sistema de Agrotóxicos Fitossanitários. MAPA. 🔗
+                        <a href="https://extranet.agricultura.gov.br/agrofit_cons/principal_agrofit_cons" target="_blank" rel="noopener">
+                            Acesse o portal.
+                        </a>
+                    </p>
+
+                </div>
+
+            </div>
+        </section>
+
+        <div class="alert alert-warning d-flex align-items-center">
+            <i class="bi bi-thermometer-half fs-3 me-3"></i>
+            <div class="alert alert-warning mt-3">
+                <strong>Alerta de Temperatura:</strong>
+                O tomateiro é exigente em temperatura, com faixa ótima entre <strong>21-28 °C durante o dia e 15-20 °C à noite</strong> (variação diurna de 6-8 °C é desejável). Temperaturas acima de 35 °C prejudicam a viabilidade do pólen e causam abortamento de flores/frutos, enquanto temperaturas abaixo de 10 °C reduzem o crescimento. O SPDH ameniza extremos térmicos: a palhada reduz a temperatura do solo em até 4 °C (média) e até 11 °C nos picos diurnos, proporcionando maior conforto térmico e menor estresse às plantas (MADEIRA et al., 2019).
+            </div>
+        </div>
+    </main>
+
+    <footer class="py-5 bg-light border-top">
+        <div class="container text-center">
+            <p class="text-muted fw-bold mb-1">Guia Verde – 2026</p>
+
+            <div class="small text-muted">
+                Fontes técnicas:
+                <a href="https://www.embrapa.br/hortalicas"
+                target="_blank"
+                rel="noopener"
+                class="text-decoration-none text-secondary">
+                Embrapa Hortaliças
+                </a> |
+
+                <a href="https://extranet.agricultura.gov.br/agrofit_cons/principal_agrofit_cons"
+                target="_blank"
+                rel="noopener"
+                class="text-decoration-none text-secondary">
+                AGROFIT – Agrotóxicos Fitossanitários (MAPA)
+                </a> |
+
+                <a href="https://www.infoteca.cnptia.embrapa.br/infoteca/handle/doc/1111486"
+                target="_blank"
+                rel="noopener"
+                class="text-decoration-none text-secondary">
+                Circular Técnica 168 – Cultivo do Tomateiro em SPDH (Embrapa, 2019)
+                </a>
+            </div>
+
+            <div class="small text-muted mt-2">
+                Conteúdo técnico adaptado exclusivamente da Circular Técnica 168 da
+                Embrapa Hortaliças sobre o cultivo de tomate (<em>Solanum lycopersicum</em>) em Sistema de Plantio Direto de Hortaliças (SPDH).
+            </div>
+        </div>
+    </footer>
+
+    <button
+        type="button"
+        class="btn btn-success btn-floating btn-lg"
+        id="btn-back-to-top"
+        style="position: fixed; bottom: 20px; right: 20px; display: none;"
+        aria-label="Voltar ao topo"
+        title="Voltar ao topo">
+        <i class="bi bi-arrow-up"></i>
+    </button>
+    <script src="../../js/ui-extras.js"></script>
+    <script src="../../../src/js/search.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
