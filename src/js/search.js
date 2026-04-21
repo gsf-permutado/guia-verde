@@ -1,33 +1,27 @@
 // ─── Guia Verde | search.js — pesquisa global ────────────────────────────────
-// Funciona em qualquer página do projeto, inclusive no GitHub Pages.
-// Detecta corretamente a raiz do projeto e ajusta os links.
+// Compatível com GitHub Pages em:
+// https://gsf-permutado.github.io/guia-verde/
 
 (function () {
 
-    // ─── Detecta a raiz do projeto ────────────────────────────────────────────
-    // Em GitHub Pages de projeto:
-    //   https://usuario.github.io/meu-repo/...
-    // a raiz correta é /meu-repo/
-    //
-    // Em ambiente local ou domínio raiz:
-    //   http://127.0.0.1:5500/...
-    // a raiz será /
+    // ─── Define a raiz do projeto ────────────────────────────────────────────
     function calcularRaiz() {
         var pathname = window.location.pathname;
-        var partes = pathname.split('/').filter(function (p) { return p.length > 0; });
 
+        // GitHub Pages do projeto
         if (window.location.hostname.indexOf('github.io') !== -1) {
-            if (partes.length > 0) {
-                return '/' + partes[0] + '/';
+            if (pathname.indexOf('/guia-verde/') === 0) {
+                return '/guia-verde/';
             }
         }
 
+        // Ambiente local
         return '/';
     }
 
     var RAIZ = calcularRaiz();
 
-    // ─── Junta raiz + caminho relativo sem gerar // ──────────────────────────
+    // ─── Monta URLs sem erro de // ───────────────────────────────────────────
     function montarUrl(caminho) {
         return RAIZ.replace(/\/+$/, '') + '/' + caminho.replace(/^\/+/, '');
     }
@@ -214,7 +208,6 @@
         }
     ];
 
-    // ─── Normalização ────────────────────────────────────────────────────────
     function normalizar(texto) {
         return String(texto || "")
             .toLowerCase()
@@ -225,7 +218,6 @@
             .trim();
     }
 
-    // ─── Algoritmo de busca com pontuação ────────────────────────────────────
     function buscar(query) {
         var qNorm = normalizar(query);
         var tokens = qNorm.split(/\s+/).filter(function (t) {
@@ -284,12 +276,10 @@
         return resultados;
     }
 
-    // ─── Caminho para resultados.html ────────────────────────────────────────
     function urlResultados(query) {
         return montarUrl("resultados.html") + "?q=" + encodeURIComponent(query);
     }
 
-    // ─── Inicializa navbar de qualquer página ────────────────────────────────
     function iniciarNavbar() {
         var searchA = document.getElementById("search");
         var suggestA = document.getElementById("suggestions");
@@ -359,7 +349,6 @@
         bindBusca(searchB, suggestB, formB);
     }
 
-    // ─── Inicializa página resultados.html ───────────────────────────────────
     function iniciarResultados() {
         var resultsHeader = document.getElementById("resultsHeader");
         if (!resultsHeader) return;
@@ -477,7 +466,6 @@
         executarBusca(query);
     }
 
-    // ─── Inicialização geral ─────────────────────────────────────────────────
     document.addEventListener("DOMContentLoaded", function () {
         iniciarNavbar();
         iniciarResultados();
