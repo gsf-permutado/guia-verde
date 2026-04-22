@@ -1,0 +1,1184 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guia Verde | Guia Climático</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="../../css/base.css">
+    <link rel="stylesheet" href="../../css/navbar.css">
+    <link rel="stylesheet" href="../../css/components.css">
+    <link rel="stylesheet" href="../../css/info-cards.css">
+    <link rel="stylesheet" href="../../css/responsive.css">
+    <link rel="stylesheet" href="../../css/guias.css">
+    <script src="../../js/search.js"></script>
+</head>
+<script src="../../js/search.js"></script>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="../../../index.html">
+                <i class="bi bi-leaf"></i>
+                Guia Verde
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item"><a class="nav-link active" href="../../../index.html">Início</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../../pages/navbar/sobre.html">Sobre</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#riscos">Riscos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#adaptacao">Adaptação</a></li>
+                </ul>
+                <form class="d-flex position-relative" role="search" id="searchForm">
+                    <label for="search" class="visually-hidden">Pesquisar</label>
+                    <input class="form-control me-2"
+                        id="search"
+                        type="search"
+                        placeholder="Buscar clima, cultura ou risco..."
+                        aria-label="Pesquisar"
+                        autocomplete="off">
+                    <button class="btn btn-warning" type="submit">Pesquisar</button>
+                    <div id="suggestions" class="suggestions"></div>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container py-4">
+        <div class="d-flex mb-3">
+            <button type="button" onclick="history.back()" class="btn btn-secondary">
+                <i class="bi bi-arrow-left"></i> Voltar
+            </button>
+
+            <a href="../../../index.html" class="btn btn-success ms-auto">
+                Página Inicial
+            </a>
+        </div>
+
+        <!-- Cabeçalho do Guia -->
+        <div class="card mb-4 border-0 shadow-sm bg-success text-white">
+            <div class="card-body py-4">
+                <div class="row align-items-center">
+                    <div class="col-lg-8">
+                        <h1 class="display-6 fw-bold mb-2">
+                            <i class="bi bi-cloud-sun me-2"></i>
+                            Guia Climático para Pequenos Produtores
+                        </h1>
+                        <p class="lead mb-0">
+                            Decisões no campo com base em temperatura, chuvas, estiagem, solo e água — foco no Cerrado e Distrito Federal
+                        </p>
+                    </div>
+                    <div class="col-lg-4 text-lg-end">
+                        <span class="badge bg-light text-dark fs-6 py-2 px-3">
+                            <i class="bi bi-geo-alt me-1"></i> Cerrado & DF
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Alert Box -->
+        <div class="alert alert-warning border-0 shadow-sm mb-4" role="alert">
+            <div class="d-flex">
+                <i class="bi bi-exclamation-triangle-fill fs-4 me-3"></i>
+                <div>
+                    <h5 class="alert-heading fw-bold">Atenção, produtor!</h5>
+                    <p class="mb-0 small">
+                        No Cerrado, <strong>a variabilidade climática é o maior risco</strong>. Uma lavoura pode falhar não porque "faltou chuva no ano", mas porque a chuva veio fora da fase crítica da cultura. Planeje com antecedência e monitore constantemente.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Danger box -->
+        <div class="alert alert-danger border-0 shadow-sm mb-4" role="alert">
+            <div class="d-flex">
+                <i class="bi bi-exclamation-octagon-fill fs-4 me-3"></i>
+                <div>
+                    <h5 class="alert-heading fw-bold">IMPORTANTE!</h5>
+                    <p class="mb-0 small">
+                        Este guia é um recurso técnico baseado em evidências para auxiliar no manejo de plantas daninhas. Ele não substitui a assistência técnica personalizada. <strong>Sempre consulte um profissional habilitado</strong> para recomendações específicas à sua propriedade, considerando as condições locais e características do seu sistema produtivo.
+                    </p>
+                    <p class="mb-0 small mt-2">
+                        <strong>Não há responsabilidade por danos causados</strong> por aplicação inadequada das informações aqui contidas. O manejo de plantas daninhas deve ser realizado com cuidado, seguindo as melhores práticas e orientações técnicas para garantir a sustentabilidade do sistema produtivo e a segurança do produtor.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Quick Navigation -->
+        <section class="card mb-4 border-0 shadow-sm" id="sumario">
+            <div class="card-body">
+                <h3 class="h4 mb-3">📋 Navegação Rápida</h3>
+                <div class="row row-cols-2 row-cols-md-4 g-2 small">
+                    <div class="col"><a class="text-decoration-none text-success fw-medium" href="#cerrado"><i class="bi bi-arrow-right-circle me-1"></i> Clima do Cerrado</a></div>
+                    <div class="col"><a class="text-decoration-none text-success fw-medium" href="#riscos"><i class="bi bi-arrow-right-circle me-1"></i> Riscos Principais</a></div>
+                    <div class="col"><a class="text-decoration-none text-success fw-medium" href="#temperatura"><i class="bi bi-arrow-right-circle me-1"></i> Temperatura</a></div>
+                    <div class="col"><a class="text-decoration-none text-success fw-medium" href="#chuva"><i class="bi bi-arrow-right-circle me-1"></i> Chuvas e Veranicos</a></div>
+                    <div class="col"><a class="text-decoration-none text-success fw-medium" href="#agua"><i class="bi bi-arrow-right-circle me-1"></i> Gestão da Água</a></div>
+                    <div class="col"><a class="text-decoration-none text-success fw-medium" href="#solo"><i class="bi bi-arrow-right-circle me-1"></i> Solo e Cobertura</a></div>
+                    <div class="col"><a class="text-decoration-none text-success fw-medium" href="#adaptacao"><i class="bi bi-arrow-right-circle me-1"></i> Adaptação</a></div>
+                    <div class="col"><a class="text-decoration-none text-success fw-medium" href="#ferramentas"><i class="bi bi-arrow-right-circle me-1"></i> Ferramentas</a></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section: Clima do Cerrado -->
+        <section class="card mb-4 border-0 shadow-sm" id="cerrado">
+            <div class="card-header bg-success text-white">
+                <h3 class="h5 mb-0"><i class="bi bi-map me-2"></i>Clima do Cerrado e do Distrito Federal</h3>
+            </div>
+            <div class="card-body">
+                <p class="text-muted small mb-3">
+                    O Distrito Federal está inteiramente inserido no bioma Cerrado, com clima tropical sazonal marcado por duas estações bem definidas. Entender essa alternância é fundamental para planejar plantio, irrigação e proteção da produção.
+                </p>
+
+                <div class="row g-3">
+                    <div class="col-md-6">
+                        <div class="season-box wet-season h-100">
+                            <h5 class="text-primary fw-bold mb-2"><i class="bi bi-cloud-rain me-1"></i>Estação Chuvosa</h5>
+                            <p class="small mb-2"><strong>Período:</strong> Outubro a Abril</p>
+                            <ul class="small mb-2 ps-3">
+                                <li>Maior disponibilidade hídrica</li>
+                                <li>Risco de enxurrada e erosão</li>
+                                <li>Pressão de doenças fúngicas</li>
+                                <li>Período ideal para plantio da maioria das culturas</li>
+                            </ul>
+                            <div class="water-indicator">
+                                <small class="text-muted">Precipitação média:</small>
+                                <div class="water-bar"><div class="water-fill" style="width: 85%"></div></div>
+                                <small class="fw-bold">Alta</small>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-6">
+                        <div class="season-box dry-season h-100">
+                            <h5 class="text-warning fw-bold mb-2"><i class="bi bi-sun me-1"></i>Estação Seca</h5>
+                            <p class="small mb-2"><strong>Período:</strong> Maio a Setembro</p>
+                            <ul class="small mb-2 ps-3">
+                                <li>Baixa precipitação, alta evaporação</li>
+                                <li>Estresse hídrico nas culturas</li>
+                                <li>Risco de incêndios em áreas secas</li>
+                                <li>Período para colheita e preparo do solo</li>
+                            </ul>
+                            <div class="water-indicator">
+                                <small class="text-muted">Precipitação média:</small>
+                                <div class="water-bar"><div class="water-fill" style="width: 15%"></div></div>
+                                <small class="fw-bold">Baixa</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="table-responsive mt-3">
+                    <table class="table table-climate table-hover align-middle mb-0">
+                        <thead>
+                            <tr>
+                                <th>Elemento Climático</th>
+                                <th>Leitura Prática</th>
+                                <th>Impacto para o Produtor</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Temperatura média anual</strong></td>
+                                <td>20°C a 24°C no DF</td>
+                                <td>Define quais culturas são viáveis e quando plantar</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Amplitude térmica</strong></td>
+                                <td>Dias quentes, noites frescas</td>
+                                <td>Pode beneficiar algumas culturas, mas exige monitoramento</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Umidade relativa</strong></td>
+                                <td>Alta na chuva, muito baixa na seca (&lt;30%)</td>
+                                <td>Afeta aplicação de defensivos e estresse das plantas</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Radiação solar</strong></td>
+                                <td>Alta durante todo o ano</td>
+                                <td>Favorece fotossíntese, mas aumenta evapotranspiração</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Microclima local</strong></td>
+                                <td>Relevo, vegetação e solo alteram condições</td>
+                                <td>Mesmo município pode ter áreas mais ou menos aptas</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="climate-visual mt-3">
+                    <small class="text-muted d-block mb-2"><strong>Distribuição mensal típica de chuvas no DF:</strong></small>
+                    <div class="month-grid">
+                        <div class="month-item month-rain">Jan<br><strong>250mm</strong></div>
+                        <div class="month-item month-rain">Fev<br><strong>200mm</strong></div>
+                        <div class="month-item month-rain">Mar<br><strong>180mm</strong></div>
+                        <div class="month-item month-dry">Abr<br><strong>90mm</strong></div>
+                        <div class="month-item month-dry">Mai<br><strong>30mm</strong></div>
+                        <div class="month-item month-dry">Jun<br><strong>10mm</strong></div>
+                        <div class="month-item month-dry">Jul<br><strong>15mm</strong></div>
+                        <div class="month-item month-dry">Ago<br><strong>20mm</strong></div>
+                        <div class="month-item month-dry">Set<br><strong>40mm</strong></div>
+                        <div class="month-item month-rain">Out<br><strong>150mm</strong></div>
+                        <div class="month-item month-rain">Nov<br><strong>220mm</strong></div>
+                        <div class="month-item month-rain">Dez<br><strong>240mm</strong></div>
+                    </div>
+                    <small class="text-muted">* Valores médios ilustrativos. Consulte dados locais para planejamento preciso.</small>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section: Riscos Climáticos -->
+        <section class="card mb-4 border-0 shadow-sm" id="riscos">
+            <div class="card-header bg-danger text-white">
+                <h3 class="h5 mb-0"><i class="bi bi-exclamation-octagon me-2"></i>Riscos Climáticos que Mais Afetam a Produção</h3>
+            </div>
+            <div class="card-body">
+                <div class="alert alert-danger small mb-3">
+                    <i class="bi bi-exclamation-triangle me-2"></i>
+                    <strong>Princípio fundamental:</strong> o maior problema nem sempre é a média anual, mas a <strong>variabilidade</strong>. Uma lavoura pode falhar porque a chuva veio fora da fase crítica, não porque "faltou chuva no ano".
+                </div>
+
+                <div class="row g-3">
+                    <!-- Déficit Hídrico -->
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card climate-card shadow-sm h-100" style="border-left-color: #dc3545;">
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between align-items-start mb-2">
+                                    <h5 class="card-title fw-bold text-danger mb-0">Déficit Hídrico</h5>
+                                    <span class="badge risk-badge risk-critical">Crítico</span>
+                                </div>
+                                <div class="climate-visual mb-2">
+                                    <i class="bi bi-droplet-half fs-3 text-primary"></i>
+                                </div>
+                                <p class="card-text small mb-2">
+                                    Ocorre quando a água disponível no solo não acompanha a necessidade da planta.
+                                </p>
+                                <div class="mb-2">
+                                    <small class="text-muted d-block">Impacto na produção:</small>
+                                    <div class="temp-meter">
+                                        <div class="temp-fill temp-critical" style="width: 95%"></div>
+                                    </div>
+                                </div>
+                                <div class="small">
+                                    <strong>Consequências:</strong>
+                                    <div class="control-method">⚠️ Queda de vigor e produtividade</div>
+                                    <div class="control-method">⚠️ Aborto floral e granação deficiente</div>
+                                    <div class="control-method">⚠️ Qualidade comercial reduzida</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Calor Excessivo -->
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card climate-card shadow-sm h-100" style="border-left-color: #fd7e14;">
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between align-items-start mb-2">
+                                    <h5 class="card-title fw-bold text-warning mb-0">Calor Excessivo</h5>
+                                    <span class="badge risk-badge risk-high">Alto</span>
+                                </div>
+                                <div class="climate-visual mb-2">
+                                    <i class="bi bi-thermometer-sun fs-3 text-warning"></i>
+                                </div>
+                                <p class="card-text small mb-2">
+                                    Temperaturas acima da faixa ótima aceleram evapotranspiração e causam estresse fisiológico.
+                                </p>
+                                <div class="mb-2">
+                                    <small class="text-muted d-block">Impacto na produção:</small>
+                                    <div class="temp-meter">
+                                        <div class="temp-fill temp-warning" style="width: 85%"></div>
+                                    </div>
+                                </div>
+                                <div class="small">
+                                    <strong>Consequências:</strong>
+                                    <div class="control-method">⚠️ Pendoamento precoce em folhosas</div>
+                                    <div class="control-method">⚠️ Redução de pegamento floral</div>
+                                    <div class="control-method">⚠️ Queima de bordas e murcha</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Veranico -->
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card climate-card shadow-sm h-100" style="border-left-color: #ffc107;">
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between align-items-start mb-2">
+                                    <h5 class="card-title fw-bold text-warning mb-0">Veranico</h5>
+                                    <span class="badge risk-badge risk-high">Alto</span>
+                                </div>
+                                <div class="climate-visual mb-2">
+                                    <i class="bi bi-cloud-slash fs-3 text-secondary"></i>
+                                </div>
+                                <p class="card-text small mb-2">
+                                    Período sem chuva dentro da estação chuvosa, especialmente crítico em fases reprodutivas.
+                                </p>
+                                <div class="mb-2">
+                                    <small class="text-muted d-block">Impacto na produção:</small>
+                                    <div class="temp-meter">
+                                        <div class="temp-fill temp-warning" style="width: 90%"></div>
+                                    </div>
+                                </div>
+                                <div class="small">
+                                    <strong>Consequências:</strong>
+                                    <div class="control-method">⚠️ Perdas severas se coincidir com floração</div>
+                                    <div class="control-method">⚠️ Redução no enchimento de grãos/frutos</div>
+                                    <div class="control-method">⚠️ Estresse hídrico agudo</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Chuva Intensa -->
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card climate-card shadow-sm h-100" style="border-left-color: #2196f3;">
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between align-items-start mb-2">
+                                    <h5 class="card-title fw-bold text-primary mb-0">Chuva Intensa</h5>
+                                    <span class="badge risk-badge risk-medium">Médio</span>
+                                </div>
+                                <div class="climate-visual mb-2">
+                                    <i class="bi bi-cloud-rain-heavy fs-3 text-primary"></i>
+                                </div>
+                                <p class="card-text small mb-2">
+                                    Precipitação concentrada pode causar erosão, encharcamento e lixiviação de nutrientes.
+                                </p>
+                                <div class="mb-2">
+                                    <small class="text-muted d-block">Impacto na produção:</small>
+                                    <div class="temp-meter">
+                                        <div class="temp-fill temp-optimal" style="width: 70%"></div>
+                                    </div>
+                                </div>
+                                <div class="small">
+                                    <strong>Consequências:</strong>
+                                    <div class="control-method">⚠️ Erosão e perda de solo fértil</div>
+                                    <div class="control-method">⚠️ Granizo e Tombamento</div>
+                                    <div class="control-method">⚠️ Disseminação de doenças</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Vento e Deriva -->
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card climate-card shadow-sm h-100" style="border-left-color: #6c757d;">
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between align-items-start mb-2">
+                                    <h5 class="card-title fw-bold text-secondary mb-0">Vento e Deriva</h5>
+                                    <span class="badge risk-badge risk-medium">Médio</span>
+                                </div>
+                                <div class="climate-visual mb-2">
+                                    <i class="bi bi-wind fs-3 text-secondary"></i>
+                                </div>
+                                <p class="card-text small mb-2">
+                                    Ventos fortes interferem na aplicação de insumos e aumentam perda de água do solo.
+                                </p>
+                                <div class="mb-2">
+                                    <small class="text-muted d-block">Impacto na produção:</small>
+                                    <div class="temp-meter">
+                                        <div class="temp-fill temp-optimal" style="width: 60%"></div>
+                                    </div>
+                                </div>
+                                <div class="small">
+                                    <strong>Consequências:</strong>
+                                    <div class="control-method">⚠️ Deriva de herbicidas para áreas vizinhas</div>
+                                    <div class="control-method">⚠️ Dano mecânico em mudas sensíveis</div>
+                                    <div class="control-method">⚠️ Aumento da evapotranspiração</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Geada (ocasional) -->
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card climate-card shadow-sm h-100" style="border-left-color: #6f42c1;">
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between align-items-start mb-2">
+                                    <h5 class="card-title fw-bold text-purple mb-0">Geada (ocasional)</h5>
+                                    <span class="badge risk-badge risk-low">Baixo</span>
+                                </div>
+                                <div class="climate-visual mb-2">
+                                    <i class="bi bi-snow fs-3 text-purple"></i>
+                                </div>
+                                <p class="card-text small mb-2">
+                                    Eventos raros no DF, mas possíveis em áreas mais altas ou vales de ar frio.
+                                </p>
+                                <div class="mb-2">
+                                    <small class="text-muted d-block">Impacto na produção:</small>
+                                    <div class="temp-meter">
+                                        <div class="temp-fill temp-optimal" style="width: 40%"></div>
+                                    </div>
+                                </div>
+                                <div class="small">
+                                    <strong>Consequências:</strong>
+                                    <div class="control-method">⚠️ Queima de folhas em culturas sensíveis</div>
+                                    <div class="control-method">⚠️ Parada temporária do crescimento</div>
+                                    <div class="control-method">⚠️ Monitorar previsão em meses frios</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section: Temperatura -->
+        <section class="card mb-4 border-0 shadow-sm" id="temperatura">
+            <div class="card-header bg-warning text-dark">
+                <h3 class="h5 mb-0"><i class="bi bi-thermometer me-2"></i>Temperatura e Consequências Agronômicas</h3>
+            </div>
+            <div class="card-body">
+                <p class="text-muted small mb-3">
+                    Cada cultura possui uma faixa de temperatura mais favorável. Fora dela, a planta entra em estresse, diminui crescimento, altera florescimento e passa a usar energia para sobreviver, e não para produzir.
+                </p>
+
+                <div class="table-responsive">
+                    <table class="table table-climate table-striped table-bordered align-middle mb-0">
+                        <thead>
+                            <tr>
+                                <th>Cultura / Grupo</th>
+                                <th>Faixa Ótima</th>
+                                <th>Estresse por Calor</th>
+                                <th>Adaptação ao Cerrado</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+<tr>
+                                <td><strong>Alface</strong><br><small>Hortaliça folhosa</small></td>
+                                <td>15°C a 22°C</td>
+                                <td>Pendoamento precoce, sabor amargo</td>
+                                <td>Plantio no inverno ou sombreamento</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Beterraba</strong><br><small>Raiz tuberosa</small></td>
+                                <td>18°C a 22°C</td>
+                                <td>Crescimento irregular da raiz</td>
+                                <td>Cobertura do solo e umidade constante</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Cebolinha</strong><br><small>Condimento</small></td>
+                                <td>15°C a 25°C</td>
+                                <td>Queima de pontas, perda de vigor</td>
+                                <td>Irrigação regular e solo fértil</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Cenoura</strong><br><small>Raiz tuberosa</small></td>
+                                <td>16°C a 22°C</td>
+                                <td>Raízes lenhosas e malformadas</td>
+                                <td>Solo bem drenado e evitar sol direto intenso</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Couve</strong><br><small>Hortaliça folhosa</small></td>
+                                <td>18°C a 25°C</td>
+                                <td>Folhas enrugadas e ataque de pragas</td>
+                                <td>Monitoramento fitossanitário</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Mandioca</strong><br><small>Raiz tropical</small></td>
+                                <td>25°C a 35°C</td>
+                                <td>Sensível à seca extrema e encharcamento</td>
+                                <td>Bem adaptada ao clima tropical</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Pepino</strong><br><small>Cucurbitácea</small></td>
+                                <td>20°C a 30°C</td>
+                                <td>Aborto de flores e frutos deformados</td>
+                                <td>Tutoramento e irrigação abundante</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Pimentão</strong><br><small>Solanácea</small></td>
+                                <td>20°C a 28°C</td>
+                                <td>Queda de flores, queimadura no fruto</td>
+                                <td>Sombreamento parcial no verão</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Repolho</strong><br><small>Hortaliça folhosa</small></td>
+                                <td>15°C a 22°C</td>
+                                <td>Cabeças pequenas ou abertas</td>
+                                <td>Preferência por épocas mais amenas</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Tomate</strong><br><small>Solanácea</small></td>
+                                <td>20°C a 27°C</td>
+                                <td>Menor pegamento floral, má coloração</td>
+                                <td>Irrigação precisa e cobertura do solo</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="row g-3 mt-3">
+                    <div class="col-md-6">
+                        <div class="card h-100 border-success-subtle">
+                            <div class="card-body">
+                                <h4 class="h6 text-success"><i class="bi bi-eye me-1"></i>Sinais de Estresse Térmico</h4>
+                                <ul class="mb-0 small ps-3">
+                                    <li>Murcha nas horas mais quentes do dia</li>
+                                    <li>Queima de bordas das folhas</li>
+                                    <li>Queda prematura de flores e frutos</li>
+                                    <li>Crescimento travado ou assimétrico</li>
+                                    <li>Amadurecimento irregular da produção</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="card h-100 border-primary-subtle">
+                            <div class="card-body">
+                                <h4 class="h6 text-primary"><i class="bi bi-tools me-1"></i>Respostas Práticas</h4>
+                                <ul class="mb-0 small ps-3">
+                                    <li>Sombreamento com telas ou árvores para culturas sensíveis</li>
+                                    <li>Palhada sobre o solo para reduzir temperatura da rizosfera</li>
+                                    <li>Transplante e operações em horários frescos</li>
+                                    <li>Irrigação ajustada para amenizar estresse</li>
+                                    <li>Escolha de cultivares adaptados ao calor local</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="info-highlight mt-3">
+                    <h6 class="fw-bold text-success mb-2"><i class="bi bi-lightbulb me-1"></i>Dica Técnica: Monitoramento de Temperatura</h6>
+                    <p class="small mb-0">
+                        Instale termômetros de máxima e mínima na propriedade. Registre as temperaturas diárias e compare com as faixas ótimas das suas culturas. Isso permite antecipar estresses e ajustar irrigação, sombreamento ou datas de colheita.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section: Chuvas e Veranicos -->
+        <section class="card mb-4 border-0 shadow-sm" id="chuva">
+            <div class="card-header bg-info text-white">
+                <h3 class="h5 mb-0"><i class="bi bi-cloud-rain me-2"></i>Chuvas, Veranicos e Excesso Hídrico</h3>
+            </div>
+            <div class="card-body">
+                <p class="text-muted small mb-3">
+                    No Cerrado, a chuva não deve ser analisada apenas em volume total. Sua <strong>distribuição ao longo do ciclo produtivo</strong> é decisiva. É comum haver períodos sem chuva dentro da estação chuvosa, os chamados <strong>veranicos</strong>, capazes de causar perdas severas se coincidirem com fases críticas.
+                </p>
+
+                <div class="accordion" id="accordionChuva">
+                    <div class="accordion-item">
+                        <h4 class="accordion-header">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#itemVeranico">
+                                <i class="bi bi-cloud-slash me-2"></i>Veranico: seca dentro do período de chuva
+                            </button>
+                        </h4>
+                        <div id="itemVeranico" class="accordion-collapse collapse show" data-bs-parent="#accordionChuva">
+                            <div class="accordion-body">
+                                <p class="small mb-2">
+                                    Um intervalo de 10 a 20 dias sem chuva, em fase crítica da cultura (floração, enchimento de grãos, pegamento de frutos), já pode reduzir produção de forma importante.
+                                </p>
+                                <div class="alert alert-warning small mb-2">
+                                    <strong>Atenção:</strong> O problema é mais grave quando o solo tem baixa cobertura e baixa retenção hídrica. Solos descobertos perdem água mais rapidamente.
+                                </div>
+                                <ul class="small mb-0 ps-3">
+                                    <li><strong>Prevenção:</strong> Plantio em época que minimize risco de veranico na fase crítica</li>
+                                    <li><strong>Mitigação:</strong> Cobertura do solo e matéria orgânica para reter umidade</li>
+                                    <li><strong>Resposta:</strong> Irrigação de salvamento se disponível</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h4 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#itemExcesso">
+                                <i class="bi bi-cloud-rain-heavy me-2"></i>Excesso de chuva e encharcamento
+                            </button>
+                        </h4>
+                        <div id="itemExcesso" class="accordion-collapse collapse" data-bs-parent="#accordionChuva">
+                            <div class="accordion-body">
+                                <p class="small mb-2">
+                                    Chuva intensa pode saturar o solo, reduzir oxigênio na zona radicular, apodrecer raízes, arrastar adubos e facilitar doenças. Em terreno com declive, eleva muito o risco de erosão e perda da camada fértil.
+                                </p>
+                                <ul class="small mb-0 ps-3">
+                                    <li><strong>Prevenção:</strong> Plantio em nível, terraceamento, manutenção de cobertura vegetal</li>
+                                    <li><strong>Mitigação:</strong> Drenagem superficial em áreas propensas a encharcamento</li>
+                                    <li><strong>Resposta:</strong> Evitar pisoteio e tráfego em solo encharcado para não compactar</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h4 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#itemManejoChuva">
+                                <i class="bi bi-calendar-check me-2"></i>Manejo para reduzir perdas
+                            </button>
+                        </h4>
+                        <div id="itemManejoChuva" class="accordion-collapse collapse" data-bs-parent="#accordionChuva">
+                            <div class="accordion-body">
+                                <p class="small mb-2">
+                                    Cobertura do solo, plantio em nível, drenagem localizada, proteção de APPs, infiltração favorecida e calendário agrícola ajustado reduzem o efeito tanto da chuva excessiva quanto da ausência temporária de precipitação.
+                                </p>
+                                <div class="table-responsive">
+                                    <table class="table table-sm table-bordered small mb-0">
+                                        <thead class="table-light">
+                                            <tr>
+                                                <th>Prática</th>
+                                                <th>Contra Veranico</th>
+                                                <th>Contra Excesso</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>Cobertura morta</td>
+                                                <td>✅ Retém umidade</td>
+                                                <td>✅ Reduz impacto da gota de chuva</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Plantio em nível</td>
+                                                <td>✅ Favorece infiltração</td>
+                                                <td>✅ Controla escoamento superficial</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Matéria orgânica</td>
+                                                <td>✅ Aumenta capacidade de retenção</td>
+                                                <td>✅ Melhora estrutura e drenagem</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Proteção de APPs</td>
+                                                <td>✅ Mantém nascentes</td>
+                                                <td>✅ Reduz erosão e assoreamento</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section: Gestão da Água -->
+        <section class="card mb-4 border-0 shadow-sm" id="agua">
+            <div class="card-header bg-primary text-white">
+                <h3 class="h5 mb-0"><i class="bi bi-droplet me-2"></i>Gestão da Água e Resiliência à Estiagem</h3>
+            </div>
+            <div class="card-body">
+                <p class="text-muted small mb-3">
+                    A gestão hídrica é um eixo central para a agricultura familiar. Em clima com estação seca prolongada, a água precisa ser vista como recurso estratégico, finito e planejável.
+                </p>
+
+                <div class="alert alert-info">
+                    <strong>Balanço hídrico:</strong> é a diferença entre a água que entra no solo (chuva e irrigação) e a que sai (evaporação, transpiração e escoamento). Quando a saída supera a entrada, a planta entra em déficit hídrico.
+                </div>
+
+                <div class="row g-3 mt-3">
+                    <div class="col-md-6">
+                        <div class="card h-100 border-primary-subtle">
+                            <div class="card-body">
+                                <h4 class="h6 text-primary"><i class="bi bi-shield-check me-1"></i>Práticas de Conservação</h4>
+                                <ul class="mb-0 small ps-3">
+                                    <li>Cobertura morta com palha para reduzir evaporação</li>
+                                    <li>Plantio direto para manter estrutura do solo</li>
+                                    <li>Adição de matéria orgânica para aumentar retenção</li>
+                                    <li>Redução de solo exposto em todas as épocas</li>
+                                    <li>Proteção de nascentes e áreas de recarga</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="card h-100 border-success-subtle">
+                            <div class="card-body">
+                                <h4 class="h6 text-success"><i class="bi bi-gear me-1"></i>Estruturas e Tecnologia</h4>
+                                <ul class="mb-0 small ps-3">
+                                    <li>Cisternas e reservatórios para armazenar água da chuva</li>
+                                    <li>Captação em telhados e áreas impermeabilizadas</li>
+                                    <li>Irrigação por gotejamento para eficiência máxima</li>
+                                    <li>Microaspersão em situações adequadas</li>
+                                    <li>Programação de irrigação em horas frescas</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="table-responsive mt-3">
+                    <table class="table table-climate table-bordered align-middle mb-0">
+                        <thead>
+                            <tr>
+                                <th>Prática</th>
+                                <th>Como Ajuda</th>
+                                <th>Efeito Esperado</th>
+                                <th>Custo Relativo</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Cobertura morta</strong></td>
+                                <td>Reduz evaporação e modera temperatura do solo</td>
+                                <td>Mais umidade disponível e raízes protegidas</td>
+                                <td class="text-success fw-bold">Baixo</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Gotejamento</strong></td>
+                                <td>Entrega água diretamente à zona radicular</td>
+                                <td>Eficiência hídrica &gt;90%, menor desperdício</td>
+                                <td class="text-warning fw-bold">Médio</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Matéria orgânica</strong></td>
+                                <td>Melhora capacidade de retenção e estrutura</td>
+                                <td>Solo mais estável em períodos secos</td>
+                                <td class="text-success fw-bold">Baixo</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Cisterna</strong></td>
+                                <td>Armazena água da estação chuvosa</td>
+                                <td>Segurança hídrica na estação seca</td>
+                                <td class="text-danger fw-bold">Alto</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Recuperação de nascentes</strong></td>
+                                <td>Protege vazão e qualidade da água</td>
+                                <td>Fonte mais confiável no longo prazo</td>
+                                <td class="text-warning fw-bold">Médio</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="info-highlight mt-3">
+                    <h6 class="fw-bold text-success mb-2"><i class="bi bi-lightbulb me-1"></i>Regra Prática: Irrigação de Salvamento</h6>
+                    <p class="small mb-0">
+                        Em veranicos curtos durante a estação chuvosa, uma aplicação estratégica de água (20-30mm) pode salvar a produção se aplicada na fase crítica. Calcule o custo-benefício: se o valor da produção salva supera o custo da irrigação, vale a pena.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section: Solo e Cobertura -->
+        <section class="card mb-4 border-0 shadow-sm" id="solo">
+            <div class="card-header bg-secondary text-white">
+                <h3 class="h5 mb-0"><i class="bi bi-house me-2"></i>Solo, Infiltração e Cobertura como Defesa Climática</h3>
+            </div>
+            <div class="card-body">
+                <p class="text-muted small mb-3">
+                    Em contexto climático instável, o solo deixa de ser apenas suporte físico e passa a ser um <strong>regulador ativo</strong> da água e da temperatura. Um solo protegido infiltra melhor, retém mais umidade e perde menos nutrientes.
+                </p>
+
+                <div class="row g-3">
+                    <div class="col-md-4">
+                        <div class="card h-100 border-danger-subtle">
+                            <div class="card-body text-center">
+                                <i class="bi bi-x-circle fs-1 text-danger mb-2"></i>
+                                <h4 class="h6 text-danger">Solo Descoberto</h4>
+                                <p class="small mb-0">
+                                    Aquece mais, perde água rapidamente, sofre impacto direto da chuva e forma crostas com maior facilidade.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card h-100 border-success-subtle">
+                            <div class="card-body text-center">
+                                <i class="bi bi-check-circle fs-1 text-success mb-2"></i>
+                                <h4 class="h6 text-success">Solo com Palhada</h4>
+                                <p class="small mb-0">
+                                    Mantém temperatura mais estável, reduz evaporação e favorece infiltração quando as chuvas retornam.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card h-100 border-primary-subtle">
+                            <div class="card-body text-center">
+                                <i class="bi bi-star fs-1 text-primary mb-2"></i>
+                                <h4 class="h6 text-primary">Solo com Matéria Orgânica</h4>
+                                <p class="small mb-0">
+                                    Funciona como "esponja viva", melhora estrutura, retenção hídrica e atividade biológica.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-3 alert alert-warning">
+                    <strong>Consequência prática:</strong> proteger o solo reduz simultaneamente os efeitos da seca, do calor e da chuva intensa. É uma medida de resiliência climática de alto retorno e baixo custo relativo.
+                </div>
+
+                <div class="row g-3 mt-3">
+                    <div class="col-md-6">
+                        <div class="card">
+                            <div class="card-header bg-success-subtle fw-bold">Como aumentar a infiltração</div>
+                            <div class="card-body small">
+                                <ul class="mb-0 ps-3">
+                                    <li>Manter cobertura vegetal ou palha</li>
+                                    <li>Evitar compactação por tráfego em solo úmido</li>
+                                    <li>Adicionar matéria orgânica (composto, esterco)</li>
+                                    <li>Praticar plantio em nível em áreas inclinadas</li>
+                                    <li>Usar plantas de cobertura com raízes profundas</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="card">
+                            <div class="card-header bg-primary-subtle fw-bold">Como reduzir a evaporação</div>
+                            <div class="card-body small">
+                                <ul class="mb-0 ps-3">
+                                    <li>Cobertura morta com palha ou resíduos vegetais</li>
+                                    <li>Irrigar em horários frescos (início da manhã ou fim da tarde)</li>
+                                    <li>Usar gotejamento em vez de aspersão quando possível</li>
+                                    <li>Manter vento quebrado com quebra-ventos naturais</li>
+                                    <li>Evitar revolvimento excessivo do solo</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section: APP e Reserva Legal -->
+        <section class="card mb-4 border-0 shadow-sm" id="infraestrutura">
+            <div class="card-header bg-dark text-white">
+                <h3 class="h5 mb-0"><i class="bi bi-tree me-2"></i>APP, Reserva Legal e Infraestrutura Verde</h3>
+            </div>
+            <div class="card-body">
+                <p class="text-muted small mb-3">
+                    Áreas preservadas não devem ser vistas apenas como exigência legal. No contexto climático, elas funcionam como <strong>infraestrutura verde</strong>: regulam água, reduzem erosão, ajudam no microclima local e sustentam biodiversidade útil à produção.
+                </p>
+
+                <div class="row g-3">
+                    <div class="col-md-6">
+                        <div class="card h-100 border-success-subtle">
+                            <div class="card-body">
+                                <h4 class="h6 text-success"><i class="bi bi-water me-1"></i>APPs (Áreas de Preservação Permanente)</h4>
+                                <p class="small mb-2">
+                                    Faixas em torno de nascentes, cursos d'água, encostas e outras áreas sensíveis.
+                                </p>
+                                <ul class="small mb-0 ps-3">
+                                    <li>Protegem recursos hídricos e mantêm vazão</li>
+                                    <li>Reduzem assoreamento e filtram sedimentos</li>
+                                    <li>Diminuem risco de erosão e deslizamentos</li>
+                                    <li>Contribuem para regulação microclimática</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="card h-100 border-primary-subtle">
+                            <div class="card-body">
+                                <h4 class="h6 text-primary"><i class="bi bi-shield-check me-1"></i>Reserva Legal</h4>
+                                <p class="small mb-2">
+                                    Porção da propriedade com vegetação nativa mantida conforme a lei.
+                                </p>
+                                <ul class="small mb-0 ps-3">
+                                    <li>Mantém biodiversidade e polinizadores nativos</li>
+                                    <li>Contribui para estabilidade ecológica regional</li>
+                                    <li>Auxilia no controle biológico de pragas</li>
+                                    <li>Fortalece resiliência da propriedade no longo prazo</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="card h-100 border-danger-subtle">
+                            <div class="card-body">
+                                <h4 class="h6 text-danger"><i class="bi bi-exclamation-triangle me-1"></i>Cuide das Áreas de Preservação Permanente</h4>
+                                <p class="small mb-2">
+                                    Faixas em torno de nascentes, cursos d'água, encostas e outras áreas sensíveis.
+                                </p>
+                                <ul class="small mb-0 ps-3">
+                                    <li>Não devem ser desmatadas ou alteradas sem autorização</li>
+                                    <li>Evite a exploração de nascentes e cursos d'água que sustentam o ambiente</li>
+                                    <li>Contribua com a manutenção de espécies nativas</li>
+                                    <li>Ajude a combater o desmatamento e a degradação ambiental</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="info-highlight mt-3">
+                    <h6 class="fw-bold text-success mb-2"><i class="bi bi-lightbulb me-1"></i>Integração Produtiva</h6>
+                    <p class="small mb-0">
+                        Sistemas como ILPF (Integração Lavoura-Pecuária-Floresta) e SAFs (Sistemas Agroflorestais) permitem conciliar produção com conservação. Árvores em arranjos produtivos podem fornecer sombra, madeira, frutos e ainda melhorar o microclima da lavoura.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section: Estratégias de Adaptação -->
+        <section class="card mb-4 border-0 shadow-sm" id="adaptacao">
+            <div class="card-header bg-success text-white">
+                <h3 class="h5 mb-0"><i class="bi bi-shield-check me-2"></i>Estratégias de Adaptação Climática no Campo</h3>
+            </div>
+            <div class="card-body">
+                <div class="row g-3">
+                    <div class="col-lg-6">
+                        <div class="card h-100 border-success-subtle">
+                            <div class="card-header bg-success-subtle fw-bold">
+                                <i class="bi bi-lightning me-1"></i>Adaptação Imediata (Baixo Custo)
+                            </div>
+                            <div class="card-body">
+                                <ul class="mb-0 small ps-3">
+                                    <li>Ajustar datas de plantio conforme ZARC e previsão</li>
+                                    <li>Escolher cultivares tolerantes à seca ou ao calor</li>
+                                    <li>Irrigar de forma localizada e monitorada</li>
+                                    <li>Usar sombreamento em hortaliças sensíveis</li>
+                                    <li>Evitar operações críticas no pico do calor</li>
+                                    <li>Manter cobertura do solo em todas as épocas</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6">
+                        <div class="card h-100 border-primary-subtle">
+                            <div class="card-header bg-primary-subtle fw-bold">
+                                <i class="bi bi-building me-1"></i>Adaptação Estrutural (Investimento)
+                            </div>
+                            <div class="card-body">
+                                <ul class="mb-0 small ps-3">
+                                    <li>Ampliar capacidade de reservação de água (cisternas)</li>
+                                    <li>Recuperar APPs e nascentes degradadas</li>
+                                    <li>Adotar sistemas integrados (ILPF, SAF) onde fizer sentido</li>
+                                    <li>Implementar irrigação eficiente (gotejamento)</li>
+                                    <li>Organizar monitoramento climático contínuo</li>
+                                    <li>Investir em infraestrutura de proteção (quebra-ventos)</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-3 p-3 rounded border bg-light">
+                    <h4 class="h6 text-success"><i class="bi bi-tree me-1"></i>Sombreamento e Microclima</h4>
+                    <p class="small mb-0">
+                        Redes de sombreamento, árvores em arranjos produtivos e sistemas agroflorestais podem reduzir temperatura no ambiente produtivo em 2°C a 5°C, diminuir perda de água por evapotranspiração e aumentar estabilidade de culturas mais sensíveis ao calor.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section: Ferramentas Técnicas -->
+        <section class="card mb-4 border-0 shadow-sm" id="ferramentas">
+            <div class="card-header bg-info text-white">
+                <h3 class="h5 mb-0"><i class="bi bi-tools me-2"></i>Como Usar ZARC, INMET, Agritempo e Dados Técnicos</h3>
+            </div>
+            <div class="card-body">
+                <p class="text-muted small mb-3">
+                    Boa parte do risco climático pode ser reduzida quando o produtor consulta ferramentas públicas antes de plantar. Elas não eliminam o risco, mas melhoram significativamente a tomada de decisão.
+                </p>
+
+                <div class="table-responsive">
+                    <table class="table table-climate table-bordered align-middle mb-0">
+                        <thead>
+                            <tr>
+                                <th>Ferramenta</th>
+                                <th>Para que Serve</th>
+                                <th>Uso Prático</th>
+                                <th>Acesso</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>ZARC</strong><br><small>Zoneamento Agrícola de Risco Climático</small></td>
+                                <td>Define épocas de plantio com menor risco climático por município e cultura</td>
+                                <td>Escolher janela de semeadura mais segura; base para seguro rural</td>
+                                <td><a href="https://www.gov.br/agricultura/pt-br/assuntos/riscos-seguro/risco-agropecuario/zoneamento-agricola" target="_blank" class="text-decoration-none">gov.br/agricultura</a></td>
+                            </tr>
+                            <tr>
+                                <td><strong>INMET</strong><br><small>Instituto Nacional de Meteorologia</small></td>
+                                <td>Previsão, alertas e observação meteorológica em tempo real</td>
+                                <td>Acompanhar chuva, temperatura e eventos extremos; planejar operações</td>
+                                <td><a href="https://portal.inmet.gov.br" target="_blank" class="text-decoration-none">inmet.gov.br</a></td>
+                            </tr>
+                            <tr>
+                                <td><strong>Agritempo</strong><br><small>Monitoramento Agrometeorológico</small></td>
+                                <td>Dados de estações agrometeorológicas e índices para agricultura</td>
+                                <td>Apoiar decisão diária de manejo, irrigação e proteção</td>
+                                <td><a href="https://www.agritempo.gov.br" target="_blank" class="text-decoration-none">agritempo.gov.br</a></td>
+                            </tr>
+                            <tr>
+                                <td><strong>Embrapa / Emater-DF</strong><br><small>Assistência técnica regional</small></td>
+                                <td>Conteúdo técnico, zoneamento e orientação adaptada ao Cerrado</td>
+                                <td>Ajustar recomendações à realidade local da propriedade</td>
+                                <td><a href="https://www.embrapa.br" target="_blank" class="text-decoration-none">embrapa.br</a> | <a href="https://www.emater.df.gov.br" target="_blank" class="text-decoration-none">emater.df.gov.br</a></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="mt-3">
+                    <h4 class="h6 text-success"><i class="bi bi-list-check me-1"></i>Passo a Passo Enxuto para Decisão</h4>
+                    <ol class="small mb-0 ps-3">
+                        <li>Identifique município, tipo de solo e relevo da área de plantio</li>
+                        <li>Consulte a janela indicada no ZARC para a cultura escolhida</li>
+                        <li>Acompanhe previsão e alertas do INMET 7-10 dias antes do plantio</li>
+                        <li>Observe se sua área tem microclima distinto (vale, encosta, altitude)</li>
+                        <li>Reajuste manejo de água, adubação e proteção do solo conforme as condições</li>
+                        <li>Registre as decisões e resultados para aprimorar próximos ciclos</li>
+                    </ol>
+                </div>
+
+                <div class="alert alert-success mt-3 mb-0">
+                    <strong>Dica final:</strong> Combine ferramentas. Use o ZARC para planejar a época, o INMET para acompanhar o curto prazo e a Emater para ajustar à sua realidade. Essa triangulação reduz erros e aumenta a segurança da decisão.
+                </div>
+            </div>
+        </section>
+
+        <!-- Section: Checklist -->
+        <section class="card mb-4 border-0 shadow-sm" id="checklist">
+            <div class="card-header bg-primary text-white">
+                <h3 class="h5 mb-0"><i class="bi bi-clipboard-check me-2"></i>Checklist Decisório para Antes do Plantio</h3>
+            </div>
+            <div class="card-body">
+                <div class="row g-3">
+                    <div class="col-md-6">
+                        <div class="card h-100 border-primary-subtle">
+                            <div class="card-header bg-primary-subtle fw-bold">🔍 Avaliação Pré-Plantio</div>
+                            <div class="card-body small">
+                                <div class="form-check mb-2">
+                                    <input class="form-check-input" type="checkbox" id="chk1">
+                                    <label class="form-check-label" for="chk1">A cultura escolhida é compatível com o clima local?</label>
+                                </div>
+                                <div class="form-check mb-2">
+                                    <input class="form-check-input" type="checkbox" id="chk2">
+                                    <label class="form-check-label" for="chk2">A janela de plantio está dentro de menor risco (ZARC)?</label>
+                                </div>
+                                <div class="form-check mb-2">
+                                    <input class="form-check-input" type="checkbox" id="chk3">
+                                    <label class="form-check-label" for="chk3">Há água suficiente para a fase crítica da cultura?</label>
+                                </div>
+                                <div class="form-check mb-2">
+                                    <input class="form-check-input" type="checkbox" id="chk4">
+                                    <label class="form-check-label" for="chk4">O solo está coberto e com boa infiltração?</label>
+                                </div>
+                                <div class="form-check mb-2">
+                                    <input class="form-check-input" type="checkbox" id="chk5">
+                                    <label class="form-check-label" for="chk5">A área tem risco de erosão ou encharcamento?</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="card h-100 border-success-subtle">
+                            <div class="card-header bg-success-subtle fw-bold">✅ Preparação para Riscos</div>
+                            <div class="card-body small">
+                                <div class="form-check mb-2">
+                                    <input class="form-check-input" type="checkbox" id="chk6">
+                                    <label class="form-check-label" for="chk6">Existe previsão de calor ou veranico no curto prazo?</label>
+                                </div>
+                                <div class="form-check mb-2">
+                                    <input class="form-check-input" type="checkbox" id="chk7">
+                                    <label class="form-check-label" for="chk7">Há proteção de APP, nascente e drenagem natural?</label>
+                                </div>
+                                <div class="form-check mb-2">
+                                    <input class="form-check-input" type="checkbox" id="chk8">
+                                    <label class="form-check-label" for="chk8">A cultivar é tolerante ao estresse esperado?</label>
+                                </div>
+                                <div class="form-check mb-2">
+                                    <input class="form-check-input" type="checkbox" id="chk9">
+                                    <label class="form-check-label" for="chk9">O sistema de irrigação é eficiente para a escala da área?</label>
+                                </div>
+                                <div class="form-check mb-2">
+                                    <input class="form-check-input" type="checkbox" id="chk10">
+                                    <label class="form-check-label" for="chk10">O manejo está ajustado para reduzir perdas e não apenas reagir?</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="alert alert-success mt-3 mb-0">
+                    <strong>Regra prática:</strong> quanto mais cedo o clima entra no planejamento, menor a chance de o produtor atuar apenas no modo corretivo. Prevenção é sempre mais barata que correção.
+                </div>
+            </div>
+        </section>
+
+        <!-- Section: Glossário -->
+        <section class="card mb-4 border-0 shadow-sm" id="glossario">
+            <div class="card-header bg-secondary text-white">
+                <h3 class="h5 mb-0"><i class="bi bi-book-half me-2"></i>Glossário Climático Essencial</h3>
+            </div>
+            <div class="card-body">
+                <div class="row g-0">
+                    <div class="col-md-6 pe-md-3">
+                        <div class="border-bottom py-2 small"><strong>Balanço hídrico:</strong> diferença entre a água que entra no solo e a que sai.</div>
+                        <div class="border-bottom py-2 small"><strong>Déficit hídrico:</strong> falta de água disponível para atender a demanda da planta.</div>
+                        <div class="border-bottom py-2 small"><strong>Evapotranspiração:</strong> soma da evaporação do solo com a transpiração das plantas.</div>
+                        <div class="border-bottom py-2 small"><strong>Veranico:</strong> período sem chuva dentro da estação chuvosa.</div>
+                        <div class="border-bottom py-2 small"><strong>Pendoamento precoce:</strong> emissão antecipada do caule floral, comum em folhosas sob calor.</div>
+                        <div class="border-bottom py-2 small"><strong>Fenologia:</strong> fases de desenvolvimento da cultura ao longo do ciclo.</div>
+                    </div>
+                    <div class="col-md-6 ps-md-3">
+                        <div class="border-bottom py-2 small"><strong>Temperatura ótima:</strong> faixa em que a cultura cresce e produz melhor.</div>
+                        <div class="border-bottom py-2 small"><strong>APP:</strong> Área de Preservação Permanente, protegida por lei.</div>
+                        <div class="border-bottom py-2 small"><strong>Reserva Legal:</strong> porção da propriedade com vegetação nativa mantida conforme a lei.</div>
+                        <div class="border-bottom py-2 small"><strong>ZARC:</strong> Zoneamento Agrícola de Risco Climático por município e cultura.</div>
+                        <div class="border-bottom py-2 small"><strong>Microclima:</strong> condições climáticas locais influenciadas por relevo, vegetação e solo.</div>
+                        <div class="py-2 small"><strong>Estresse térmico:</strong> condição em que temperatura fora da faixa ideal prejudica a planta.</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Alerta de Atenção -->
+        <div class="alert alert-warning d-flex align-items-center shadow-sm">
+            <i class="bi bi-exclamation-triangle fs-3 me-3"></i>
+            <div>
+                <strong>Atenção:</strong> Este guia organiza o conteúdo em linguagem prática, mas a decisão final de plantio, irrigação, correção de solo e uso da área deve ser ajustada à realidade da propriedade, preferencialmente com apoio técnico local da Emater-DF ou assistência privada qualificada.
+            </div>
+        </div>
+
+    </main>
+
+    <footer class="py-5 bg-light border-top">
+        <div class="container text-center">
+            <p class="text-muted fw-bold mb-1">Guia Verde – 2026</p>
+
+            <div class="small text-muted">
+                Fontes e instituições de referência:
+                <a href="https://www.embrapa.br" target="_blank" rel="noopener" class="text-decoration-none text-secondary">Embrapa</a> |
+                <a href="https://www.emater.df.gov.br" target="_blank" rel="noopener" class="text-decoration-none text-secondary">Emater-DF</a> |
+                <a href="https://portal.inmet.gov.br" target="_blank" rel="noopener" class="text-decoration-none text-secondary">INMET</a> |
+                <a href="https://www.agritempo.gov.br" target="_blank" rel="noopener" class="text-decoration-none text-secondary">Agritempo</a> |
+                <a href="https://www.gov.br/agricultura/pt-br/assuntos/riscos-seguro/risco-agropecuario/zoneamento-agricola" target="_blank" rel="noopener" class="text-decoration-none text-secondary">ZARC</a>
+            </div>
+
+            <div class="small text-muted mt-2">
+                Conteúdo voltado ao apoio de pequenos produtores rurais, com ênfase em leitura climática, gestão hídrica, proteção do solo, zoneamento e medidas de adaptação para reduzir riscos produtivos no Cerrado e Distrito Federal.
+            </div>
+
+            <div class="small text-muted mt-2">
+                Este conteúdo foi desenvolvido como parte de um projeto extensivo do curso de Análise e Desenvolvimento de Sistemas, com o objetivo de criar um guia prático e acessível para produtores rurais, estudantes e entusiastas da agricultura. Não possuindo fins comerciais, o Guia Verde é uma iniciativa educacional que visa disseminar conhecimento técnico de forma clara e objetiva, contribuindo para a melhoria das práticas agrícolas e a sustentabilidade no campo.
+            </div>
+        </div>
+    </footer>
+
+    <button 
+        type="button"
+        class="btn btn-success btn-floating btn-lg"
+        id="btn-back-to-top"
+        style="position: fixed; bottom: 20px; right: 20px; display: none; z-index: 1000;"
+        aria-label="Voltar ao topo"
+        title="Voltar ao topo">
+        <i class="bi bi-arrow-up"></i>
+    </button>
+
+    <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous">
+    </script>
+    <script src="../../js/ui-extras.js"></script>
+</body>
+
+</html>

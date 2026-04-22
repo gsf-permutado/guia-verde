@@ -1,0 +1,1042 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guia Verde | Espécies Agressivas de Plantas Daninhas no Cerrado</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <script src="././js/search.js"></script>
+    <link rel="stylesheet" href="../../css/base.css">
+    <link rel="stylesheet" href="../../css/components.css">
+    <link rel="stylesheet" href="../../css/info-cards.css">
+    <link rel="stylesheet" href="../../css/navbar.css">
+    <link rel="stylesheet" href="../../css/responsive.css">
+    <link rel="stylesheet" href="../../css/guias.css">
+</head>
+<script src="../../js/search.js"></script>
+<body class="bg-body-tertiary">
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="./././index.html">
+                <i class="bi bi-leaf"></i>
+                Guia Verde
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-label="Abrir navegação">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item"><a class="nav-link active" href="./././index.html">Início</a></li>
+                    <li class="nav-item"><a class="nav-link" href="././pages/navbar/sobre.html">Sobre</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#especies">Espécies</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#controle">Controle</a></li>
+                </ul>
+                <form class="d-flex position-relative" role="search" id="searchForm">
+                    <label for="search" class="visually-hidden">Pesquisar</label>
+                    <input class="form-control me-2"
+                        id="search"
+                        type="search"
+                        placeholder="Buscar espécie ou método..."
+                        aria-label="Pesquisar"
+                        autocomplete="off">
+                    <button class="btn btn-warning" type="submit">Pesquisar</button>
+                    <div id="suggestions" class="position-absolute top-100 start-0 w-100"></div>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container py-4">
+        <div class="d-flex mb-3">
+            <button type="button" onclick="history.back()" class="btn btn-secondary">
+                <i class="bi bi-arrow-left"></i> Voltar
+            </button>
+            <a href="./././index.html" class="btn btn-success ms-auto">
+                Página Inicial
+            </a>
+        </div>
+
+        <!-- Hero Section -->
+        <div class="card mb-4 border-0 shadow-sm bg-success text-white">
+            <div class="card-body py-4">
+                <div class="row align-items-center">
+                    <div class="col-lg-8">
+                        <h1 class="display-6 fw-bold mb-2">
+                            <i class="bi bi-flower1 me-2"></i>
+                            Espécies Agressivas de Plantas Daninhas
+                        </h1>
+                        <p class="lead mb-0">
+                            Guia técnico para identificação e manejo das principais espécies invasoras que afetam agricultores familiares do Cerrado e Distrito Federal
+                        </p>
+                    </div>
+                    <div class="col-lg-4 text-lg-end pt-3">
+                        <span class="badge bg-light text-dark fs-6 py-2 px-3">
+                            <i class="bi bi-geo-alt me-1"></i> Cerrado & DF
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Alert Box -->
+        <div class="alert alert-warning border-0 shadow-sm mb-4" role="alert">
+            <div class="d-flex">
+                <i class="bi bi-exclamation-triangle-fill fs-4 me-3"></i>
+                <div>
+                    <h5 class="alert-heading fw-bold">Atenção, produtor!</h5>
+                    <p class="mb-0 small">
+                        A identificação precoce é fundamental. Espécies como <strong>caruru-palmeri</strong>, <strong>buva</strong> e <strong>capim-amargoso</strong> apresentam resistência a herbicidas e podem causar perdas de até 97% na produtividade. O manejo integrado é a única estratégia sustentável para controle eficaz.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <!-- Danger box -->
+        <div class="alert alert-danger border-0 shadow-sm mb-4" role="alert">
+            <div class="d-flex">
+                <i class="bi bi-exclamation-octagon-fill fs-4 me-3"></i>
+                <div>
+                    <h5 class="alert-heading fw-bold">IMPORTANTE!</h5>
+                    <p class="mb-0 small">
+                        Este guia é um recurso técnico baseado em evidências para auxiliar no manejo de plantas daninhas. Ele não substitui a assistência técnica personalizada. <strong>Sempre consulte um profissional habilitado</strong> para recomendações específicas à sua propriedade, considerando as condições locais e características do seu sistema produtivo.
+                    </p>
+                    <p class="mb-0 small mt-2">
+                        <strong>Não há responsabilidade por danos causados</strong> por aplicação inadequada das informações aqui contidas. O manejo de plantas daninhas deve ser realizado com cuidado, seguindo as melhores práticas e orientações técnicas para garantir a sustentabilidade do sistema produtivo e a segurança do produtor.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Quick Navigation -->
+        <section class="card mb-4 border-0 shadow-sm" id="sumario">
+            <div class="card-body">
+                <h3 class="h4 mb-3">📋 Navegação Rápida</h3>
+                <div class="row row-cols-2 row-cols-md-4 g-2 small">
+                    <div class="col"><a class="text-decoration-none text-success fw-medium" href="#gramineas"><i class="bi bi-arrow-right-circle me-1"></i> Gramíneas</a></div>
+                    <div class="col"><a class="text-decoration-none text-success fw-medium" href="#folha-larga"><i class="bi bi-arrow-right-circle me-1"></i> Folha Larga</a></div>
+                    <div class="col"><a class="text-decoration-none text-success fw-medium" href="#resistentes"><i class="bi bi-arrow-right-circle me-1"></i> Espécies Resistentes</a></div>
+                    <div class="col"><a class="text-decoration-none text-success fw-medium" href="#controle"><i class="bi bi-arrow-right-circle me-1"></i> Estratégias de Controle</a></div>
+                    <div class="col"><a class="text-decoration-none text-success fw-medium" href="#comparacao"><i class="bi bi-arrow-right-circle me-1"></i> Tabela Comparativa</a></div>
+                    <div class="col"><a class="text-decoration-none text-success fw-medium" href="#checklist"><i class="bi bi-arrow-right-circle me-1"></i> Checklist de Campo</a></div>
+                    <div class="col"><a class="text-decoration-none text-success fw-medium" href="#ecologia"><i class="bi bi-arrow-right-circle me-1"></i> Ecologia Aplicada</a></div>
+                    <div class="col"><a class="text-decoration-none text-success fw-medium" href="#recursos"><i class="bi bi-arrow-right-circle me-1"></i> Recursos Técnicos</a></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section: Gramíneas Invasoras -->
+        <section class="card mb-4 border-0 shadow-sm" id="gramineas">
+            <div class="card-header bg-success text-white">
+                <h3 class="h5 mb-0"><i class="bi bi-grid-3x3-gap me-2"></i>Gramíneas Invasoras (Folha Estreita)</h3>
+            </div>
+            <div class="card-body">
+                <p class="text-muted small mb-3">
+                    Caracterizadas por folhas longas e estreitas, alta capacidade de perfilhamento e competição intensa por recursos. São frequentes em pastagens e lavouras anuais do Cerrado .
+                </p>
+
+                <div class="row g-3">
+                    <!-- Capim-amargoso -->
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card species-card shadow-sm h-100">
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between align-items-start mb-2">
+                                    <h5 class="card-title fw-bold text-success mb-0">Capim-amargoso</h5>
+                                    <span class="badge risk-badge risk-high">Risco: ALTO</span>
+                                </div>
+                                <p class="card-text small text-muted mb-1"><em>Digitaria insularis</em></p>
+                                <div class="species-image-placeholder rounded overflow-hidden mb-3">
+                                    <img src="../../img/guias/amargoso.webp"
+                                        alt="Capim-amargoso (Digitaria insularis)"
+                                        class="w-100 h-100 object-fit-cover d-block rounded">
+                                </div>
+                                
+                                <div class="ecology-box small mb-2">
+                                    <strong>Ecologia:</strong> Resistente ao glifosato, dispersão por sementes leves, alta competitividade em áreas perturbadas.
+                                </div>
+                                
+                                <div class="mb-2">
+                                    <small class="text-muted d-block">Impacto na cultura:</small>
+                                    <div class="impact-meter">
+                                        <div class="impact-fill impact-high" style="width: 90%"></div>
+                                    </div>
+                                </div>
+                                
+                                <div class="small">
+                                    <strong>Métodos de controle:</strong>
+                                    <div class="control-method">✅ Herbicidas inibidores da ACCase (cletodim, haloxyfop)</div>
+                                    <div class="control-method">✅ Aplicações sequenciais antes do perfilhamento</div>
+                                    <div class="control-method">✅ Cobertura vegetal para supressão</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Capim-pé-de-galinha -->
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card species-card shadow-sm h-100">
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between align-items-start mb-2">
+                                    <h5 class="card-title fw-bold text-success mb-0">Capim-pé-de-galinha</h5>
+                                    <span class="badge risk-badge risk-high">Risco: ALTO</span>
+                                </div>
+                                <p class="card-text small text-muted mb-1"><em>Eleusine indica</em></p>
+                                <div class="species-image-placeholder rounded overflow-hidden mb-3">
+                                    <img src="../../img/guias/pe-de-galinha.webp"
+                                        alt="Capim-amargoso (Digitaria insularis)"
+                                        class="w-100 h-100 object-fit-cover d-block rounded">
+                                </div>
+                                
+                                <div class="ecology-box small mb-2">
+                                    <strong>Ecologia:</strong> Biótipos resistentes ao glifosato, germinação rápida, alta produção de sementes.
+                                </div>
+                                
+                                <div class="mb-2">
+                                    <small class="text-muted d-block">Impacto na cultura:</small>
+                                    <div class="impact-meter">
+                                        <div class="impact-fill impact-high" style="width: 85%"></div>
+                                    </div>
+                                </div>
+                                
+                                <div class="small">
+                                    <strong>Métodos de controle:</strong>
+                                    <div class="control-method">✅ Mistura de graminicidas + glifosato</div>
+                                    <div class="control-method">✅ Controle mecânico em estádio jovem</div>
+                                    <div class="control-method">✅ Rotação de mecanismos de ação</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Capim-carrapicho -->
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card species-card shadow-sm h-100">
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between align-items-start mb-2">
+                                    <h5 class="card-title fw-bold text-success mb-0">Capim-carrapicho</h5>
+                                    <span class="badge risk-badge risk-medium">Risco: MÉDIO</span>
+                                </div>
+                                <p class="card-text small text-muted mb-1"><em>Cenchrus echinatus</em></p>
+                                <div class="species-image-placeholder rounded overflow-hidden mb-3">
+                                    <img src="../../img/guias/carrapicho.webp"
+                                        alt="Capim-amargoso (Digitaria insularis)"
+                                        class="w-100 h-100 object-fit-cover d-block rounded">
+                                </div>
+                                
+                                <div class="ecology-box small mb-2">
+                                    <strong>Ecologia:</strong> Espinhos aderentes facilitam dispersão por animais, tolerância a solos pobres.
+                                </div>
+                                
+                                <div class="mb-2">
+                                    <small class="text-muted d-block">Impacto na cultura:</small>
+                                    <div class="impact-meter">
+                                        <div class="impact-fill impact-medium" style="width: 70%"></div>
+                                    </div>
+                                </div>
+                                
+                                <div class="small">
+                                    <strong>Métodos de controle:</strong>
+                                    <div class="control-method">✅ Fluazifop-P-butílico ou cletodim</div>
+                                    <div class="control-method">✅ Evitar corte de plantas maduras (dispersão)</div>
+                                    <div class="control-method">✅ Correção da fertilidade do solo</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Braquiária (como invasora) -->
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card species-card shadow-sm h-100">
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between align-items-start mb-2">
+                                    <h5 class="card-title fw-bold text-success mb-0">Braquiária invasora</h5>
+                                    <span class="badge risk-badge risk-medium">Risco: MÉDIO</span>
+                                </div>
+                                <p class="card-text small text-muted mb-1"><em>Urochloa spp.</em></p>
+                                <div class="species-image-placeholder rounded overflow-hidden mb-3">
+                                    <img src="../../img/guias/braquiaria.webp"
+                                        alt="Capim-amargoso (Digitaria insularis)"
+                                        class="w-100 h-100 object-fit-cover d-block rounded">
+                                </div>
+                                
+                                <div class="ecology-box small mb-2">
+                                    <strong>Ecologia:</strong> Escapa do cultivo, forma densa cobertura, compete com culturas anuais. Quando usada como planta de cobertura, pode suprimir outras daninhas.
+                                </div>
+                                
+                                <div class="mb-2">
+                                    <small class="text-muted d-block">Impacto na cultura:</small>
+                                    <div class="impact-meter">
+                                        <div class="impact-fill impact-medium" style="width: 65%"></div>
+                                    </div>
+                                </div>
+                                
+                                <div class="small">
+                                    <strong>Métodos de controle:</strong>
+                                    <div class="control-method">✅ Manejo como cobertura (uso estratégico)</div>
+                                    <div class="control-method">✅ Herbicidas específicos para gramíneas</div>
+                                    <div class="control-method">✅ Controle antes da produção de sementes</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Capim-gordura -->
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card species-card shadow-sm h-100">
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between align-items-start mb-2">
+                                    <h5 class="card-title fw-bold text-success mb-0">Capim-gordura</h5>
+                                    <span class="badge risk-badge risk-high">Risco: ALTO</span>
+                                </div>
+                                <p class="card-text small text-muted mb-1"><em>Melinis minutiflora</em></p>
+                                <div class="species-image-placeholder rounded overflow-hidden mb-3">
+                                    <img src="../../img/guias/gordura.webp"
+                                        alt="Capim-amargoso (Digitaria insularis)"
+                                        class="w-100 h-100 object-fit-cover d-block rounded">
+                                </div>
+                                
+                                <div class="ecology-box small mb-2">
+                                    <strong>Ecologia:</strong> Gramínea exótica invasora, ameaça à biodiversidade do Cerrado, forma densas moitas que sufocam plantas nativas.
+                                </div>
+                                
+                                <div class="mb-2">
+                                    <small class="text-muted d-block">Impacto na cultura:</small>
+                                    <div class="impact-meter">
+                                        <div class="impact-fill impact-high" style="width: 88%"></div>
+                                    </div>
+                                </div>
+                                
+                                <div class="small">
+                                    <strong>Métodos de controle:</strong>
+                                    <div class="control-method">✅ Herbicidas específicos para gramíneas</div>
+                                    <div class="control-method">✅ Controle mecânico + químico integrado</div>
+                                    <div class="control-method">✅ Recuperação com espécies nativas</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section: Folha Larga -->
+        <section class="card mb-4 border-0 shadow-sm" id="folha-larga">
+            <div class="card-header bg-warning text-dark">
+                <h3 class="h5 mb-0"><i class="bi bi-grid-1x2 me-2"></i>Plantas de Folha Larga (Dicotiledôneas)</h3>
+            </div>
+            <div class="card-body">
+                <p class="text-muted small mb-3">
+                    Espécies com arquitetura diversa, muitas com ciclo rápido, alta produção de sementes e forte capacidade competitiva. Representam desafio significativo para culturas como feijão, soja e milho.
+                </p>
+
+                <div class="row g-3">
+                    <!-- Carrapicho rasteiro -->
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card species-card shadow-sm h-100" style="border-left-color: #ffc107;">
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between align-items-start mb-2">
+                                    <h5 class="card-title fw-bold text-warning mb-0">Carrapicho rasteiro</h5>
+                                    <span class="badge risk-badge risk-high">Risco: ALTO</span>
+                                </div>
+                                <p class="card-text small text-muted mb-1"><em>Acanthospermum australe</em></p>
+                                <div class="species-image-placeholder rounded overflow-hidden mb-3">
+                                    <img src="../../img/guias/rasteiro.webp"
+                                        alt="Capim-amargoso (Digitaria insularis)"
+                                        class="w-100 h-100 object-fit-cover d-block rounded">
+                                </div>
+                                
+                                <div class="ecology-box small mb-2">
+                                    <strong>Ecologia:</strong> Muito comum em lavouras novas de campos e cerrados; infestação associada a baixa fertilidade do solo.
+                                </div>
+                                
+                                <div class="mb-2">
+                                    <small class="text-muted d-block">Impacto na cultura:</small>
+                                    <div class="impact-meter">
+                                        <div class="impact-fill impact-high" style="width: 82%"></div>
+                                    </div>
+                                </div>
+                                
+                                <div class="small">
+                                    <strong>Métodos de controle:</strong>
+                                    <div class="control-method">✅ Correção da fertilidade do solo (reduz infestação)</div>
+                                    <div class="control-method">✅ Bentazona, imazamox, sulfentrazone</div>
+                                    <div class="control-method">✅ Controle mecânico precoce</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Carrapicho beiço-de-boi -->
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card species-card shadow-sm h-100" style="border-left-color: #ffc107;">
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between align-items-start mb-2">
+                                    <h5 class="card-title fw-bold text-warning mb-0">Carrapicho beiço-de-boi</h5>
+                                    <span class="badge risk-badge risk-medium">Risco: MÉDIO</span>
+                                </div>
+                                <p class="card-text small text-muted mb-1"><em>Desmodium tortuosum</em></p>
+                                <div class="species-image-placeholder rounded overflow-hidden mb-3">
+                                    <img src="../../img/guias/beico.webp"
+                                        alt="Capim-amargoso (Digitaria insularis)"
+                                        class="w-100 h-100 object-fit-cover d-block rounded">
+                                </div>
+                                
+                                <div class="ecology-box small mb-2">
+                                    <strong>Ecologia:</strong> Frequente em beira de estradas, culturas anuais e pastagens; dispersão por aderência a animais.
+                                </div>
+                                
+                                <div class="mb-2">
+                                    <small class="text-muted d-block">Impacto na cultura:</small>
+                                    <div class="impact-meter">
+                                        <div class="impact-fill impact-medium" style="width: 68%"></div>
+                                    </div>
+                                </div>
+                                
+                                <div class="small">
+                                    <strong>Métodos de controle:</strong>
+                                    <div class="control-method">✅ Metribuzim para controle de folha larga</div>
+                                    <div class="control-method">✅ Evitar dispersão por equipamentos</div>
+                                    <div class="control-method">✅ Manejo integrado com rotação</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Picão-preto -->
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card species-card shadow-sm h-100" style="border-left-color: #ffc107;">
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between align-items-start mb-2">
+                                    <h5 class="card-title fw-bold text-warning mb-0">Picão-preto</h5>
+                                    <span class="badge risk-badge risk-high">Risco: ALTO</span>
+                                </div>
+                                <p class="card-text small text-muted mb-1"><em>Bidens pilosa / Bidens subalternans</em></p>
+                                <div class="species-image-placeholder rounded overflow-hidden mb-3">
+                                    <img src="../../img/guias/picao.webp"
+                                        alt="Capim-amargoso (Digitaria insularis)"
+                                        class="w-100 h-100 object-fit-cover d-block rounded">
+                                </div>
+                                
+                                <div class="ecology-box small mb-2">
+                                    <strong>Ecologia:</strong> Apresenta biótipos resistentes a herbicidas ALS e glifosato; alta produção de sementes com estruturas de dispersão aderentes.
+                                </div>
+                                
+                                <div class="mb-2">
+                                    <small class="text-muted d-block">Impacto na cultura:</small>
+                                    <div class="impact-meter">
+                                        <div class="impact-fill impact-high" style="width: 86%"></div>
+                                    </div>
+                                </div>
+                                
+                                <div class="small">
+                                    <strong>Métodos de controle:</strong>
+                                    <div class="control-method">✅ Rotação de culturas para quebrar ciclo</div>
+                                    <div class="control-method">✅ Plantas de cobertura para competição</div>
+                                    <div class="control-method">✅ Fomesafen + S-metolacloro (pré-emergente)</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Caruru / Amaranthus -->
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card species-card shadow-sm h-100" style="border-left-color: #ffc107;">
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between align-items-start mb-2">
+                                    <h5 class="card-title fw-bold text-warning mb-0">Caruru (espécies)</h5>
+                                    <span class="badge risk-badge risk-high">Risco: ALTO</span>
+                                </div>
+                                <p class="card-text small text-muted mb-1"><em>Amaranthus spp.</em> (incluindo <em>A. palmeri</em>)</p>
+                                <div class="species-image-placeholder rounded overflow-hidden mb-3">
+                                    <img src="../../img/guias/caruru.webp"
+                                        alt="Capim-amargoso (Digitaria insularis)"
+                                        class="w-100 h-100 object-fit-cover d-block rounded">
+                                </div>
+                                
+                                <div class="ecology-box small mb-2">
+                                    <strong>Ecologia:</strong> <em>A. palmeri</em> é praga quarentenária, crescimento rápido, extremamente agressiva, detectada recentemente no Brasil. Espécies nativas como <em>A. hybridus</em> também causam prejuízos.
+                                </div>
+                                
+                                <div class="mb-2">
+                                    <small class="text-muted d-block">Impacto na cultura:</small>
+                                    <div class="impact-meter">
+                                        <div class="impact-fill impact-high" style="width: 95%"></div>
+                                    </div>
+                                </div>
+                                
+                                <div class="small">
+                                    <strong>Métodos de controle:</strong>
+                                    <div class="control-method">✅ Monitoramento rigoroso para <em>A. palmeri</em></div>
+                                    <div class="control-method">✅ Herbicidas com múltiplos mecanismos de ação</div>
+                                    <div class="control-method">✅ Controle antes da floração (alta produção de sementes)</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Buva / Conyza -->
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card species-card shadow-sm h-100" style="border-left-color: #ffc107;">
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between align-items-start mb-2">
+                                    <h5 class="card-title fw-bold text-warning mb-0">Buva</h5>
+                                    <span class="badge risk-badge risk-high">Risco: ALTO</span>
+                                </div>
+                                <p class="card-text small text-muted mb-1"><em>Conyza spp.</em> (<em>C. bonariensis</em>, <em>C. sumatrensis</em>)</p>
+                                <div class="species-image-placeholder rounded overflow-hidden mb-3">
+                                    <img src="../../img/guias/buva.webp"
+                                        alt="Capim-amargoso (Digitaria insularis)"
+                                        class="w-100 h-100 object-fit-cover d-block rounded">
+                                </div>
+                                
+                                <div class="ecology-box small mb-2">
+                                    <strong>Ecologia:</strong> Resistência múltipla a herbicidas (glifosato, ALS, paraquat), dispersão por sementes leves transportadas pelo vento.
+                                </div>
+                                
+                                <div class="mb-2">
+                                    <small class="text-muted d-block">Impacto na cultura:</small>
+                                    <div class="impact-meter">
+                                        <div class="impact-fill impact-high" style="width: 92%"></div>
+                                    </div>
+                                </div>
+                                
+                                <div class="small">
+                                    <strong>Métodos de controle:</strong>
+                                    <div class="control-method">✅ Aplicações sequenciais com diferentes MOA</div>
+                                    <div class="control-method">✅ Manejo outonal / dessecação antecipada</div>
+                                    <div class="control-method">✅ Cobertura do solo para reduzir emergência</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Trapoeraba -->
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card species-card shadow-sm h-100" style="border-left-color: #ffc107;">
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between align-items-start mb-2">
+                                    <h5 class="card-title fw-bold text-warning mb-0">Trapoeraba</h5>
+                                    <span class="badge risk-badge risk-medium">Risco: MÉDIO</span>
+                                </div>
+                                <p class="card-text small text-muted mb-1"><em>Commelina benghalensis</em></p>
+                                <div class="species-image-placeholder rounded overflow-hidden mb-3">
+                                    <img src="../../img/guias/trapoeraba.webp"
+                                        alt="Capim-amargoso (Digitaria insularis)"
+                                        class="w-100 h-100 object-fit-cover d-block rounded">
+                                </div>
+                                
+                                <div class="ecology-box small mb-2">
+                                    <strong>Ecologia:</strong> Gênero tolerante a herbicidas, reprodução sexuada e assexuada (rizomas), alta capacidade de regeneração.
+                                </div>
+                                
+                                <div class="mb-2">
+                                    <small class="text-muted d-block">Impacto na cultura:</small>
+                                    <div class="impact-meter">
+                                        <div class="impact-fill impact-medium" style="width: 75%"></div>
+                                    </div>
+                                </div>
+                                
+                                <div class="small">
+                                    <strong>Métodos de controle:</strong>
+                                    <div class="control-method">✅ Misturas de herbicidas com diferentes MOA</div>
+                                    <div class="control-method">✅ Controle mecânico + químico integrado</div>
+                                    <div class="control-method">✅ Monitoramento contínuo (regeneração rápida)</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section: Espécies com Resistência Confirmada -->
+        <section class="card mb-4 border-0 shadow-sm" id="resistentes">
+            <div class="card-header bg-danger text-white">
+                <h3 class="h5 mb-0"><i class="bi bi-shield-exclamation me-2"></i>Espécies com Resistência Confirmada no Cerrado/DF</h3>
+            </div>
+            <div class="card-body">
+                <div class="alert alert-danger small mb-3">
+                    <i class="bi bi-exclamation-octagon me-2"></i>
+                    <strong>Alerta crítico:</strong> A resistência é um fenômeno natural acelerado pela pressão seletiva do uso repetido de herbicidas. Uma vez estabelecida, reduz drasticamente as opções de controle e eleva custos.
+                </div>
+
+                <div class="table-responsive">
+                    <table class="table table-species table-bordered align-middle mb-0">
+                        <thead>
+                            <tr>
+                                <th>Espécie</th>
+                                <th>Mecanismo de Resistência</th>
+                                <th>Regiões Confirmadas</th>
+                                <th>Estratégia Recomendada</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Capim-amargoso</strong><br><small><em>Digitaria insularis</em></small></td>
+                                <td>Glifosato (EPSPS)</td>
+                                <td>Cerrado, Matopiba, DF</td>
+                                <td>ACCase + rotação de MOA + controle cultural</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Capim-pé-de-galinha</strong><br><small><em>Eleusine indica</em></small></td>
+                                <td>Glifosato (EPSPS)</td>
+                                <td>Nacional, incluindo Cerrado</td>
+                                <td>Misturas formuladas + aplicação precoce</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Buva</strong><br><small><em>Conyza sumatrensis</em></small></td>
+                                <td>Múltipla: Glifosato, ALS, Paraquat</td>
+                                <td>Sul, Cerrado, DF</td>
+                                <td>Sequencial + dessecação outonal + cobertura</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Picão-preto</strong><br><small><em>Bidens spp.</em></small></td>
+                                <td>Glifosato, ALS (biótipos)</td>
+                                <td>Centro-Oeste, DF</td>
+                                <td>Pré-emergentes + rotação + plantas de cobertura</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Caruru-palmeri</strong><br><small><em>Amaranthus palmeri</em></small></td>
+                                <td>Múltipla (ALS, EPSPS, PPO)</td>
+                                <td>Detecção recente: MS, vigilância nacional</td>
+                                <td><strong>Quarentena:</strong> notificação imediata + controle integrado rigoroso</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Leiteiro</strong><br><small><em>Euphorbia heterophylla</em></small></td>
+                                <td>ALS (inibidores)</td>
+                                <td>Cerrado, DF</td>
+                                <td>Lactofen + rotação de MOA + manejo cultural</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="info-highlight mt-3">
+                    <h6 class="fw-bold text-success mb-2"><i class="bi bi-lightbulb me-1"></i>Princípio do MIPD para resistência</h6>
+                    <p class="small mb-0">
+                        Nunca depender exclusivamente de um único método ou mecanismo de ação. Combinar controle químico, mecânico e cultural, rotacionar grupos de herbicidas e aplicar no estágio correto da planta daninha são práticas essenciais para preservar a eficácia dos produtos.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section: Tabela Comparativa -->
+        <section class="card mb-4 border-0 shadow-sm" id="comparacao">
+            <div class="card-header bg-info text-white">
+                <h3 class="h5 mb-0"><i class="bi bi-table me-2"></i>Comparativo Rápido: Características-Chave</h3>
+            </div>
+            <div class="card-body">
+                <div class="table-responsive">
+                    <table class="table comparison-table table-striped table-hover align-middle mb-0">
+                        <thead class="table-light">
+                            <tr>
+                                <th>Espécie</th>
+                                <th>Ciclo</th>
+                                <th>Produção de Sementes</th>
+                                <th>Adaptação ao Estresse</th>
+                                <th>Principal Via de Dispersão</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Capim-amargoso</strong></td>
+                                <td>Perene</td>
+                                <td>Alta (rizomas + sementes)</td>
+                                <td>Alta tolerância à seca</td>
+                                <td>Vento, equipamentos, água</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Buva</strong></td>
+                                <td>Anual/Bienal</td>
+                                <td>Muito alta (200.000+/planta)</td>
+                                <td>Excelente (germina em condições adversas)</td>
+                                <td>Vento (sementes plumosas)</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Caruru-palmeri</strong></td>
+                                <td>Anual</td>
+                                <td>Extremamente alta (600.000+/planta)</td>
+                                <td>Crescimento rápido, competição agressiva</td>
+                                <td>Equipamentos, água, animais</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Picão-preto</strong></td>
+                                <td>Anual</td>
+                                <td>Alta (sementes com aríolos aderentes)</td>
+                                <td>Média-alta</td>
+                                <td>Aderência a animais/equipamentos</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Carrapicho rasteiro</strong></td>
+                                <td>Anual</td>
+                                <td>Média-alta</td>
+                                <td>Baixa fertilidade do solo</td>
+                                <td>Animais, equipamentos, água</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Trapoeraba</strong></td>
+                                <td>Anual/Perene</td>
+                                <td>Média (sementes + rizomas)</td>
+                                <td>Alta (regeneração vegetativa)</td>
+                                <td>Fragmentos de rizoma, água</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Capim-gordura</strong></td>
+                                <td>Perene</td>
+                                <td>Alta</td>
+                                <td>Solos degradados, fogo</td>
+                                <td>Vento, animais, equipamentos</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section: Estratégias de Controle Integrado -->
+        <section class="card mb-4 border-0 shadow-sm" id="controle">
+            <div class="card-header bg-success text-white">
+                <h3 class="h5 mb-0"><i class="bi bi-shield-check me-2"></i>Estratégias de Controle Integrado para Pequenos Produtores</h3>
+            </div>
+            <div class="card-body">
+                <div class="row g-4">
+                    <div class="col-lg-6">
+                        <h5 class="text-success mb-3">🌱 Controle Cultural (Preventivo)</h5>
+                        
+                        <div class="accordion" id="accordionCultural">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseCobertura">
+                                        Cobertura Morta / Plantio Direto
+                                    </button>
+                                </h2>
+                                <div id="collapseCobertura" class="accordion-collapse collapse show" data-bs-parent="#accordionCultural">
+                                    <div class="accordion-body small">
+                                        <p class="mb-2">A palha funciona como barreira física, bloqueando luz para germinação de daninhas anuais e reduzindo evaporação de água.</p>
+                                        <ul class="mb-0 ps-3">
+                                            <li>Supressão de 60-80% de biomassa de daninhas como caruru</li>
+                                            <li>Melhora estrutura do solo e retenção hídrica</li>
+                                            <li>Reduz necessidade de intervenções químicas</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseRotacao">
+                                        Rotação e Consórcio de Culturas
+                                    </button>
+                                </h2>
+                                <div id="collapseRotacao" class="accordion-collapse collapse" data-bs-parent="#accordionCultural">
+                                    <div class="accordion-body small">
+                                        <p class="mb-2">Alternar grupos de plantas (gramíneas, leguminosas) interrompe ciclos de daninhas especializadas.</p>
+                                        <ul class="mb-0 ps-3">
+                                            <li>Quebra padrão de infestação ciclo após ciclo</li>
+                                            <li>Plantas de cobertura competem por recursos com daninhas</li>
+                                            <li>ILPF introduz sombreamento e diversificação</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseVigor">
+                                        Vigor da Cultura
+                                    </button>
+                                </h2>
+                                <div id="collapseVigor" class="accordion-collapse collapse" data-bs-parent="#accordionCultural">
+                                    <div class="accordion-body small">
+                                        <p class="mb-2">Cultura bem desenvolvida compete melhor por luz, água e nutrientes, reduzindo vantagem ecológica das invasoras.</p>
+                                        <ul class="mb-0 ps-3">
+                                            <li>Correção de solo e adubação equilibrada</li>
+                                            <li>Época de plantio adequada ao clima local</li>
+                                            <li>Densidade de semeadura otimizada</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-lg-6">
+                        <h5 class="text-success mb-3">⚙️ Controle Mecânico + Químico (Corretivo)</h5>
+                        
+                        <div class="accordion" id="accordionCorretivo">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseMecanico">
+                                        Controle Mecânico Inteligente
+                                    </button>
+                                </h2>
+                                <div id="collapseMecanico" class="accordion-collapse collapse show" data-bs-parent="#accordionCorretivo">
+                                    <div class="accordion-body small">
+                                        <p class="mb-2">Eficaz em pequenas áreas quando realizado precocemente, antes da produção de sementes.</p>
+                                        <ul class="mb-0 ps-3">
+                                            <li>Capina/enxada em estádio vegetativo jovem</li>
+                                            <li>Evitar corte de plantas maduras (dispersão de sementes)</li>
+                                            <li>Implementos podem estimular germinação de sementes enterradas → usar com critério</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseQuimico">
+                                        Herbicidas: Uso Responsável
+                                    </button>
+                                </h2>
+                                <div id="collapseQuimico" class="accordion-collapse collapse" data-bs-parent="#accordionCorretivo">
+                                    <div class="accordion-body small">
+                                        <p class="mb-2">Aplicar apenas quando necessário, baseado no Limiar de Dano Econômico (LDE).</p>
+                                        <ul class="mb-0 ps-3">
+                                            <li>Rotacionar mecanismos de ação (GMA) para evitar resistência</li>
+                                            <li>Calibrar pulverizador para dose correta</li>
+                                            <li>Aplicar em condições climáticas favoráveis (vento < 10 km/h)</li>
+                                            <li>Usar EPIs completos e seguir instruções da bula</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseIntegrado">
+                                        Integração Estratégica
+                                    </button>
+                                </h2>
+                                <div id="collapseIntegrado" class="accordion-collapse collapse" data-bs-parent="#accordionCorretivo">
+                                    <div class="accordion-body small">
+                                        <p class="mb-2">O controle mais eficiente combina métodos de forma sinérgica:</p>
+                                        <ul class="mb-0 ps-3">
+                                            <li>Cobertura do solo + herbicida pré-emergente seletivo</li>
+                                            <li>Controle mecânico precoce + rotação de culturas</li>
+                                            <li>Monitoramento contínuo + intervenção no momento certo</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="alert alert-success mt-4 mb-0">
+                    <h6 class="fw-bold"><i class="bi bi-check-circle me-2"></i>Regra de Ouro do Pequeno Produtor</h6>
+                    <p class="mb-0 small">
+                        <strong>Prevenir é mais barato que corrigir.</strong> Invista em práticas culturais que reduzam a pressão de infestação (cobertura do solo, rotação, vigor da cultura). Use herbicidas como ferramenta de precisão, não como rotina. Cada aplicação deve ter objetivo claro e estar integrada a outras estratégias de manejo.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section: Checklist de Campo -->
+        <section class="card mb-4 border-0 shadow-sm" id="checklist">
+            <div class="card-header bg-primary text-white">
+                <h3 class="h5 mb-0"><i class="bi bi-clipboard-check me-2"></i>Checklist de Decisão em Campo</h3>
+            </div>
+            <div class="card-body">
+                <div class="row g-3">
+                    <div class="col-md-6">
+                        <div class="card h-100 border-primary-subtle">
+                            <div class="card-header bg-primary-subtle fw-bold">🔍 Antes de Intervir</div>
+                            <div class="card-body small">
+                                <div class="form-check mb-2">
+                                    <input class="form-check-input" type="checkbox" id="chk1">
+                                    <label class="form-check-label" for="chk1">A espécie foi corretamente identificada?</label>
+                                </div>
+                                <div class="form-check mb-2">
+                                    <input class="form-check-input" type="checkbox" id="chk2">
+                                    <label class="form-check-label" for="chk2">A planta está jovem ou já em fase reprodutiva?</label>
+                                </div>
+                                <div class="form-check mb-2">
+                                    <input class="form-check-input" type="checkbox" id="chk3">
+                                    <label class="form-check-label" for="chk3">A infestação ultrapassou o Limiar de Dano Econômico?</label>
+                                </div>
+                                <div class="form-check mb-2">
+                                    <input class="form-check-input" type="checkbox" id="chk4">
+                                    <label class="form-check-label" for="chk4">Há risco de resistência (histórico de aplicações repetidas)?</label>
+                                </div>
+                                <div class="form-check mb-2">
+                                    <input class="form-check-input" type="checkbox" id="chk5">
+                                    <label class="form-check-label" for="chk5">Condições climáticas são favoráveis para aplicação (se for o caso)?</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-6">
+                        <div class="card h-100 border-success-subtle">
+                            <div class="card-header bg-success-subtle fw-bold">✅ Ao Executar o Controle</div>
+                            <div class="card-body small">
+                                <div class="form-check mb-2">
+                                    <input class="form-check-input" type="checkbox" id="chk6">
+                                    <label class="form-check-label" for="chk6">EPIs completos e em bom estado de uso</label>
+                                </div>
+                                <div class="form-check mb-2">
+                                    <input class="form-check-input" type="checkbox" id="chk7">
+                                    <label class="form-check-label" for="chk7">Pulverizador calibrado e limpo</label>
+                                </div>
+                                <div class="form-check mb-2">
+                                    <input class="form-check-input" type="checkbox" id="chk8">
+                                    <label class="form-check-label" for="chk8">Herbicida com mecanismo de ação diferente do último usado</label>
+                                </div>
+                                <div class="form-check mb-2">
+                                    <input class="form-check-input" type="checkbox" id="chk9">
+                                    <label class="form-check-label" for="chk9">Registro da aplicação (produto, dose, data, condições)</label>
+                                </div>
+                                <div class="form-check mb-2">
+                                    <input class="form-check-input" type="checkbox" id="chk10">
+                                    <label class="form-check-label" for="chk10">Plano para monitorar eficácia e prevenir reinfestação</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="mt-3 p-3 rounded bg-light border">
+                    <small class="text-muted">
+                        <i class="bi bi-info-circle me-1"></i>
+                        <strong>Dica prática:</strong> Mantenha um caderno de campo simples com fotos das infestações, datas de controle e resultados. Isso ajuda a identificar padrões, ajustar estratégias e evitar repetição de erros.
+                    </small>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section: Ecologia Aplicada -->
+        <section class="card mb-4 border-0 shadow-sm" id="ecologia">
+            <div class="card-header bg-secondary text-white">
+                <h3 class="h5 mb-0"><i class="bi bi-tree me-2"></i>Ecologia Aplicada: Entender para Prevenir</h3>
+            </div>
+            <div class="card-body">
+                <div class="row g-4">
+                    <div class="col-md-4">
+                        <div class="card h-100 text-center border-0 shadow-sm">
+                            <div class="card-body">
+                                <i class="bi bi-clock-history fs-1 text-success mb-3"></i>
+                                <h5 class="card-title">Fenologia</h5>
+                                <p class="card-text small text-muted">
+                                    Conhecer as fases de desenvolvimento da planta daninha permite intervir no momento de maior vulnerabilidade (geralmente estádio jovem), antes da produção de sementes.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-4">
+                        <div class="card h-100 text-center border-0 shadow-sm">
+                            <div class="card-body">
+                                <i class="bi bi-droplet fs-1 text-primary mb-3"></i>
+                                <h5 class="card-title">Banco de Sementes</h5>
+                                <p class="card-text small text-muted">
+                                    O solo funciona como reservatório de sementes. Controle apenas o que está visível não resolve o sistema. É preciso reduzir a entrada de novas sementes e criar condições desfavoráveis à germinação.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-4">
+                        <div class="card h-100 text-center border-0 shadow-sm">
+                            <div class="card-body">
+                                <i class="bi bi-arrow-repeat fs-1 text-warning mb-3"></i>
+                                <h5 class="card-title">Dispersão</h5>
+                                <p class="card-text small text-muted">
+                                    Entender como a espécie se dispersa (vento, água, animais, equipamentos) permite adotar barreiras físicas e práticas de higiene que reduzem a propagação entre áreas.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="info-highlight mt-4">
+                    <h6 class="fw-bold text-success mb-2"><i class="bi bi-lightbulb me-1"></i>Conceito-chave: Janela de Oportunidade</h6>
+                    <p class="small mb-0">
+                        Cada espécie tem um período crítico em que o controle é mais eficiente e menos custoso. Para a maioria das daninhas anuais, essa janela ocorre nas primeiras 2-4 semanas após a emergência, antes do rápido crescimento vegetativo e início da reprodução. Monitoramento frequente é essencial para não perder essa oportunidade.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section: Recursos Técnicos -->
+        <section class="card mb-4 border-0 shadow-sm" id="recursos">
+            <div class="card-header bg-dark text-white">
+                <h3 class="h5 mb-0"><i class="bi bi-book-half me-2"></i>Recursos Técnicos Recomendados</h3>
+            </div>
+            <div class="card-body">
+                <div class="row g-3">
+                    <div class="col-md-6">
+                        <div class="list-group">
+                            <a href="https://www.embrapa.br/cerrados" target="_blank" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">
+                                <div>
+                                    <strong>Embrapa Cerrados</strong>
+                                    <div class="small text-muted">Publicações técnicas, guias de identificação e recomendações de manejo para o bioma</div>
+                                </div>
+                                <i class="bi bi-box-arrow-up-right text-primary"></i>
+                            </a>
+                            <a href="https://www.sbcpd.org" target="_blank" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">
+                                <div>
+                                    <strong>Sociedade Brasileira da Ciência das Plantas Daninhas</strong>
+                                    <div class="small text-muted">Artigos científicos, congressos e atualização sobre resistência e novas estratégias</div>
+                                </div>
+                                <i class="bi bi-box-arrow-up-right text-primary"></i>
+                            </a>
+                            <a href="https://agrofit.agricultura.gov.br" target="_blank" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">
+                                <div>
+                                    <strong>Agrofit / MAPA</strong>
+                                    <div class="small text-muted">Consulta de herbicidas registrados por cultura e espécie-alvo</div>
+                                </div>
+                                <i class="bi bi-box-arrow-up-right text-primary"></i>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-6">
+                        <div class="alert alert-info small mb-3">
+                            <i class="bi bi-mortarboard me-2"></i>
+                            <strong>Capacitação:</strong> Busque cursos técnicos presenciais ou online oferecidos por Emater-DF, SENAR e instituições de pesquisa. O manejo integrado exige conhecimento contínuo.
+                        </div>
+                        
+                        <div class="card border-success-subtle">
+                            <div class="card-body">
+                                <h6 class="fw-bold text-success mb-2">📱 Ferramentas Úteis</h6>
+                                <ul class="small mb-0 ps-3">
+                                    <li>Apps de identificação de plantas (com validação técnica)</li>
+                                    <li>Planilhas simples para registro de aplicações e monitoramento</li>
+                                    <li>Grupos de produtores para troca de experiências locais</li>
+                                    <li>Alertas meteorológicos para planejar aplicações</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="py-5 bg-light border-top">
+        <div class="container text-center">
+            <p class="text-muted fw-bold mb-1">Guia Verde – 2026</p>
+            <div class="small text-muted">
+                Conteúdo técnico elaborado para pequenos produtores rurais do Cerrado e Distrito Federal, com base em publicações da Embrapa, literatura científica e experiências de campo. 
+                Foco em manejo integrado, prevenção da resistência e sustentabilidade do sistema produtivo.
+            </div>
+            <div class="small text-muted mt-3">
+                Fontes principais: Embrapa Cerrados, SBCPD, Agrofit/MAPA, literatura revisada por pares.
+            </div>
+        </div>
+    </footer>
+
+    <button type="button" class="btn btn-success btn-lg" id="btn-back-to-top" 
+            style="position: fixed; bottom: 20px; right: 20px; display: none; z-index: 1000;" 
+            aria-label="Voltar ao topo" title="Voltar ao topo">
+        <i class="bi bi-arrow-up"></i>
+    </button>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" 
+            integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" 
+            crossorigin="anonymous"></script>
+    </script>
+</body>
+</html>
