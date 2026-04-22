@@ -8,6 +8,9 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="../../css/base.css">
     <link rel="stylesheet" href="../../css/navbar.css">
+    <link rel="stylesheet" href="../../css/components.css">
+    <link rel="stylesheet" href="../../css/info-cards.css">
+    <link rel="stylesheet" href="../../css/responsive.css">
 </head>
 <script src="../../js/search.js"></script>
 <body class="bg-light">
@@ -38,12 +41,16 @@
                     </li>
                 </ul>
 
-                <form class="d-flex" role="search">
+                <form class="d-flex position-relative" role="search" id="searchForm">
+                    <label for="search" class="visually-hidden">Pesquisar</label>
                     <input class="form-control me-2"
+                        id="search"
                         type="search"
-                        placeholder="O que procura?"
-                        aria-label="Pesquisar">
+                        placeholder="O que você procura?"
+                        aria-label="Pesquisar"
+                        autocomplete="off">
                     <button class="btn btn-warning" type="submit">Pesquisar</button>
+                    <div id="suggestions" class="suggestions"></div>
                 </form>
             </div>
         </div>
@@ -71,7 +78,7 @@
                         Selecionamos as <strong>10 principais hortaliças</strong> produzidas na região — como o tomate, a alface, o pimentão e a mandioca — que representam a maior parte da renda e do trabalho dos nossos pequenos produtores.
                     </p>
                     <p class="text-secondary">
-                        Focar nessas culturas nos permite entregar um conteúdo profundo e útil, baseado em dados da <strong>EMATER-DF</strong> e tendências para 2025–2026.
+                        Focar nessas culturas nos permite entregar um conteúdo profundo e útil, baseado em dados da <strong>EMATER-DF</strong> e tendências para os anos seguintes.
                     </p>
                 </div>
             </div>
@@ -93,6 +100,9 @@
                         <p class="text-secondary">
                             Muitas vezes, o conhecimento técnico está confinado em artigos complexos ou consultorias caras. Essa barreira gera dependência de soluções paliativas e uso inadequado de insumos no campo.
                         </p>
+                        <p class="text-secondary">
+                            Imagine o cenário de um pequeno produtor rural aplicando defensivos perigosos sem orientação adequada, ou enfrentando pragas e doenças sem saber como agir. O resultado? Perdas significativas, riscos à saúde e impactos ambientais. E ainda, um dos principais problemas é a falta de acesso a informações confiáveis e práticas, o que pode levar a decisões erradas e consequências graves para a produção agrícola. Seja pela cultura herdada, pela falta de recursos ou pela ausência de suporte técnico, muitos agricultores acabam enfrentando um verdadeiro abismo de informação, onde o conhecimento necessário para uma agricultura sustentável e produtiva está fora de alcance.
+                        </p>
                     </div>
                 </div>
             </div>
@@ -107,13 +117,55 @@
                         <p class="text-secondary mb-3">Optamos por um <strong>Microsite Estático</strong> focado na realidade rural:</p>
                         <div class="d-flex flex-wrap gap-2">
                             <span class="badge bg-success-subtle text-success border border-success-subtle rounded-pill p-2 px-3">
-                                <i class="bi bi-eye me-1"></i> Navegação Visual
+                                <i class="bi bi-geo-alt me-1"></i> Adaptado ao DF (Cerrado)
                             </span>
+
                             <span class="badge bg-success-subtle text-success border border-success-subtle rounded-pill p-2 px-3">
-                                <i class="bi bi-reception-2 me-1"></i> Baixo Consumo (2G/3G)
+                                <i class="bi bi-journal-check me-1"></i> Referência EMBRAPA
                             </span>
+
                             <span class="badge bg-success-subtle text-success border border-success-subtle rounded-pill p-2 px-3">
-                                <i class="bi bi-check2-square me-1"></i> Diagnóstico Prático
+                                <i class="bi bi-lightning-charge me-1"></i> Acesso Rápido às Culturas
+                            </span>
+
+                            <span class="badge bg-success-subtle text-success border border-success-subtle rounded-pill p-2 px-3">
+                                <i class="bi bi-table me-1"></i> Dados em Tabelas Técnicas
+                            </span>
+
+                            <span class="badge bg-success-subtle text-success border border-success-subtle rounded-pill p-2 px-3">
+                                <i class="bi bi-search me-1"></i> Diagnóstico de Problemas
+                            </span>
+
+                            <span class="badge bg-success-subtle text-success border border-success-subtle rounded-pill p-2 px-3">
+                                <i class="bi bi-calendar-range me-1"></i> Calendário de Plantio
+                            </span>
+
+                            <span class="badge bg-success-subtle text-success border border-success-subtle rounded-pill p-2 px-3">
+                                <i class="bi bi-droplet me-1"></i> Manejo de Irrigação
+                            </span>
+
+                            <span class="badge bg-success-subtle text-success border border-success-subtle rounded-pill p-2 px-3">
+                                <i class="bi bi-bug me-1"></i> Controle de Pragas e Doenças
+                            </span>
+
+                            <span class="badge bg-success-subtle text-success border border-success-subtle rounded-pill p-2 px-3">
+                                <i class="bi bi-tree me-1"></i> Recomendação por Cultura
+                            </span>
+
+                            <span class="badge bg-success-subtle text-success border border-success-subtle rounded-pill p-2 px-3">
+                                <i class="bi bi-speedometer2 me-1"></i> Otimizado para Baixa Conexão
+                            </span>
+
+                            <span class="badge bg-success-subtle text-success border border-success-subtle rounded-pill p-2 px-3">
+                                <i class="bi bi-phone me-1"></i> Interface Mobile-first
+                            </span>
+
+                            <span class="badge bg-success-subtle text-success border border-success-subtle rounded-pill p-2 px-3">
+                                <i class="bi bi-map me-1"></i> Zoneamento Agrícola Simplificado
+                            </span>
+
+                            <span class="badge bg-success-subtle text-success border border-success-subtle rounded-pill p-2 px-3">
+                                <i class="bi bi-check2-circle me-1"></i> Conteúdo Validado Técnico
                             </span>
                         </div>
                     </div>
@@ -145,6 +197,9 @@
         </div>
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
+
+    </script>
+    <script src="../../js/ui-extras.js"></script>
 </body>
 </html>
