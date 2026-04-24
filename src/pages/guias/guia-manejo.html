@@ -1,74 +1,954 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Manejo</title>
-    <link
-        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
-        rel="stylesheet"
-        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
-        crossorigin="anonymous">
-    <link
-        rel="stylesheet"
-        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
-    <link rel="stylesheet" href="../../css/styles.css">
+    <title>Guia Verde | Manejo Agroecológico para o Cerrado</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="../../css/base.css">
+    <link rel="stylesheet" href="../../css/navbar.css">
+    <link rel="stylesheet" href="../../css/components.css">
+    <link rel="stylesheet" href="../../css/info-cards.css">
+    <link rel="stylesheet" href="../../css/responsive.css">
+    <link rel="stylesheet" href="../../css/guias.css">
+    <script src="../../js/search.js"></script>
 </head>
 
 <body>
 
-    <nav class="navbar navbar-expand-lg navbar-dark">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#"><i class="bi bi-leaf d-inline-block align-top" style="font-size: 1.5rem; color: #a7ffab;"></i> Guia Verde</a>
-
-            <button class="navbar-toggler"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#navbarSupportedContent"
-                aria-controls="navbarSupportedContent"
-                aria-expanded="false"
-                aria-label="Alternar navegação">
+            <a class="navbar-brand" href="../../../index.html">
+                <i class="bi bi-leaf"></i>
+                Guia Verde
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">
                 <span class="navbar-toggler-icon"></span>
             </button>
 
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
-
-                <!-- Menu -->
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="../../../index.html">Início</a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link" href="../../pages/navbar/sobre.html">Sobre</a>
-                    </li>
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item"><a class="nav-link" href="../../../index.html">Início</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../../pages/navbar/sobre.html">Sobre</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="#planejamento">Planejamento</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#solo">Solo</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#clima">Clima & Água</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#pragas">Pragas & Doenças</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#nutricao">Nutrição</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#culturas">Culturas</a></li>
                 </ul>
-
-                <!-- Busca -->
-                <form class="d-flex" role="search">
+                <form class="d-flex position-relative" role="search" id="searchForm">
+                    <label for="search" class="visually-hidden">Pesquisar</label>
                     <input class="form-control me-2"
+                        id="search"
                         type="search"
-                        placeholder="O que procura?"
-                        aria-label="Pesquisar">
+                        placeholder="Buscar cultura, solo, praga, manejo..."
+                        aria-label="Pesquisar"
+                        autocomplete="off">
                     <button class="btn btn-warning" type="submit">Pesquisar</button>
+                    <div id="suggestions" class="suggestions"></div>
                 </form>
             </div>
         </div>
     </nav>
 
-    <footer class="py-4 text-center bg-body-secondary">
-        <div class="container">
-            <p class="mb-0">
-                © 2026 Guia Verde — Plataforma de apoio ao diagnóstico agrícola.
-            </p>
+    <main class="container py-4">
+        <div class="d-flex mb-3">
+            <button type="button" onclick="history.back()" class="btn btn-secondary">
+                <i class="bi bi-arrow-left"></i> Voltar
+            </button>
+            <a href="../../../index.html" class="btn btn-success ms-auto">
+                Página Inicial
+            </a>
+        </div>
+
+        <!-- Cabeçalho do Guia -->
+        <div class="card mb-4 border-0 shadow-sm bg-success text-white">
+            <div class="card-body py-4">
+                <div class="row align-items-center">
+                    <div class="col-lg-8">
+                        <h1 class="display-6 fw-bold mb-2">
+                            <i class="bi bi-tree me-2"></i>
+                            Autossuficiência Agroecológica para o Cerrado
+                        </h1>
+                        <p class="lead mb-0">
+                            Guia prático de manejo para o pequeno agricultor do DF e região do Cerrado — planejamento, solo, água, pragas e nutrição com baixo custo
+                        </p>
+                    </div>
+                    <div class="col-lg-4 text-lg-end mt-3">
+                        <span class="badge bg-light text-dark fs-6 py-2 px-3">
+                            <i class="bi bi-shield-check me-1"></i> Manejo Integrado & Agroecologia
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Alert Box Princípio -->
+        <div class="alert alert-success alert-mip border-0 shadow-sm mb-4" role="alert">
+            <div class="d-flex">
+                <i class="bi bi-lightbulb-fill fs-4 me-3"></i>
+                <div>
+                    <h5 class="alert-heading fw-bold">Princípio Central</h5>
+                    <p class="mb-0 small">
+                        <strong>Uma lavoura bem-manejada é intrinsecamente menos suscetível a problemas.</strong> A ideia não é eliminar completamente pragas, doenças ou ervas daninhas, mas gerenciá-las dentro de níveis que não comprometam a produção e a saúde do ecossistema da propriedade. Planejar, observar e prevenir reduz custos e aumenta a resiliência do sistema produtivo.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Danger box -->
+        <div class="alert alert-danger border-0 shadow-sm mb-4" role="alert">
+            <div class="d-flex">
+                <i class="bi bi-exclamation-octagon-fill fs-4 me-3"></i>
+                <div>
+                    <h5 class="alert-heading fw-bold">IMPORTANTE!</h5>
+                    <p class="mb-0 small">
+                        Este guia é um recurso educativo baseado em publicações técnicas da Embrapa, Emater-DF e instituições públicas brasileiras. Ele não substitui a assistência técnica personalizada. <strong>Sempre consulte um profissional habilitado</strong> (Emater, engenheiro agrônomo) para recomendações específicas à sua propriedade.
+                    </p>
+                    <p class="mb-0 small mt-2">
+                        <strong>Não há responsabilidade por danos causados</strong> por aplicação inadequada das informações aqui contidas. Práticas inadequadas podem levar à degradação ambiental, perda de produção e riscos à saúde humana, animal e do solo.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Navegação Rápida -->
+        <section class="card mb-4 border-0 shadow-sm" id="sumario">
+            <div class="card-body">
+                <h3 class="h4 mb-3">📋 Navegação Rápida</h3>
+                <div class="row row-cols-2 row-cols-md-4 g-2 small">
+                    <div class="col"><a class="text-decoration-none text-success fw-medium" href="#planejamento"><i class="bi bi-arrow-right-circle me-1"></i> Planejamento Estratégico</a></div>
+                    <div class="col"><a class="text-decoration-none text-success fw-medium" href="#solo"><i class="bi bi-arrow-right-circle me-1"></i> Diagnóstico do Solo</a></div>
+                    <div class="col"><a class="text-decoration-none text-success fw-medium" href="#clima"><i class="bi bi-arrow-right-circle me-1"></i> Clima, Água e Calendário</a></div>
+                    <div class="col"><a class="text-decoration-none text-success fw-medium" href="#pragas"><i class="bi bi-arrow-right-circle me-1"></i> Controle Integrado (CIP)</a></div>
+                    <div class="col"><a class="text-decoration-none text-success fw-medium" href="#nutricao"><i class="bi bi-arrow-right-circle me-1"></i> Nutrição e Fertilidade</a></div>
+                    <div class="col"><a class="text-decoration-none text-success fw-medium" href="#culturas"><i class="bi bi-arrow-right-circle me-1"></i> Manejo das Culturas</a></div>
+                    <div class="col"><a class="text-decoration-none text-success fw-medium" href="#checklist"><i class="bi bi-arrow-right-circle me-1"></i> Checklists</a></div>
+                    <div class="col"><a class="text-decoration-none text-success fw-medium" href="#ajuda"><i class="bi bi-arrow-right-circle me-1"></i> Ajuda Técnica</a></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section: Planejamento Estratégico -->
+        <section class="card mb-4 border-0 shadow-sm" id="planejamento">
+            <div class="card-header bg-success text-white">
+                <h3 class="h5 mb-0"><i class="bi bi-search me-2"></i>Planejamento Estratégico do Sistema Produtivo</h3>
+            </div>
+            <div class="card-body">
+                <p class="text-muted small mb-3">
+                    Antes de plantar, o agricultor deve responder perguntas cruciais: qual a finalidade da produção? Consumo próprio, venda no mercado local ou processamento? Isso define escalas, escolha de culturas e tecnologias a adotar.
+                </p>
+
+                <div class="row g-3">
+                    <div class="col-md-4">
+                        <div class="card h-100 border-success-subtle">
+                            <div class="card-body text-center">
+                                <div class="step-number bg-success text-white">1</div>
+                                <h5 class="h6 fw-bold mt-2">Mapeie sua Propriedade</h5>
+                                <p class="small mb-0">Identifique variações de relevo, tipo de solo, pontos de acumulação de água, exposição solar e disponibilidade hídrica. Use checklists e planilhas para registrar dados históricos.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card h-100 border-primary-subtle">
+                            <div class="card-body text-center">
+                                <div class="step-number bg-primary text-white">2</div>
+                                <h5 class="h6 fw-bold mt-2">Pratique a Rotação de Culturas</h5>
+                                <p class="small mb-0">Alterne diferentes famílias botânicas na mesma área ao longo do tempo (ex: leguminosas → gramíneas → folhosas). Quebra ciclos de pragas, equilibra a fertilidade e enriquece o solo com nitrogênio.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card h-100 border-info-subtle">
+                            <div class="card-body text-center">
+                                <div class="step-number bg-info text-white">3</div>
+                                <h5 class="h6 fw-bold mt-2">Adote o Consórcio de Culturas</h5>
+                                <p class="small mb-0">Cultive duas ou mais espécies juntas (ex: milho + feijão). O feijão fixa nitrogênio beneficiando o milho, otimiza o uso de espaço e luz solar, e reduz o crescimento de plantas daninhas.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="visual-diagnosis mt-3">
+                    <h6 class="fw-bold text-success mb-2"><i class="bi bi-lightbulb me-1"></i>Observação Sistemática e Diário de Campo</h6>
+                    <p class="small mb-2">
+                        A observação constante é o motor do manejo preventivo. Inspecione regularmente plantas, solo e ambiente para detectar alterações sutis antes que se tornem crises:
+                    </p>
+                    <ul class="small mb-0 ps-3">
+                        <li><strong>Plantas:</strong> Mudança de cor das folhas (amarelamento, escurecimento), deformidades, presença de excrementos, orifícios nos tecidos ou manchas</li>
+                        <li><strong>Solo:</strong> Textura, cor, umidade e presença de organismos vivos (minhocas, besouros)</li>
+                        <li><strong>Ambiente:</strong> Temperatura, umidade relativa e padrões de precipitação</li>
+                        <li><strong>Diário de Campo:</strong> Ferramenta essencial para registrar observações, hipóteses e ações — transforma intuição em banco de dados pessoal valioso</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section: Diagnóstico e Gestão do Solo -->
+        <section class="card mb-4 border-0 shadow-sm" id="solo">
+            <div class="card-header bg-warning text-dark">
+                <h3 class="h5 mb-0"><i class="bi bi-flower1 me-2"></i>Diagnóstico e Gestão do Solo no Cerrado</h3>
+            </div>
+            <div class="card-body">
+                <p class="text-muted small mb-3">
+                    No Cerrado, os solos são geralmente ácidos, pobres em nutrientes e com baixa fertilidade natural. O manejo correto do solo é a condição fundamental para qualquer produção bem-sucedida. Uma terra bem cuidada requer menos insumos externos e produz mais de forma sustentável.
+                </p>
+
+                <!-- Tabela Comparativa de Diagnóstico -->
+                <div class="table-responsive mb-3">
+                    <table class="table table-diagnosis table-bordered align-middle mb-0">
+                        <thead>
+                            <tr>
+                                <th>Indicador Visual</th>
+                                <th>O que Significa</th>
+                                <th>Ação Recomendada</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Solo escuro / marrom</strong></td>
+                                <td><span class="symptom-tag symptom-biotic">Alto teor de matéria orgânica</span></td>
+                                <td><span class="symptom-tag symptom-biotic">Manter com compostagem e adubação verde</span></td>
+                            </tr>
+                            <tr>
+                                <td><strong>Solo acinzentado / branco</strong></td>
+                                <td><span class="symptom-tag symptom-abiotic">Problemas de drenagem ou salinidade</span></td>
+                                <td><span class="symptom-tag symptom-abiotic">Análise laboratorial urgente; melhorar drenagem</span></td>
+                            </tr>
+                            <tr>
+                                <td><strong>Sem minhocas ao cavar</strong></td>
+                                <td><span class="symptom-tag symptom-abiotic">Solo biologicamente inativo</span></td>
+                                <td><span class="symptom-tag symptom-abiotic">Incorporar matéria orgânica; reduzir revolvimento</span></td>
+                            </tr>
+                            <tr>
+                                <td><strong>Torrões duros e grandes</strong></td>
+                                <td><span class="symptom-tag symptom-abiotic">Compactação; estrutura ruim</span></td>
+                                <td><span class="symptom-tag symptom-abiotic">Adubação verde com gramíneas; subsolagem</span></td>
+                            </tr>
+                            <tr>
+                                <td><strong>Solo arenoso, seco rapidamente</strong></td>
+                                <td><span class="symptom-tag symptom-abiotic">Baixa retenção de água e nutrientes</span></td>
+                                <td><span class="symptom-tag symptom-abiotic">Incorporar composto; cobertura morta</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="alert alert-info mt-3 mb-0">
+                    <i class="bi bi-info-circle me-2"></i>
+                    <strong>Calagem:</strong> No Cerrado, a acidez é endêmica. Aplique calcário agrícola (dolomítico ou calcítico) conforme o laudo de análise de solo para corrigir o pH e disponibilizar nutrientes. Realize análise laboratorial a cada 2–3 anos, coletando 10 a 20 amostras por parcela de até 1000 m², na profundidade de 0–20 cm. Encaminhe ao laboratório da Embrapa ou secretaria estadual de agricultura.
+                </div>
+            </div>
+        </section>
+
+        <!-- Section: Clima, Água e Calendário de Plantio -->
+        <section class="card mb-4 border-0 shadow-sm" id="clima">
+            <div class="card-header bg-danger text-white">
+                <h3 class="h5 mb-0"><i class="bi bi-cloud-rain me-2"></i>Clima, Água e Calendário de Plantio</h3>
+            </div>
+            <div class="card-body">
+                <p class="text-muted small mb-3">
+                    O Cerrado possui clima tropical de altitude, com estações bem definidas: um período chuvoso e um período seco. Adaptar-se a esses ritmos é fundamental para a segurança e produtividade na agricultura familiar.
+                </p>
+
+                <div class="row g-3">
+                    <div class="col-md-6">
+                        <div class="card h-100 border-danger-subtle">
+                            <div class="card-header bg-danger-subtle fw-bold">
+                                <i class="bi bi-droplet me-1"></i>Gestão da Água e Irrigação
+                            </div>
+                            <div class="card-body small">
+                                <ul class="mb-0 ps-3">
+                                    <li><strong>Solo rico em matéria orgânica</strong> retém significativamente mais água — invista em compostagem e adubação verde</li>
+                                    <li><strong>Cobertura morta</strong> (palha, folhas): reduz evaporação, mantém umidade e evita crosta impermeável</li>
+                                    <li><strong>Gotejamento</strong>: método mais eficiente, entrega água direto na zona radicular, minimiza perdas</li>
+                                    <li><strong>Aspersão</strong>: viável em áreas maiores, porém com maior perda por evaporação</li>
+                                    <li><strong>Horário ideal</strong>: irrigar pela manhã permite que as folhas sequem durante o dia, reduzindo doenças fúngicas</li>
+                                    <li><strong>Consulta climática</strong>: use o INMET ou aplicativos de previsão do tempo para planejar irrigações e plantios</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="card h-100 border-warning-subtle">
+                            <div class="card-header bg-warning-subtle fw-bold">
+                                <i class="bi bi-calendar3 me-1"></i>Calendário de Plantio — Cerrado / DF
+                            </div>
+                            <div class="card-body small">
+                                <ul class="mb-0 ps-3">
+                                    <li><strong>Alface:</strong> Primavera/Verão — 60–70 dias — evitar auge do calor</li>
+                                    <li><strong>Beterraba:</strong> Outono/Inverno — 70–80 dias — prefere solo fresco</li>
+                                    <li><strong>Cenoura:</strong> Primavera/Outono — 70–90 dias — solo livre de obstáculos</li>
+                                    <li><strong>Couve:</strong> Outono/Inverno/Primavera — 60–90 dias — resistente ao frio</li>
+                                    <li><strong>Pepino:</strong> Primavera/Verão — 60–70 dias — exige suporte e muita água</li>
+                                    <li><strong>Pimentão:</strong> Primavera/Verão — 90–120 dias — sensível a geadas</li>
+                                    <li><strong>Repolho:</strong> Outono/Inverno — 90–120 dias — ideal entre 15°C e 20°C</li>
+                                    <li><strong>Tomate:</strong> Outono/Inverno/Primavera — 80–100 dias — sensível a geadas</li>
+                                    <li><strong>Mandioca:</strong> Todo o ano (preferencialmente início da chuva) — 8–12 meses</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="alert alert-warning mt-3 mb-0">
+                    <i class="bi bi-exclamation-triangle me-2"></i>
+                    <strong>Atenção:</strong> O calendário acima é uma diretriz genérica. Adapte-o rigorosamente às condições locais do seu município. Consulte a Emater-DF para validar e refinar as datas de plantio conforme o histórico climático da sua região.
+                </div>
+            </div>
+        </section>
+
+        <!-- Section: Controle Integrado de Pragas -->
+        <section class="card mb-4 border-0 shadow-sm" id="pragas">
+            <div class="card-header bg-info text-white">
+                <h3 class="h5 mb-0">
+                    <i class="bi bi-bug me-2"></i>
+                    Controle Integrado de Pragas e Doenças (CIP)
+                </h3>
+            </div>
+
+            <div class="card-body">
+                <p class="text-muted small mb-3">
+                    O CIP é uma filosofia de gestão que combina métodos preventivos, culturais, biológicos e químicos de forma racional. O objetivo é manter populações de pragas abaixo do Limite de Tolerância Econômica (LTE), não eliminá-las completamente.
+                </p>
+
+                <div class="row g-3">
+
+                    <!-- Técnicas Culturais -->
+                    <div class="col-md-4">
+                        <div class="card-body d-flex flex-column flex-sm-row align-items-center align-items-sm-start gap-3 text-center text-sm-start">
+                            <div>
+                                <h6 class="fw-bold mb-2">1ª Opção: Técnicas Culturais e Físicas</h6>
+                                <p class="small mb-1">
+                                    Rotação de culturas, consórcio, limpeza da área (remoção de restos culturais), cobertura morta, plantio em datas adequadas e remoção manual de pragas maiores.
+                                </p>
+                                <span class="badge bg-success-subtle text-success">
+                                    Baixo custo • Alta eficácia preventiva
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Técnicas Biológicas -->
+                    <div class="col-md-4">
+                        <div class="card-body d-flex flex-column flex-sm-row align-items-center align-items-sm-start gap-3 text-center text-sm-start">
+                            <div>
+                                <h6 class="fw-bold mb-2">2ª Opção: Técnicas Biológicas</h6>
+                                <p class="small mb-1">
+                                    Conservar e atrair inimigos naturais (joaninhas, vespas, aranhas, sapos). Usar <em>Bacillus thuringiensis</em> (Bt) contra lagartas. Extratos vegetais como repelentes.
+                                </p>
+                                <span class="badge bg-primary-subtle text-primary">
+                                    Seletivo • Seguro para polinizadores
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Técnicas Químicas -->
+                    <div class="col-md-4">
+                        <div class="card-body d-flex flex-column flex-sm-row align-items-center align-items-sm-start gap-3 text-center text-sm-start">
+                            <div>
+                                <h6 class="fw-bold mb-2">3ª Opção: Técnicas Químicas</h6>
+                                <p class="small mb-1">
+                                    Último recurso. Use produtos de baixa toxicidade, com período de carência adequado. Aplique na manhã ou tarde, com EPI completo. Alterne produtos de diferentes classes para evitar resistência.
+                                </p>
+                                <span class="badge bg-danger-subtle text-danger">
+                                    Último recurso • Com parcimônia
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Pulgões -->
+                    <div class="col-md-4">
+                        <div class="card-body d-flex flex-column flex-sm-row align-items-center align-items-sm-start gap-3 text-center text-sm-start">
+                            <div>
+                                <h6 class="fw-bold mb-2">Pulgões</h6>
+                                <p class="small mb-1">
+                                    Sucção de seiva, amarelamento e deformação das folhas; transmitem vírus. Controle: remoção manual, jatos de água, joaninhas, sabão potássico, extrato de nicotiana.
+                                </p>
+                                <span class="badge bg-info-subtle text-info">
+                                    Monitorar • Joaninha é aliada
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Lagartas -->
+                    <div class="col-md-4">
+                        <div class="card-body d-flex flex-column flex-sm-row align-items-center align-items-sm-start gap-3 text-center text-sm-start">
+                            <div>
+                                <h6 class="fw-bold mb-2">Spodoptera spp. (Lagartas)</h6>
+                                <p class="small mb-1">
+                                    Mastigação de folhas, brotos e frutos; podem consumir toda a folhagem. Controle: catação manual, <em>Bacillus thuringiensis</em> (Bt), flores atrativas para vespas, redes de proteção.
+                                </p>
+                                <span class="badge bg-info-subtle text-info">
+                                    Bt eficiente • Seguro para humanos
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Mosca-branca -->
+                    <div class="col-md-4">
+                        <div class="card-body d-flex flex-column flex-sm-row align-items-center align-items-sm-start gap-3 text-center text-sm-start">
+                            <div>
+                                <h6 class="fw-bold mb-2">Mosca-branca e Tripes</h6>
+                                <p class="small mb-1">
+                                    Sucção de seiva, mofo-fuligem e transmissão de vírus (mosca-branca); manchas prateadas e deformações (tripes). Use armadilhas amarelas/azuis, sabão potássico e remoção de folhas infestadas.
+                                </p>
+                                <span class="badge bg-info-subtle text-info">
+                                    Armadilhas adesivas • Monitorar
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="alert alert-danger mt-3">
+                    <strong>Sequência do CIP (hierarquia obrigatória):</strong>
+                    Técnicas Culturais e Físicas → Técnicas Biológicas → Agrotóxicos (último recurso).
+                    <strong>Nunca pule etapas</strong> por comodidade: o uso desnecessário de químicos elimina inimigos naturais e cria resistência nas pragas.
+                </div>
+
+                <div class="alert alert-info mb-0">
+                    <i class="bi bi-bar-chart me-2"></i>
+                    <strong>Limite de Tolerância Econômica (LTE):</strong>
+                    Monitore a população de pragas antes de agir. Abaixo do LTE, o tratamento é economicamente desnecessário e pode prejudicar o equilíbrio do ecossistema. Use armadilhas isca e contagem de insetos por planta para embasar suas decisões.
+                </div>
+            </div>
+        </section>
+
+        <!-- Section: Nutrição e Fertilidade -->
+        <section class="card mb-4 border-0 shadow-sm" id="nutricao">
+            <div class="card-header bg-success text-white">
+                <h3 class="h5 mb-0"><i class="bi bi-recycle me-2"></i>Nutrição de Culturas e Fertilidade do Solo</h3>
+            </div>
+            <div class="card-body">
+                <p class="text-muted small mb-3">
+                    A fertilidade não se compra, ela se constrói. A dependência excessiva de fertilizantes minerais sintéticos é um fardo financeiro e um vetor de degradação ambiental. As duas ferramentas mais poderosas e de baixo custo são a Adubação Verde e a Compostagem.
+                </p>
+
+                <div class="row g-3">
+                    <div class="col-md-6">
+                        <div class="card h-100 border-success-subtle">
+                            <div class="card-header bg-success-subtle fw-bold">
+                                <i class="bi bi-flower2 me-1"></i>Adubação Verde
+                            </div>
+                            <div class="card-body small">
+                                <p><strong>Leguminosas (mucuna, crotalária, alfafa):</strong> Fixam nitrogênio atmosférico em associação com bactérias no solo. Uma hectare de alfafa pode fixar dezenas de kg de nitrogênio por ano.</p>
+                                <p><strong>Gramíneas (milheto, panicum):</strong> Raízes densas quebram compactação, criam canais para água e ar, e adicionam matéria orgânica à zona compactada.</p>
+                                <p><strong>Benefícios gerais:</strong> Proteção contra erosão e evaporação, supressão de ervas daninhas, controle de nematoides (crotalária), captura de nutrientes do subsolo.</p>
+                                <p class="mb-0"><strong>Formas de implementação:</strong> Em pousio, em consórcio com a cultura principal ou em rotação após a colheita.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="card h-100 border-success-subtle">
+                            <div class="card-header bg-success-subtle fw-bold">
+                                <i class="bi bi-arrow-repeat me-1"></i>Compostagem
+                            </div>
+                            <div class="card-body small">
+                                <p><strong>O que é:</strong> Decomposição aeróbica controlada de matéria orgânica, transformando resíduos em húmus — adubo estável, rico em nutrientes e microrganismos benéficos.</p>
+                                <p><strong>Materiais disponíveis na propriedade:</strong> Esterco de bovinos, restos de corte de pastagem, palha, folhas secas, serragem, restos de hortaliças.</p>
+                                <p><strong>Proporção ideal:</strong> ~30 partes de carbono (palha, folhas secas) para 1 parte de nitrogênio (esterco, restos de horta).</p>
+                                <p class="mb-0"><strong>Manejo:</strong> Manter úmido (como esponja torcida) e aerado (virar regularmente). Pronto quando escuro, esponjoso e com cheiro de terra molhada.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="card h-100 border-success-subtle">
+                            <div class="card-header bg-success-subtle fw-bold">
+                                <i class="bi bi-droplet-half me-1"></i>Adubação Mineral Estratégica
+                            </div>
+                            <div class="card-body small">
+                                <p><strong>Quando usar:</strong> Como suplemento inteligente, apenas quando análise de solo indicar deficiências específicas — não como pilar principal da fertilidade.</p>
+                                <p><strong>NPK no Cerrado:</strong> O fósforo (P) tende a se fixar e tornar-se indisponível em solos ácidos. Corrija o pH com calagem antes de aplicar fósforo para melhorar sua eficiência.</p>
+                                <p class="mb-0"><strong>Aplicação econômica:</strong> Fertirrigação maximiza eficiência (fertilizante dissolvido na água de irrigação). Para sistemas simples, use adubação em bandeja lateral à linha de semeadura.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="card h-100 border-success-subtle">
+                            <div class="card-header bg-success-subtle fw-bold">
+                                <i class="bi bi-graph-up me-1"></i>Benefícios Comparativos
+                            </div>
+                            <div class="card-body small">
+                                <p><strong>Adubação Verde para o solo:</strong> Fixação de N, quebra de compactação, aumento de matéria orgânica, supressão de daninhas, controle de nematoides.</p>
+                                <p><strong>Compostagem para as plantas:</strong> Fornecimento lento e contínuo de nutrientes, fortalecimento da imunidade vegetal, redução de doenças de solo.</p>
+                                <p class="mb-0"><strong>Para o agricultor:</strong> Ambas reduzem custos com fertilizantes e herbicidas, fecham o ciclo de nutrientes na propriedade e aumentam a sustentabilidade da produção.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section: Manejo das Culturas -->
+        <section class="card mb-4 border-0 shadow-sm" id="culturas">
+            <div class="card-header bg-primary text-white">
+                <h3 class="h5 mb-0"><i class="bi bi-check2-circle me-2"></i>Manejo Cultural das Hortaliças e Raízes no DF e Cerrado</h3>
+            </div>
+            <div class="card-body">
+                <p class="text-muted small mb-3">
+                    Guia prático e conciso sobre as características, exigências e principais desafios de cada cultura no contexto do Distrito Federal e do Cerrado. Use como referência rápida conectada às soluções de baixo custo apresentadas nos capítulos anteriores.
+                </p>
+
+                <div class="row g-3">
+                    <div class="col-md-4">
+                        <div class="card h-100 border-primary-subtle">
+                            <div class="card-header bg-primary-subtle fw-bold">
+                                Alface (<em>Lactuca sativa</em>)
+                            </div>
+                            <div class="card-body small">
+                                <p class="mb-2">Hortaliça folhosa anual, muito utilizada em saladas. Possui ciclo curto e exige manejo cuidadoso para boa qualidade das folhas.</p>
+                                <ul class="mb-0 ps-3 small">
+                                    <li>Solo: fértil, bem drenado, rico em matéria orgânica</li>
+                                    <li>pH ideal: entre 6,0 e 6,8</li>
+                                    <li>Espaçamento: 25–30 cm entre plantas; 30–40 cm entre linhas</li>
+                                    <li>Necessita irrigação frequente e uniforme</li>
+                                    <li>Sensível ao calor excessivo — preferir épocas mais amenas</li>
+                                    <li>Controle de pragas como pulgões e lagartas é essencial</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="card h-100 border-primary-subtle">
+                            <div class="card-header bg-primary-subtle fw-bold">
+                                Beterraba (<em>Beta vulgaris</em>)
+                            </div>
+                            <div class="card-body small">
+                                <p class="mb-2">Hortaliça de raiz que exige solo bem preparado, livre de obstáculos que deformam o tubérculo. Ideal para outono e inverno no DF.</p>
+                                <ul class="mb-0 ps-3 small">
+                                    <li>Solo: profundo, fino, canteiro elevado para boa drenagem</li>
+                                    <li>Espaçamento final: 8–10 cm após desbaste</li>
+                                    <li>Umidade constante (falta d'água causa raízes fibrosas e amargas)</li>
+                                    <li>Praga principal: pulgão — controlar com jatos de água</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="card h-100 border-primary-subtle">
+                            <div class="card-header bg-primary-subtle fw-bold">
+                                Cenoura (<em>Daucus carota</em>)
+                            </div>
+                            <div class="card-body small">
+                                <p class="mb-2">Exige solo arenoso, fértil e livre de obstáculos para bom desenvolvimento do corpo inferior. Não tolera transplante — semeadura direta.</p>
+                                <ul class="mb-0 ps-3 small">
+                                    <li>Preparo do solo: passo mais crítico — profundo e com antecedência</li>
+                                    <li>Dois desbastes: a 5 cm e a 10–15 cm de altura</li>
+                                    <li>Espaçamento final: 3–5 cm entre plantas</li>
+                                    <li>Doença principal: "queima" — fungos; controle com rotação de culturas</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="card h-100 border-primary-subtle">
+                            <div class="card-header bg-primary-subtle fw-bold">
+                                Couve (<em>Brassica oleracea</em> var. acephala)
+                            </div>
+                            <div class="card-body small">
+                                <p class="mb-2">Cultura robusta, muito adaptada ao Cerrado, especialmente no outono e inverno. Tolerante ao frio e geada.</p>
+                                <ul class="mb-0 ps-3 small">
+                                    <li>Solo: variado, bem adubado e com boa drenagem</li>
+                                    <li>Espaçamento: 30–40 cm entre plantas; 50–60 cm entre linhas</li>
+                                    <li>Irrigação frequente no início</li>
+                                    <li>Praga principal: lagartas (<em>Spodoptera</em>) — controlar com Bt</li>
+                                    <li>Colheita progressiva: remover folhas externas estimula rebrota</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="card h-100 border-primary-subtle">
+                            <div class="card-header bg-primary-subtle fw-bold">
+                                Mandioca (<em>Manihot esculenta</em>)
+                            </div>
+                            <div class="card-body small">
+                                <p class="mb-2">Cultura fundamental no Cerrado, mas com baixa produtividade local (apenas ~14 t/ha). Manejo adequado pode superar esse limite.</p>
+                                <ul class="mb-0 ps-3 small">
+                                    <li>Plantio com brotos (manivas); espaçamento: 1,0 × 0,5 m</li>
+                                    <li>Tolerante à seca e solos ácidos; responde bem à calagem</li>
+                                    <li>Cobertura morta: controla daninhas e conserva umidade</li>
+                                    <li>Colheita: a partir de 8 meses; pico entre 10–14 meses</li>
+                                    <li>Preferência pelo início da estação chuvosa para o plantio</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="card h-100 border-primary-subtle">
+                            <div class="card-header bg-primary-subtle fw-bold">
+                                Pepino (<em>Cucumis sativus</em>)
+                            </div>
+                            <div class="card-body small">
+                                <p class="mb-2">Cultura de clima quente e ciclo curto, ideal para primavera e verão. Requer irrigação constante e treliça para suporte.</p>
+                                <ul class="mb-0 ps-3 small">
+                                    <li>Solo: fértil, bem trabalhado, alta retenção de água</li>
+                                    <li>Espaçamento: ~1,0 × 0,5 m; 2–3 sementes por cova</li>
+                                    <li>Treliça recomendada: economiza espaço, facilita colheita</li>
+                                    <li>Irrigação pela base; evitar molhar folhas</li>
+                                    <li>Colheita frequente (a cada 2–3 dias) garante frutos jovens</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="card h-100 border-primary-subtle">
+                            <div class="card-header bg-primary-subtle fw-bold">
+                                Pimentão (<em>Capsicum</em> spp.)
+                            </div>
+                            <div class="card-body small">
+                                <p class="mb-2">Clima quente, sensível a geadas. Plantio no outono, inverno e primavera no DF. Requer solo de excelente drenagem.</p>
+                                <ul class="mb-0 ps-3 small">
+                                    <li>Produção de mudas em bandejas; transplantar após 45–60 dias</li>
+                                    <li>Espaçamento: ~60 × 40 cm</li>
+                                    <li>Suporte recomendado: plantas ficam pesadas com frutos</li>
+                                    <li>Doença principal: murcha bacteriana — controle com variedades resistentes</li>
+                                    <li>Colheita manual estimula produção de novos frutos</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="card h-100 border-primary-subtle">
+                            <div class="card-header bg-primary-subtle fw-bold">
+                                Repolho (<em>Brassica oleracea</em> var. capitata)
+                            </div>
+                            <div class="card-body small">
+                                <p class="mb-2">Cultura de clima fresco, muito bem adaptada ao outono e inverno no Cerrado. Ideal entre 15°C e 20°C.</p>
+                                <ul class="mb-0 ps-3 small">
+                                    <li>Produção de mudas em bandejas; transplantar para o campo</li>
+                                    <li>Espaçamento: 50 × 50 cm</li>
+                                    <li>Incorporar composto no preparo do solo</li>
+                                    <li>Irrigação constante para bom formato e compactação do cabeço</li>
+                                    <li>Pragas: lagartas e pulgões — CIP com Bt e sabão potássico</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="card h-100 border-primary-subtle">
+                            <div class="card-header bg-primary-subtle fw-bold">
+                                Tomate (<em>Solanum lycopersicum</em>)
+                            </div>
+                            <div class="card-body small">
+                                <p class="mb-2">Clima quente, sensível a geadas. Plantado no outono, inverno e primavera no DF. Exige solo fértil e bem estruturado.</p>
+                                <ul class="mb-0 ps-3 small">
+                                    <li>Produção de mudas em bandejas; cuidado especial no transplante</li>
+                                    <li>Solo: fértil, bem estruturado, excelente drenagem</li>
+                                    <li>Plantio precoce pode ser protegido com estacas e plástico</li>
+                                    <li>Preferir variedades adaptadas ao Cerrado recomendadas pela Embrapa</li>
+                                    <li>Monitorar fungos e pragas regularmente</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="alert alert-success mt-3 mb-0">
+                    <i class="bi bi-lightbulb me-2"></i>
+                    <strong>Busca Digital Eficiente:</strong> Para informações técnicas específicas, use operadores de busca como <code>site:embrapa.br controle de ervas daninhas</code> ou <code>filetype:pdf manejo de tomate Cerrado</code>. A Embrapa possui biblioteca digital com milhares de publicações técnicas gratuitas. Consulte também o canal YouTube da Emater-DF e da Embrapa para vídeos práticos de manejo.
+                </div>
+            </div>
+        </section>
+
+        <!-- Section: Checklist de Campo -->
+        <section class="card mb-4 border-0 shadow-sm" id="checklist">
+            <div class="card-header bg-dark text-white">
+                <h3 class="h5 mb-0"><i class="bi bi-clipboard-check me-2"></i>Checklists Práticos</h3>
+            </div>
+            <div class="card-body">
+                <p class="text-muted small mb-3">
+                    Use estes checklists para organizar suas atividades e garantir um manejo racional, seguro e sustentável em todas as etapas do ciclo produtivo.
+                </p>
+
+                <div class="row g-3">
+                    <div class="col-md-6">
+                        <div class="card h-100 border-dark-subtle">
+                            <div class="card-header bg-dark-subtle fw-bold">✅ Planejamento e Preparo do Solo</div>
+                            <div class="card-body small">
+                                <div class="form-check mb-2">
+                                    <input class="form-check-input" type="checkbox" id="chk1">
+                                    <label class="form-check-label" for="chk1">Defini a finalidade da produção (consumo, venda, processamento)</label>
+                                </div>
+                                <div class="form-check mb-2">
+                                    <input class="form-check-input" type="checkbox" id="chk2">
+                                    <label class="form-check-label" for="chk2">Mapeei relevo, tipo de solo, pontos de água e exposição solar</label>
+                                </div>
+                                <div class="form-check mb-2">
+                                    <input class="form-check-input" type="checkbox" id="chk3">
+                                    <label class="form-check-label" for="chk3">Realizei ou consultei análise laboratorial de solo (pH, MO, NPK, Al³⁺)</label>
+                                </div>
+                                <div class="form-check mb-2">
+                                    <input class="form-check-input" type="checkbox" id="chk4">
+                                    <label class="form-check-label" for="chk4">Calagem realizada conforme laudo (pH corrigido para a cultura)</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="card h-100 border-dark-subtle">
+                            <div class="card-header bg-dark-subtle fw-bold">✅ Rotação, Consórcio e Adubação Verde</div>
+                            <div class="card-body small">
+                                <div class="form-check mb-2">
+                                    <input class="form-check-input" type="checkbox" id="chk5">
+                                    <label class="form-check-label" for="chk5">Planejei rotação de culturas entre famílias botânicas distintas</label>
+                                </div>
+                                <div class="form-check mb-2">
+                                    <input class="form-check-input" type="checkbox" id="chk6">
+                                    <label class="form-check-label" for="chk6">Avaliei possibilidade de consórcio para otimizar espaço e nutrientes</label>
+                                </div>
+                                <div class="form-check mb-2">
+                                    <input class="form-check-input" type="checkbox" id="chk7">
+                                    <label class="form-check-label" for="chk7">Escolhi espécie de adubação verde adequada ao meu objetivo (fixação N ou quebra de compactação)</label>
+                                </div>
+                                <div class="form-check mb-2">
+                                    <input class="form-check-input" type="checkbox" id="chk8">
+                                    <label class="form-check-label" for="chk8">Composteira ativa: proporção carbono/nitrogênio balanceada, úmida e aerada</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="card h-100 border-dark-subtle">
+                            <div class="card-header bg-dark-subtle fw-bold">✅ Monitoramento de Pragas (CIP)</div>
+                            <div class="card-body small">
+                                <div class="form-check mb-2">
+                                    <input class="form-check-input" type="checkbox" id="chk9">
+                                    <label class="form-check-label" for="chk9">Inspecionei plantas, solo e ambiente pelo menos uma vez por semana</label>
+                                </div>
+                                <div class="form-check mb-2">
+                                    <input class="form-check-input" type="checkbox" id="chk10">
+                                    <label class="form-check-label" for="chk10">Identifiquei e registrei pragas E seus inimigos naturais presentes</label>
+                                </div>
+                                <div class="form-check mb-2">
+                                    <input class="form-check-input" type="checkbox" id="chk11">
+                                    <label class="form-check-label" for="chk11">Quantifiquei a população e comparei com o Limite de Tolerância Econômica (LTE)</label>
+                                </div>
+                                <div class="form-check mb-2">
+                                    <input class="form-check-input" type="checkbox" id="chk12">
+                                    <label class="form-check-label" for="chk12">Optei pela técnica de menor impacto possível antes de recorrer a agrotóxicos</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="card h-100 border-dark-subtle">
+                            <div class="card-header bg-dark-subtle fw-bold">✅ Gestão de Água e Calendário</div>
+                            <div class="card-body small">
+                                <div class="form-check mb-2">
+                                    <input class="form-check-input" type="checkbox" id="chk13">
+                                    <label class="form-check-label" for="chk13">Cobertura morta aplicada nas fileiras para reduzir evaporação</label>
+                                </div>
+                                <div class="form-check mb-2">
+                                    <input class="form-check-input" type="checkbox" id="chk14">
+                                    <label class="form-check-label" for="chk14">Sistema de irrigação adequado à escala e topografia da propriedade</label>
+                                </div>
+                                <div class="form-check mb-2">
+                                    <input class="form-check-input" type="checkbox" id="chk15">
+                                    <label class="form-check-label" for="chk15">Calendário de plantio definido com base no clima local e ciclo de cada cultura</label>
+                                </div>
+                                <div class="form-check mb-2">
+                                    <input class="form-check-input" type="checkbox" id="chk16">
+                                    <label class="form-check-label" for="chk16">Diário de campo atualizado com datas, chuvas, pragas e resultados obtidos</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="alert alert-success mt-3 mb-0">
+                    <strong>Dica de Soberania:</strong> O agricultor que planeja, observa, registra e decide com base em dados é um gestor ativo de seu ecossistema. Cada ciclo produtivo bem documentado no diário de campo é capital acumulado em conhecimento, que vale mais do que qualquer insumo comprado.
+                </div>
+            </div>
+        </section>
+
+        <!-- Section: Ajuda Técnica -->
+        <section class="card mb-4 border-0 shadow-sm" id="ajuda">
+            <div class="card-header bg-secondary text-white">
+                <h3 class="h5 mb-0"><i class="bi bi-people me-2"></i>Canais de Apoio Técnico e Digital</h3>
+            </div>
+            <div class="card-body">
+                <p class="text-muted small mb-3">
+                    A internet não deve substituir a visita do técnico da Emater, mas preparar essa visita. Com pesquisa prévia, o produtor chega com perguntas específicas, tornando a assistência técnica muito mais eficaz e produtiva.
+                </p>
+
+                <div class="row g-3">
+                    <div class="col-md-6">
+                        <div class="institution-card">
+                            <h5 class="fw-bold text-success mb-2">
+                                <i class="bi bi-building me-1"></i>Emater-DF / ATER Estaduais
+                            </h5>
+                            <p class="small mb-2">
+                                <strong>O que oferece:</strong> Assistência técnica personalizada, diagnóstico de campo, receituário agronômico, treinamentos em BPA e CIP. Boletins técnicos sobre pragas emergentes, clima e programas de apoio.
+                            </p>
+                            <p class="small mb-2">
+                                <strong>Como acessar:</strong>
+                            </p>
+                            <ul class="small mb-0 ps-3">
+                                <li>Site: <a href="https://www.emater.df.gov.br" target="_blank" class="text-decoration-none">emater.df.gov.br</a></li>
+                                <li>Agende visita técnica para diagnóstico in loco</li>
+                                <li>Canal YouTube com vídeos de boas práticas e manejo</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="institution-card">
+                            <h5 class="fw-bold text-success mb-2">
+                                <i class="bi bi-flower1 me-1"></i>Embrapa
+                            </h5>
+                            <p class="small mb-2">
+                                <strong>O que oferece:</strong> Pesquisa aplicada ao Cerrado, variedades adaptadas, publicações técnicas gratuitas, guias de manejo, experimentos de campo. Forte atuação em adubação verde, CIP, irrigação e mudanças climáticas.
+                            </p>
+                            <p class="small mb-2">
+                                <strong>Como acessar:</strong>
+                            </p>
+                            <ul class="small mb-0 ps-3">
+                                <li>Site: <a href="https://www.embrapa.br" target="_blank" class="text-decoration-none">embrapa.br</a> — Biblioteca Digital com PDFs gratuitos</li>
+                                <li>Canal YouTube: vídeos didáticos de técnicas de manejo</li>
+                                <li>Instagram e TikTok: conteúdos curtos e informativos</li>
+                                <li>Busca avançada: <code>site:embrapa.br sua dúvida aqui</code></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="institution-card">
+                            <h5 class="fw-bold text-primary mb-2">
+                                <i class="bi bi-book me-1"></i>Universidades (UnB e UFG)
+                            </h5>
+                            <p class="small mb-2">
+                                <strong>O que oferece:</strong> Conteúdo técnico e acadêmico atualizado, pesquisas regionais sobre o Cerrado, dissertações e artigos sobre manejo agroecológico. Canais YouTube com aulas e experimentos práticos.
+                            </p>
+                            <p class="small mb-2">
+                                <strong>Como acessar:</strong>
+                            </p>
+                            <ul class="small mb-0 ps-3">
+                                <li>YouTube: busque "manejo hortaliças Cerrado UnB" ou "agroecologia UFG"</li>
+                                <li>Repositórios online de TCC e dissertações abertos ao público</li>
+                                <li>Eventos e dias de campo periódicos abertos à comunidade</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="institution-card">
+                            <h5 class="fw-bold text-info mb-2">
+                                <i class="bi bi-phone me-1"></i>Redes Digitais de Produtores
+                            </h5>
+                            <p class="small mb-2">
+                                <strong>O que oferece:</strong> Experiências reais de outros produtores da região, troca de informações sobre preços, pragas emergentes e técnicas locais. Complemento valioso à assistência técnica oficial.
+                            </p>
+                            <p class="small mb-2">
+                                <strong>Como acessar:</strong>
+                            </p>
+                            <ul class="small mb-0 ps-3">
+                                <li>Grupos no WhatsApp e Facebook de produtores do DF e Goiás</li>
+                                <li>Fóruns agrícolas: "Agrinho" e "Portal do Agronegócio"</li>
+                                <li>Sempre valide informações em fontes oficiais antes de aplicar</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="alert alert-info mt-3 mb-0">
+                    <i class="bi bi-info-circle me-2"></i>
+                    <strong>Dica de busca digital:</strong> Formule perguntas específicas. Em vez de "problemas no tomate", busque <em>"manchas pretas nas folhas do tomate Cerrado Embrapa"</em>. Use <code>filetype:pdf</code> para encontrar guias técnicos diretamente. Verifique: quem é o autor, onde foi publicado e se é aplicável ao Cerrado/DF.
+                </div>
+            </div>
+        </section>
+
+        <!-- Section: Glossário -->
+        <section class="card mb-4 border-0 shadow-sm" id="glossario">
+            <div class="card-header bg-secondary text-white">
+                <h3 class="h5 mb-0"><i class="bi bi-book-half me-2"></i>Glossário Essencial</h3>
+            </div>
+            <div class="card-body">
+                <div class="row g-0">
+                    <div class="col-md-6 pe-md-3">
+                        <div class="border-bottom py-2 small"><strong>CIP:</strong> Controle Integrado de Pragas — filosofia de gestão que combina métodos preventivos, culturais, biológicos e químicos de forma hierárquica e racional.</div>
+                        <div class="border-bottom py-2 small"><strong>LTE:</strong> Limite de Tolerância Econômica — nível populacional de uma praga a partir do qual o custo do dano iguala o custo do controle, justificando a intervenção.</div>
+                        <div class="border-bottom py-2 small"><strong>Rotação de Culturas:</strong> Alternância de diferentes famílias botânicas na mesma área ao longo do tempo para quebrar ciclos de pragas e equilibrar a fertilidade do solo.</div>
+                        <div class="border-bottom py-2 small"><strong>Consórcio:</strong> Cultivo simultâneo de duas ou mais espécies na mesma área, explorando sinergias como fixação de nitrogênio e supressão de daninhas.</div>
+                        <div class="border-bottom py-2 small"><strong>Adubação Verde:</strong> Cultivo deliberado de plantas (mucuna, crotalária, milheto) cujos restos são incorporados ao solo para melhorar fertilidade, estrutura e controle de nematoides.</div>
+                        <div class="border-bottom py-2 small"><strong>Calagem:</strong> Aplicação de calcário para corrigir a acidez do solo (elevar pH), tornando nutrientes disponíveis e reduzindo toxicidade do alumínio — prática indispensável no Cerrado.</div>
+                    </div>
+                    <div class="col-md-6 ps-md-3">
+                        <div class="border-bottom py-2 small"><strong>Compostagem:</strong> Decomposição aeróbica controlada de matéria orgânica (esterco, palha, restos de horta) transformada em húmus rico em nutrientes e microrganismos benéficos.</div>
+                        <div class="border-bottom py-2 small"><strong>Cobertura Morta (Mulching):</strong> Camada de palha, folhas ou resíduos orgânicos sobre o solo para reduzir evaporação, controlar daninhas e prevenir erosão.</div>
+                        <div class="border-bottom py-2 small"><strong>Bacillus thuringiensis (Bt):</strong> Bactéria que produz cristais proteicos letais para lagartas de mariposas e borboletas, mas segura para humanos, animais e insetos benéficos.</div>
+                        <div class="border-bottom py-2 small"><strong>Fertirrigação:</strong> Aplicação de fertilizantes dissolvidos na água de irrigação, maximizando a eficiência de absorção pelas raízes e reduzindo desperdício.</div>
+                        <div class="border-bottom py-2 small"><strong>Inimigos Naturais:</strong> Organismos que controlam pragas naturalmente (joaninhas, vespas parasitoides, aranhas, sapos) — protegê-los é fundamental no CIP.</div>
+                        <div class="py-2 small"><strong>Diário de Campo:</strong> Registro sistemático de observações, datas de plantio, chuvas, incidência de pragas e resultados — transforma experiência em banco de dados valioso para decisões futuras.</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Alerta Final -->
+        <div class="alert alert-warning d-flex align-items-center shadow-sm">
+            <i class="bi bi-exclamation-triangle fs-3 me-3"></i>
+            <div>
+                <strong>Atenção:</strong> Este guia é uma ferramenta educativa baseada em publicações da Embrapa, Emater-DF e instituições públicas brasileiras. Diagnósticos complexos, surtos severos ou dúvidas persistentes exigem consulta com profissional habilitado. O manejo agroecológico é dinâmico — adapte as recomendações à realidade da sua propriedade, registrando resultados para aprimorar suas práticas a cada ciclo. <strong>O manejo correto não é um destino, mas um caminho.</strong>
+            </div>
+        </div>
+
+    </main>
+
+    <footer class="py-5 bg-light border-top">
+        <div class="container text-center">
+            <p class="text-muted fw-bold mb-1">Guia Verde – 2026</p>
+
+            <div class="small text-muted">
+                Fontes e instituições de referência:
+                <a href="https://www.embrapa.br" target="_blank" rel="noopener" class="text-decoration-none text-secondary">Embrapa</a> |
+                <a href="https://www.emater.df.gov.br" target="_blank" rel="noopener" class="text-decoration-none text-secondary">Emater-DF</a> |
+                <a href="https://www.gov.br/agricultura" target="_blank" rel="noopener" class="text-decoration-none text-secondary">MAPA</a> |
+                <a href="https://www.ibama.gov.br" target="_blank" rel="noopener" class="text-decoration-none text-secondary">Ibama</a>
+            </div>
+
+            <div class="small text-muted mt-2">
+                Conteúdo baseado no guia "Manual de Autossuficiência Agroecológica para o Cerrado: Como o Pequeno Agricultor Dominou seu Sistema Produtivo com Baixo Custo e Conhecimento Digital", adaptado para pequenos produtores rurais, estudantes e técnicos de campo. Foco em planejamento estratégico, gestão do solo, controle integrado de pragas, nutrição sustentável e manejo específico de hortaliças e raízes no DF e região do Cerrado.
+            </div>
+
+            <div class="small text-muted mt-2">
+                Este conteúdo foi desenvolvido como parte de um projeto extensivo do curso de Análise e Desenvolvimento de Sistemas, com o objetivo de criar um guia prático e acessível para produtores rurais, estudantes e entusiastas da agricultura. Não possuindo fins comerciais, o Guia Verde é uma iniciativa educacional que visa disseminar conhecimento técnico de forma clara e objetiva, contribuindo para a melhoria das práticas agrícolas e a sustentabilidade no campo.
+            </div>
         </div>
     </footer>
 
-    <script
-        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
-        crossorigin="anonymous">
-    </script>
+    <button 
+        type="button"
+        class="btn btn-success btn-floating btn-lg"
+        id="btn-back-to-top"
+        style="position: fixed; bottom: 20px; right: 20px; display: none; z-index: 1000;"
+        aria-label="Voltar ao topo"
+        title="Voltar ao topo">
+        <i class="bi bi-arrow-up"></i>
+    </button>
 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../../js/ui-extras.js"></script>
 </body>
 </html>
